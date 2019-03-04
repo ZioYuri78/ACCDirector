@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <None Include="..\..\ACCDirector.uproject" />
+    <Filter Include="Source">
+      <UniqueIdentifier>{8A55B69A-A338-4207-9B2F-A8796415DA35}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\ACCDirector.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <None Include="..\..\Source\ACCDirectorEditor.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <Filter Include="Config">
+      <UniqueIdentifier>{B80C6F0E-09DA-4644-A74A-D5AB7E3917FE}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Config\DefaultEditor.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEditorPerProjectUserSettings.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEngine.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultGame.ini">
+      <Filter>Config</Filter>
+    </None>
+    <Filter Include="Source\ACCDirector">
+      <UniqueIdentifier>{86F36EA9-72AE-441C-8C85-D3CF3E3EE584}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\ACCDirector\ACCDirector.Build.cs">
+      <Filter>Source\ACCDirector</Filter>
+    </None>
+    <ClCompile Include="..\..\Source\ACCDirector\ACCDirector.cpp">
+      <Filter>Source\ACCDirector</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ACCDirector\ACCDirector.h">
+      <Filter>Source\ACCDirector</Filter>
+    </ClInclude>
+    <Filter Include="Source\ACCDirector\Private">
+      <UniqueIdentifier>{221250C0-E1BE-4221-8B7A-DB82B9E01555}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\ACCDirector\Private\ACCD">
+      <UniqueIdentifier>{EB1FA756-3B56-41D4-A5BF-10C1F8111365}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\ACCDirector\Private\ACCD\ACCDBaseWidget.cpp">
+      <Filter>Source\ACCDirector\Private\ACCD</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\ACCDirector\Private\ACCD\ACCDProtocol.cpp">
+      <Filter>Source\ACCDirector\Private\ACCD</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ACCDirector\Private\ACCD\ACCDProtocol.h">
+      <Filter>Source\ACCDirector\Private\ACCD</Filter>
+    </ClInclude>
+    <Filter Include="Source\ACCDirector\Private\Framework">
+      <UniqueIdentifier>{F636EE32-9D70-4C8F-B160-8E1E32082458}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\ACCDirector\Private\Framework\ACCDGameInstance.cpp">
+      <Filter>Source\ACCDirector\Private\Framework</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\ACCDirector\Private\Framework\ACCDGameMode.cpp">
+      <Filter>Source\ACCDirector\Private\Framework</Filter>
+    </ClCompile>
+    <Filter Include="Source\ACCDirector\Public">
+      <UniqueIdentifier>{41102EA9-CC5A-450E-8822-CD2ABE572195}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\ACCDirector\Public\ACCD">
+      <UniqueIdentifier>{74FF932B-8E7B-45C6-8A9F-E8854D8E3C48}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Source\ACCDirector\Public\ACCD\ACCDBaseWidget.h">
+      <Filter>Source\ACCDirector\Public\ACCD</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\ACCDirector\Public\ACCD\ACCDEnums.h">
+      <Filter>Source\ACCDirector\Public\ACCD</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\ACCDirector\Public\ACCD\ACCDStructs.h">
+      <Filter>Source\ACCDirector\Public\ACCD</Filter>
+    </ClInclude>
+    <Filter Include="Source\ACCDirector\Public\Framework">
+      <UniqueIdentifier>{D53B40CD-03B0-4D1E-BD33-2BD35208173C}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Source\ACCDirector\Public\Framework\ACCDGameInstance.h">
+      <Filter>Source\ACCDirector\Public\Framework</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\ACCDirector\Public\Framework\ACCDGameMode.h">
+      <Filter>Source\ACCDirector\Public\Framework</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
