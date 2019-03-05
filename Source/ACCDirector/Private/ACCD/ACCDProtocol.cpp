@@ -563,7 +563,12 @@ void AACCDProtocol::Recv(const FArrayReaderPtr & ArrayReaderPtr, const FIPv4Endp
 		}
 		else
 		{
+#if 1
 			OnRealTimeCarUpdate.Broadcast(ConnectionIdentifier, CarUpdate);
+#else
+			// Call it only if you need to create something at runtime
+			AsyncTask(ENamedThreads::GameThread, []() {OnRealTimeCarUpdate.Broadcast(ConnectionIdentifier, CarUpdate); });
+#endif
 		}
 
 		
@@ -576,7 +581,7 @@ void AACCDProtocol::Recv(const FArrayReaderPtr & ArrayReaderPtr, const FIPv4Endp
 		break;
 	}
 
-#if 1
+#if 0	// DEBUG
 	PrintRecvCounters();
 #endif
 }

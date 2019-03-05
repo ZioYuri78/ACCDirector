@@ -112,7 +112,7 @@ private:
 
 	FDateTime LastEntryListRequest;
 
-	// TrackData and EntryListCars are declared here because we need them declared on Game Thread or the AsyncTask in TRACK_DATA and ENTRY_LIST_CAR will crash
+	// TrackData and EntryListCars are declared here because we need them on Game Thread or the AsyncTask in TRACK_DATA and ENTRY_LIST_CAR will crash
 	FTrackData GTrackData;
 	TArray<FCarInfo> GCarsEntryList;
 	FCarInfo GCarInfo;
