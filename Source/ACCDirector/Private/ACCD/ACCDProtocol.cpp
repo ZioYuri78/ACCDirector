@@ -133,6 +133,8 @@ bool AACCDProtocol::RequestConnection(const FString& IP, const int32 Port, FStri
 
 void AACCDProtocol::RequestDisconnection()
 {
+	/* #ACCD_TODO figure out how to disconnect, ask Minolin on the forum
+
 	FArrayWriter Message;
 	uint8 CommandType = (uint8)EOutboundMessageTypes::UNREGISTER_COMMAND_APPLICATION;
 
@@ -151,7 +153,7 @@ void AACCDProtocol::RequestDisconnection()
 		UE_LOG(LogACCDProtocol, Warning, TEXT("RequestDisconnection() invalid RemoteAddr"));
 	}
 
-	
+	*/
 }
 
 void AACCDProtocol::RequestEntryList()
@@ -376,8 +378,11 @@ void AACCDProtocol::Recv(const FArrayReaderPtr & ArrayReaderPtr, const FIPv4Endp
 		int32 Index = GCarsEntryList.IndexOfByKey(GCarInfo);
 		GCarsEntryList[Index] = GCarInfo;
 		
+#if 1
+		OnEntryListUpdate.Broadcast(ConnectionIdentifier, GCarInfo);
+#else
 		AsyncTask(ENamedThreads::GameThread, [&] {OnEntryListUpdate.Broadcast(ConnectionIdentifier, GCarInfo); });
-
+#endif
 	} GDEntryListCarCounter++;
 	break;
 
@@ -563,12 +568,7 @@ void AACCDProtocol::Recv(const FArrayReaderPtr & ArrayReaderPtr, const FIPv4Endp
 		}
 		else
 		{
-#if 1
 			OnRealTimeCarUpdate.Broadcast(ConnectionIdentifier, CarUpdate);
-#else
-			// Call it only if you need to create something at runtime
-			AsyncTask(ENamedThreads::GameThread, []() {OnRealTimeCarUpdate.Broadcast(ConnectionIdentifier, CarUpdate); });
-#endif
 		}
 
 		
