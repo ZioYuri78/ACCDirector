@@ -1,4 +1,4 @@
-// Copyright 1998-2018 Epic Games, Inc. All Rights Reserved.
+// Copyright 1998-2019 Epic Games, Inc. All Rights Reserved.
 /*===========================================================================
 	Generated code exported from UnrealHeaderTool.
 	DO NOT modify this manually! Edit the corresponding .h files instead!
@@ -32,13 +32,17 @@ void EmptyLinkFunctionForGeneratedCodeACCDEnums() {}
 		}
 		return Singleton;
 	}
+	template<> ACCDIRECTOR_API UEnum* StaticEnum<ERaceSessionType>()
+	{
+		return ERaceSessionType_StaticEnum();
+	}
 	static FCompiledInDeferEnum Z_CompiledInDeferEnum_UEnum_ERaceSessionType(ERaceSessionType_StaticEnum, TEXT("/Script/ACCDirector"), TEXT("ERaceSessionType"), false, nullptr, nullptr);
-	uint32 Get_Z_Construct_UEnum_ACCDirector_ERaceSessionType_CRC() { return 3352727310U; }
+	uint32 Get_Z_Construct_UEnum_ACCDirector_ERaceSessionType_Hash() { return 1778160367U; }
 	UEnum* Z_Construct_UEnum_ACCDirector_ERaceSessionType()
 	{
 #if WITH_HOT_RELOAD
 		UPackage* Outer = Z_Construct_UPackage__Script_ACCDirector();
-		static UEnum* ReturnEnum = FindExistingEnumIfHotReloadOrDynamic(Outer, TEXT("ERaceSessionType"), 0, Get_Z_Construct_UEnum_ACCDirector_ERaceSessionType_CRC(), false);
+		static UEnum* ReturnEnum = FindExistingEnumIfHotReloadOrDynamic(Outer, TEXT("ERaceSessionType"), 0, Get_Z_Construct_UEnum_ACCDirector_ERaceSessionType_Hash(), false);
 #else
 		static UEnum* ReturnEnum = nullptr;
 #endif // WITH_HOT_RELOAD
@@ -63,14 +67,14 @@ void EmptyLinkFunctionForGeneratedCodeACCDEnums() {}
 #endif
 			static const UE4CodeGen_Private::FEnumParams EnumParams = {
 				(UObject*(*)())Z_Construct_UPackage__Script_ACCDirector,
-				UE4CodeGen_Private::EDynamicType::NotDynamic,
-				"ERaceSessionType",
-				RF_Public|RF_Transient|RF_MarkAsNative,
 				nullptr,
-				(uint8)UEnum::ECppForm::EnumClass,
+				"ERaceSessionType",
 				"ERaceSessionType",
 				Enumerators,
 				ARRAY_COUNT(Enumerators),
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				UE4CodeGen_Private::EDynamicType::NotDynamic,
+				(uint8)UEnum::ECppForm::EnumClass,
 				METADATA_PARAMS(Enum_MetaDataParams, ARRAY_COUNT(Enum_MetaDataParams))
 			};
 			UE4CodeGen_Private::ConstructUEnum(ReturnEnum, EnumParams);
@@ -86,13 +90,17 @@ void EmptyLinkFunctionForGeneratedCodeACCDEnums() {}
 		}
 		return Singleton;
 	}
+	template<> ACCDIRECTOR_API UEnum* StaticEnum<ESessionPhase>()
+	{
+		return ESessionPhase_StaticEnum();
+	}
 	static FCompiledInDeferEnum Z_CompiledInDeferEnum_UEnum_ESessionPhase(ESessionPhase_StaticEnum, TEXT("/Script/ACCDirector"), TEXT("ESessionPhase"), false, nullptr, nullptr);
-	uint32 Get_Z_Construct_UEnum_ACCDirector_ESessionPhase_CRC() { return 3090050046U; }
+	uint32 Get_Z_Construct_UEnum_ACCDirector_ESessionPhase_Hash() { return 101067584U; }
 	UEnum* Z_Construct_UEnum_ACCDirector_ESessionPhase()
 	{
 #if WITH_HOT_RELOAD
 		UPackage* Outer = Z_Construct_UPackage__Script_ACCDirector();
-		static UEnum* ReturnEnum = FindExistingEnumIfHotReloadOrDynamic(Outer, TEXT("ESessionPhase"), 0, Get_Z_Construct_UEnum_ACCDirector_ESessionPhase_CRC(), false);
+		static UEnum* ReturnEnum = FindExistingEnumIfHotReloadOrDynamic(Outer, TEXT("ESessionPhase"), 0, Get_Z_Construct_UEnum_ACCDirector_ESessionPhase_Hash(), false);
 #else
 		static UEnum* ReturnEnum = nullptr;
 #endif // WITH_HOT_RELOAD
@@ -117,14 +125,14 @@ void EmptyLinkFunctionForGeneratedCodeACCDEnums() {}
 #endif
 			static const UE4CodeGen_Private::FEnumParams EnumParams = {
 				(UObject*(*)())Z_Construct_UPackage__Script_ACCDirector,
-				UE4CodeGen_Private::EDynamicType::NotDynamic,
-				"ESessionPhase",
-				RF_Public|RF_Transient|RF_MarkAsNative,
 				nullptr,
-				(uint8)UEnum::ECppForm::EnumClass,
+				"ESessionPhase",
 				"ESessionPhase",
 				Enumerators,
 				ARRAY_COUNT(Enumerators),
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				UE4CodeGen_Private::EDynamicType::NotDynamic,
+				(uint8)UEnum::ECppForm::EnumClass,
 				METADATA_PARAMS(Enum_MetaDataParams, ARRAY_COUNT(Enum_MetaDataParams))
 			};
 			UE4CodeGen_Private::ConstructUEnum(ReturnEnum, EnumParams);
@@ -140,13 +148,17 @@ void EmptyLinkFunctionForGeneratedCodeACCDEnums() {}
 		}
 		return Singleton;
 	}
+	template<> ACCDIRECTOR_API UEnum* StaticEnum<ECarLocationEnum>()
+	{
+		return ECarLocationEnum_StaticEnum();
+	}
 	static FCompiledInDeferEnum Z_CompiledInDeferEnum_UEnum_ECarLocationEnum(ECarLocationEnum_StaticEnum, TEXT("/Script/ACCDirector"), TEXT("ECarLocationEnum"), false, nullptr, nullptr);
-	uint32 Get_Z_Construct_UEnum_ACCDirector_ECarLocationEnum_CRC() { return 1787218434U; }
+	uint32 Get_Z_Construct_UEnum_ACCDirector_ECarLocationEnum_Hash() { return 3635592906U; }
 	UEnum* Z_Construct_UEnum_ACCDirector_ECarLocationEnum()
 	{
 #if WITH_HOT_RELOAD
 		UPackage* Outer = Z_Construct_UPackage__Script_ACCDirector();
-		static UEnum* ReturnEnum = FindExistingEnumIfHotReloadOrDynamic(Outer, TEXT("ECarLocationEnum"), 0, Get_Z_Construct_UEnum_ACCDirector_ECarLocationEnum_CRC(), false);
+		static UEnum* ReturnEnum = FindExistingEnumIfHotReloadOrDynamic(Outer, TEXT("ECarLocationEnum"), 0, Get_Z_Construct_UEnum_ACCDirector_ECarLocationEnum_Hash(), false);
 #else
 		static UEnum* ReturnEnum = nullptr;
 #endif // WITH_HOT_RELOAD
@@ -167,14 +179,14 @@ void EmptyLinkFunctionForGeneratedCodeACCDEnums() {}
 #endif
 			static const UE4CodeGen_Private::FEnumParams EnumParams = {
 				(UObject*(*)())Z_Construct_UPackage__Script_ACCDirector,
-				UE4CodeGen_Private::EDynamicType::NotDynamic,
-				"ECarLocationEnum",
-				RF_Public|RF_Transient|RF_MarkAsNative,
 				nullptr,
-				(uint8)UEnum::ECppForm::EnumClass,
+				"ECarLocationEnum",
 				"ECarLocationEnum",
 				Enumerators,
 				ARRAY_COUNT(Enumerators),
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				UE4CodeGen_Private::EDynamicType::NotDynamic,
+				(uint8)UEnum::ECppForm::EnumClass,
 				METADATA_PARAMS(Enum_MetaDataParams, ARRAY_COUNT(Enum_MetaDataParams))
 			};
 			UE4CodeGen_Private::ConstructUEnum(ReturnEnum, EnumParams);
@@ -190,13 +202,17 @@ void EmptyLinkFunctionForGeneratedCodeACCDEnums() {}
 		}
 		return Singleton;
 	}
+	template<> ACCDIRECTOR_API UEnum* StaticEnum<ELapType>()
+	{
+		return ELapType_StaticEnum();
+	}
 	static FCompiledInDeferEnum Z_CompiledInDeferEnum_UEnum_ELapType(ELapType_StaticEnum, TEXT("/Script/ACCDirector"), TEXT("ELapType"), false, nullptr, nullptr);
-	uint32 Get_Z_Construct_UEnum_ACCDirector_ELapType_CRC() { return 3918948321U; }
+	uint32 Get_Z_Construct_UEnum_ACCDirector_ELapType_Hash() { return 1832837404U; }
 	UEnum* Z_Construct_UEnum_ACCDirector_ELapType()
 	{
 #if WITH_HOT_RELOAD
 		UPackage* Outer = Z_Construct_UPackage__Script_ACCDirector();
-		static UEnum* ReturnEnum = FindExistingEnumIfHotReloadOrDynamic(Outer, TEXT("ELapType"), 0, Get_Z_Construct_UEnum_ACCDirector_ELapType_CRC(), false);
+		static UEnum* ReturnEnum = FindExistingEnumIfHotReloadOrDynamic(Outer, TEXT("ELapType"), 0, Get_Z_Construct_UEnum_ACCDirector_ELapType_Hash(), false);
 #else
 		static UEnum* ReturnEnum = nullptr;
 #endif // WITH_HOT_RELOAD
@@ -216,14 +232,14 @@ void EmptyLinkFunctionForGeneratedCodeACCDEnums() {}
 #endif
 			static const UE4CodeGen_Private::FEnumParams EnumParams = {
 				(UObject*(*)())Z_Construct_UPackage__Script_ACCDirector,
-				UE4CodeGen_Private::EDynamicType::NotDynamic,
-				"ELapType",
-				RF_Public|RF_Transient|RF_MarkAsNative,
 				nullptr,
-				(uint8)UEnum::ECppForm::EnumClass,
+				"ELapType",
 				"ELapType",
 				Enumerators,
 				ARRAY_COUNT(Enumerators),
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				UE4CodeGen_Private::EDynamicType::NotDynamic,
+				(uint8)UEnum::ECppForm::EnumClass,
 				METADATA_PARAMS(Enum_MetaDataParams, ARRAY_COUNT(Enum_MetaDataParams))
 			};
 			UE4CodeGen_Private::ConstructUEnum(ReturnEnum, EnumParams);
@@ -239,13 +255,17 @@ void EmptyLinkFunctionForGeneratedCodeACCDEnums() {}
 		}
 		return Singleton;
 	}
+	template<> ACCDIRECTOR_API UEnum* StaticEnum<EDriverCategory>()
+	{
+		return EDriverCategory_StaticEnum();
+	}
 	static FCompiledInDeferEnum Z_CompiledInDeferEnum_UEnum_EDriverCategory(EDriverCategory_StaticEnum, TEXT("/Script/ACCDirector"), TEXT("EDriverCategory"), false, nullptr, nullptr);
-	uint32 Get_Z_Construct_UEnum_ACCDirector_EDriverCategory_CRC() { return 989618274U; }
+	uint32 Get_Z_Construct_UEnum_ACCDirector_EDriverCategory_Hash() { return 3392188076U; }
 	UEnum* Z_Construct_UEnum_ACCDirector_EDriverCategory()
 	{
 #if WITH_HOT_RELOAD
 		UPackage* Outer = Z_Construct_UPackage__Script_ACCDirector();
-		static UEnum* ReturnEnum = FindExistingEnumIfHotReloadOrDynamic(Outer, TEXT("EDriverCategory"), 0, Get_Z_Construct_UEnum_ACCDirector_EDriverCategory_CRC(), false);
+		static UEnum* ReturnEnum = FindExistingEnumIfHotReloadOrDynamic(Outer, TEXT("EDriverCategory"), 0, Get_Z_Construct_UEnum_ACCDirector_EDriverCategory_Hash(), false);
 #else
 		static UEnum* ReturnEnum = nullptr;
 #endif // WITH_HOT_RELOAD
@@ -266,14 +286,14 @@ void EmptyLinkFunctionForGeneratedCodeACCDEnums() {}
 #endif
 			static const UE4CodeGen_Private::FEnumParams EnumParams = {
 				(UObject*(*)())Z_Construct_UPackage__Script_ACCDirector,
-				UE4CodeGen_Private::EDynamicType::NotDynamic,
-				"EDriverCategory",
-				RF_Public|RF_Transient|RF_MarkAsNative,
 				nullptr,
-				(uint8)UEnum::ECppForm::EnumClass,
+				"EDriverCategory",
 				"EDriverCategory",
 				Enumerators,
 				ARRAY_COUNT(Enumerators),
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				UE4CodeGen_Private::EDynamicType::NotDynamic,
+				(uint8)UEnum::ECppForm::EnumClass,
 				METADATA_PARAMS(Enum_MetaDataParams, ARRAY_COUNT(Enum_MetaDataParams))
 			};
 			UE4CodeGen_Private::ConstructUEnum(ReturnEnum, EnumParams);
@@ -289,13 +309,17 @@ void EmptyLinkFunctionForGeneratedCodeACCDEnums() {}
 		}
 		return Singleton;
 	}
+	template<> ACCDIRECTOR_API UEnum* StaticEnum<EBNProtocol>()
+	{
+		return EBNProtocol_StaticEnum();
+	}
 	static FCompiledInDeferEnum Z_CompiledInDeferEnum_UEnum_EBNProtocol(EBNProtocol_StaticEnum, TEXT("/Script/ACCDirector"), TEXT("EBNProtocol"), false, nullptr, nullptr);
-	uint32 Get_Z_Construct_UEnum_ACCDirector_EBNProtocol_CRC() { return 3135053500U; }
+	uint32 Get_Z_Construct_UEnum_ACCDirector_EBNProtocol_Hash() { return 1674954084U; }
 	UEnum* Z_Construct_UEnum_ACCDirector_EBNProtocol()
 	{
 #if WITH_HOT_RELOAD
 		UPackage* Outer = Z_Construct_UPackage__Script_ACCDirector();
-		static UEnum* ReturnEnum = FindExistingEnumIfHotReloadOrDynamic(Outer, TEXT("EBNProtocol"), 0, Get_Z_Construct_UEnum_ACCDirector_EBNProtocol_CRC(), false);
+		static UEnum* ReturnEnum = FindExistingEnumIfHotReloadOrDynamic(Outer, TEXT("EBNProtocol"), 0, Get_Z_Construct_UEnum_ACCDirector_EBNProtocol_Hash(), false);
 #else
 		static UEnum* ReturnEnum = nullptr;
 #endif // WITH_HOT_RELOAD
@@ -311,14 +335,14 @@ void EmptyLinkFunctionForGeneratedCodeACCDEnums() {}
 #endif
 			static const UE4CodeGen_Private::FEnumParams EnumParams = {
 				(UObject*(*)())Z_Construct_UPackage__Script_ACCDirector,
-				UE4CodeGen_Private::EDynamicType::NotDynamic,
-				"EBNProtocol",
-				RF_Public|RF_Transient|RF_MarkAsNative,
 				nullptr,
-				(uint8)UEnum::ECppForm::EnumClass,
+				"EBNProtocol",
 				"EBNProtocol",
 				Enumerators,
 				ARRAY_COUNT(Enumerators),
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				UE4CodeGen_Private::EDynamicType::NotDynamic,
+				(uint8)UEnum::ECppForm::EnumClass,
 				METADATA_PARAMS(Enum_MetaDataParams, ARRAY_COUNT(Enum_MetaDataParams))
 			};
 			UE4CodeGen_Private::ConstructUEnum(ReturnEnum, EnumParams);
@@ -334,13 +358,17 @@ void EmptyLinkFunctionForGeneratedCodeACCDEnums() {}
 		}
 		return Singleton;
 	}
+	template<> ACCDIRECTOR_API UEnum* StaticEnum<EInboundMessageTypes>()
+	{
+		return EInboundMessageTypes_StaticEnum();
+	}
 	static FCompiledInDeferEnum Z_CompiledInDeferEnum_UEnum_EInboundMessageTypes(EInboundMessageTypes_StaticEnum, TEXT("/Script/ACCDirector"), TEXT("EInboundMessageTypes"), false, nullptr, nullptr);
-	uint32 Get_Z_Construct_UEnum_ACCDirector_EInboundMessageTypes_CRC() { return 1356117354U; }
+	uint32 Get_Z_Construct_UEnum_ACCDirector_EInboundMessageTypes_Hash() { return 2400770206U; }
 	UEnum* Z_Construct_UEnum_ACCDirector_EInboundMessageTypes()
 	{
 #if WITH_HOT_RELOAD
 		UPackage* Outer = Z_Construct_UPackage__Script_ACCDirector();
-		static UEnum* ReturnEnum = FindExistingEnumIfHotReloadOrDynamic(Outer, TEXT("EInboundMessageTypes"), 0, Get_Z_Construct_UEnum_ACCDirector_EInboundMessageTypes_CRC(), false);
+		static UEnum* ReturnEnum = FindExistingEnumIfHotReloadOrDynamic(Outer, TEXT("EInboundMessageTypes"), 0, Get_Z_Construct_UEnum_ACCDirector_EInboundMessageTypes_Hash(), false);
 #else
 		static UEnum* ReturnEnum = nullptr;
 #endif // WITH_HOT_RELOAD
@@ -362,14 +390,14 @@ void EmptyLinkFunctionForGeneratedCodeACCDEnums() {}
 #endif
 			static const UE4CodeGen_Private::FEnumParams EnumParams = {
 				(UObject*(*)())Z_Construct_UPackage__Script_ACCDirector,
-				UE4CodeGen_Private::EDynamicType::NotDynamic,
-				"EInboundMessageTypes",
-				RF_Public|RF_Transient|RF_MarkAsNative,
 				nullptr,
-				(uint8)UEnum::ECppForm::EnumClass,
+				"EInboundMessageTypes",
 				"EInboundMessageTypes",
 				Enumerators,
 				ARRAY_COUNT(Enumerators),
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				UE4CodeGen_Private::EDynamicType::NotDynamic,
+				(uint8)UEnum::ECppForm::EnumClass,
 				METADATA_PARAMS(Enum_MetaDataParams, ARRAY_COUNT(Enum_MetaDataParams))
 			};
 			UE4CodeGen_Private::ConstructUEnum(ReturnEnum, EnumParams);
@@ -385,13 +413,17 @@ void EmptyLinkFunctionForGeneratedCodeACCDEnums() {}
 		}
 		return Singleton;
 	}
+	template<> ACCDIRECTOR_API UEnum* StaticEnum<EOutboundMessageTypes>()
+	{
+		return EOutboundMessageTypes_StaticEnum();
+	}
 	static FCompiledInDeferEnum Z_CompiledInDeferEnum_UEnum_EOutboundMessageTypes(EOutboundMessageTypes_StaticEnum, TEXT("/Script/ACCDirector"), TEXT("EOutboundMessageTypes"), false, nullptr, nullptr);
-	uint32 Get_Z_Construct_UEnum_ACCDirector_EOutboundMessageTypes_CRC() { return 965753703U; }
+	uint32 Get_Z_Construct_UEnum_ACCDirector_EOutboundMessageTypes_Hash() { return 314295709U; }
 	UEnum* Z_Construct_UEnum_ACCDirector_EOutboundMessageTypes()
 	{
 #if WITH_HOT_RELOAD
 		UPackage* Outer = Z_Construct_UPackage__Script_ACCDirector();
-		static UEnum* ReturnEnum = FindExistingEnumIfHotReloadOrDynamic(Outer, TEXT("EOutboundMessageTypes"), 0, Get_Z_Construct_UEnum_ACCDirector_EOutboundMessageTypes_CRC(), false);
+		static UEnum* ReturnEnum = FindExistingEnumIfHotReloadOrDynamic(Outer, TEXT("EOutboundMessageTypes"), 0, Get_Z_Construct_UEnum_ACCDirector_EOutboundMessageTypes_Hash(), false);
 #else
 		static UEnum* ReturnEnum = nullptr;
 #endif // WITH_HOT_RELOAD
@@ -417,14 +449,14 @@ void EmptyLinkFunctionForGeneratedCodeACCDEnums() {}
 #endif
 			static const UE4CodeGen_Private::FEnumParams EnumParams = {
 				(UObject*(*)())Z_Construct_UPackage__Script_ACCDirector,
-				UE4CodeGen_Private::EDynamicType::NotDynamic,
-				"EOutboundMessageTypes",
-				RF_Public|RF_Transient|RF_MarkAsNative,
 				nullptr,
-				(uint8)UEnum::ECppForm::EnumClass,
+				"EOutboundMessageTypes",
 				"EOutboundMessageTypes",
 				Enumerators,
 				ARRAY_COUNT(Enumerators),
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				UE4CodeGen_Private::EDynamicType::NotDynamic,
+				(uint8)UEnum::ECppForm::EnumClass,
 				METADATA_PARAMS(Enum_MetaDataParams, ARRAY_COUNT(Enum_MetaDataParams))
 			};
 			UE4CodeGen_Private::ConstructUEnum(ReturnEnum, EnumParams);

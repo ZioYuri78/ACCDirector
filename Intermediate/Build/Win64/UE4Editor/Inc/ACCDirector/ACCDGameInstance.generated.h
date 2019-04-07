@@ -1,4 +1,4 @@
-// Copyright 1998-2018 Epic Games, Inc. All Rights Reserved.
+// Copyright 1998-2019 Epic Games, Inc. All Rights Reserved.
 /*===========================================================================
 	Generated code exported from UnrealHeaderTool.
 	DO NOT modify this manually! Edit the corresponding .h files instead!
@@ -82,6 +82,8 @@ public: \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
+
+template<> ACCDIRECTOR_API UClass* StaticClass<class UACCDGameInstance>();
 
 #undef CURRENT_FILE_ID
 #define CURRENT_FILE_ID ACCDirector_Source_ACCDirector_Public_Framework_ACCDGameInstance_h

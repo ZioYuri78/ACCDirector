@@ -1,4 +1,4 @@
-// Copyright 1998-2018 Epic Games, Inc. All Rights Reserved.
+// Copyright 1998-2019 Epic Games, Inc. All Rights Reserved.
 /*===========================================================================
 	Generated code exported from UnrealHeaderTool.
 	DO NOT modify this manually! Edit the corresponding .h files instead!
@@ -32,10 +32,11 @@ void EmptyLinkFunctionForGeneratedCodeACCDirector_init() {}
 			};
 			static const UE4CodeGen_Private::FPackageParams PackageParams = {
 				"/Script/ACCDirector",
+				SingletonFuncArray,
+				ARRAY_COUNT(SingletonFuncArray),
 				PKG_CompiledIn | 0x00000000,
-				0xD086E091,
-				0xCF8E8FD5,
-				SingletonFuncArray, ARRAY_COUNT(SingletonFuncArray),
+				0x1D5FE471,
+				0x5E802F89,
 				METADATA_PARAMS(nullptr, 0)
 			};
 			UE4CodeGen_Private::ConstructUPackage(ReturnPackage, PackageParams);

@@ -1,4 +1,4 @@
-// Copyright 1998-2018 Epic Games, Inc. All Rights Reserved.
+// Copyright 1998-2019 Epic Games, Inc. All Rights Reserved.
 /*===========================================================================
 	Generated code exported from UnrealHeaderTool.
 	DO NOT modify this manually! Edit the corresponding .h files instead!
@@ -51,13 +51,17 @@ void EmptyLinkFunctionForGeneratedCodeACCDGameMode() {}
 	};
 	const UE4CodeGen_Private::FClassParams Z_Construct_UClass_AACCDGameMode_Statics::ClassParams = {
 		&AACCDGameMode::StaticClass,
-		DependentSingletons, ARRAY_COUNT(DependentSingletons),
-		0x009002A8u,
-		nullptr, 0,
-		nullptr, 0,
 		nullptr,
 		&StaticCppClassTypeInfo,
-		nullptr, 0,
+		DependentSingletons,
+		nullptr,
+		nullptr,
+		nullptr,
+		ARRAY_COUNT(DependentSingletons),
+		0,
+		0,
+		0,
+		0x009002A8u,
 		METADATA_PARAMS(Z_Construct_UClass_AACCDGameMode_Statics::Class_MetaDataParams, ARRAY_COUNT(Z_Construct_UClass_AACCDGameMode_Statics::Class_MetaDataParams))
 	};
 	UClass* Z_Construct_UClass_AACCDGameMode()
@@ -69,7 +73,11 @@ void EmptyLinkFunctionForGeneratedCodeACCDGameMode() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AACCDGameMode, 1796587870);
+	IMPLEMENT_CLASS(AACCDGameMode, 1044272206);
+	template<> ACCDIRECTOR_API UClass* StaticClass<AACCDGameMode>()
+	{
+		return AACCDGameMode::StaticClass();
+	}
 	static FCompiledInDefer Z_CompiledInDefer_UClass_AACCDGameMode(Z_Construct_UClass_AACCDGameMode, &AACCDGameMode::StaticClass, TEXT("/Script/ACCDirector"), TEXT("AACCDGameMode"), false, nullptr, nullptr, nullptr);
 	DEFINE_VTABLE_PTR_HELPER_CTOR(AACCDGameMode);
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
