@@ -18,8 +18,13 @@ Windows.Engine:AssetRegistry:CookedTagsWhitelist:4=(Class=*,Tag=PrimaryAssetType
 Windows.Engine:AssetRegistry:CookedTagsWhitelist:5=(Class=*,Tag=PrimaryAssetName)
 Windows.Engine:AssetRegistry:CookedTagsWhitelist:6=(Class=World,Tag=Tests)
 Windows.Engine:AssetRegistry:CookedTagsWhitelist:7=(Class=World,Tag=TestNames)
+Windows.Engine:AssetRegistry:CookedTagsAsFName:0=PrimaryAssetType
+Windows.Engine:AssetRegistry:CookedTagsAsFName:1=PrimaryAssetName
+Windows.Engine:AssetRegistry:CookedTagsAsPathName:0=GeneratedClass
+Windows.Engine:AssetRegistry:CookedTagsAsPathName:1=ParentClass
+Windows.Engine:AssetRegistry:CookedTagsAsLocText:0=DisplayName
 Windows.Engine:AssetRegistry:bSerializeSearchableNameDependencies:0=false
-Windows.Engine:/Script/EngineSettings.GameMapsSettings:GameInstanceClass:0=/Script/Engine.GameInstance
+Windows.Engine:/Script/EngineSettings.GameMapsSettings:GameInstanceClass:0=/Game/Blueprints/Framework/BP_GameInstance.BP_GameInstance_C
 Windows.Engine:/Script/EngineSettings.GameMapsSettings:GameDefaultMap:0=/Game/Maps/LVL_ACCDClient.LVL_ACCDClient
 Windows.Engine:/Script/EngineSettings.GameMapsSettings:ServerDefaultMap:0=/Engine/Maps/Entry
 Windows.Engine:/Script/EngineSettings.GameMapsSettings:GlobalDefaultGameMode:0=/Script/Engine.GameModeBase
@@ -152,6 +157,24 @@ Windows.Engine:/Script/AndroidPlatformEditor.AndroidSDKSettings:JavaPath:0=(Path
 Windows.Engine:/Script/AndroidPlatformEditor.AndroidSDKSettings:SDKAPILevel:0=latest
 Windows.Engine:/Script/AndroidPlatformEditor.AndroidSDKSettings:NDKAPILevel:0=android-19
 Windows.Engine:MagicLeapSettings:WindowMirrorMode:0=1
+Windows.Engine:/Script/UnrealEd.EditorEngine:FlipNormalMapGreenChannel:0=False
+Windows.Engine:/Script/UnrealEd.EditorEngine:LocalPlayerClassName:0=/Script/Engine.LocalPlayer
+Windows.Engine:/Script/UnrealEd.EditorEngine:GameCommandLine:0=-log
+Windows.Engine:/Script/UnrealEd.EditorEngine:FOVAngle:0=90.000000
+Windows.Engine:/Script/UnrealEd.EditorEngine:GodMode:0=True
+Windows.Engine:/Script/UnrealEd.EditorEngine:UseAxisIndicator:0=True
+Windows.Engine:/Script/UnrealEd.EditorEngine:MatineeCurveDetail:0=0.1
+Windows.Engine:/Script/UnrealEd.EditorEngine:HeightMapExportClassName:0=TerrainHeightMapExporterTextT3D
+Windows.Engine:/Script/UnrealEd.EditorEngine:bGroupingActive:0=true
+Windows.Engine:/Script/UnrealEd.EditorEngine:bCustomCameraAlignEmitter:0=true
+Windows.Engine:/Script/UnrealEd.EditorEngine:CustomCameraAlignEmitterDistance:0=100.0
+Windows.Engine:/Script/UnrealEd.EditorEngine:bDrawSocketsInGMode:0=false
+Windows.Engine:/Script/UnrealEd.EditorEngine:bSmoothFrameRate:0=false
+Windows.Engine:/Script/UnrealEd.EditorEngine:SmoothedFrameRateRange:0=(LowerBound=(Type="ERangeBoundTypesInclusive",Value=5),UpperBound=(Type="ERangeBoundTypesInclusive",Value=120))
+Windows.Engine:/Script/UnrealEd.EditorEngine:UseOldStyleMICEditorGroups:0=true
+Windows.Engine:/Script/UnrealEd.EditorEngine:InEditorGameURLOptions:0=
+Windows.Engine:/Script/LuminPlatformEditor.MagicLeapSDKSettings:MLSDKPath:0=(Path="")
+Windows.Engine:FProjectLauncher:AdvancedMode:0=False
 Windows.Engine:URL:Protocol:0=unreal
 Windows.Engine:URL:Name:0=Player
 Windows.Engine:URL:SaveExt:0=usa
@@ -334,6 +357,7 @@ Windows.Engine:/Script/Engine.Engine:InitialButtonRepeatDelay:0=0.2
 Windows.Engine:/Script/Engine.Engine:ButtonRepeatDelay:0=0.1
 Windows.Engine:/Script/Engine.Engine:NetDriverDefinitions:0=(DefName="GameNetDriver",DriverClassName="/Script/OnlineSubsystemUtils.IpNetDriver",DriverClassNameFallback="/Script/OnlineSubsystemUtils.IpNetDriver")
 Windows.Engine:/Script/Engine.Engine:NetDriverDefinitions:1=(DefName="DemoNetDriver",DriverClassName="/Script/Engine.DemoNetDriver",DriverClassNameFallback="/Script/Engine.DemoNetDriver")
+Windows.Engine:/Script/Engine.Engine:NetErrorLogInterval:0=1.0
 Windows.Engine:/Script/Engine.Engine:SerializationOutOfBoundsErrorMessage:0=NSLOCTEXT("","SerializationOutOfBoundsErrorMessage","Corrupt data found, please verify your installation.")
 Windows.Engine:/Script/Engine.Engine:SerializationOutOfBoundsErrorMessageCaption:0=NSLOCTEXT("","SerializationOutOfBoundsErrorMessageCaption","Serialization Error  Action Needed")
 Windows.Engine:/Script/Engine.Engine:bSmoothFrameRate:0=true
@@ -458,10 +482,9 @@ Windows.Engine:/Script/Engine.GarbageCollectionSettings:gc.FlushStreamingOnGC:0=
 Windows.Engine:/Script/Engine.GarbageCollectionSettings:gc.NumRetriesBeforeForcingGC:0=10
 Windows.Engine:/Script/Engine.GarbageCollectionSettings:gc.AllowParallelGC:0=True
 Windows.Engine:/Script/Engine.GarbageCollectionSettings:gc.TimeBetweenPurgingPendingKillObjects:0=61.1
-Windows.Engine:/Script/Engine.GarbageCollectionSettings:gc.MaxObjectsInEditor:0=8388607
+Windows.Engine:/Script/Engine.GarbageCollectionSettings:gc.MaxObjectsInEditor:0=16777216
 Windows.Engine:/Script/Engine.GarbageCollectionSettings:gc.IncrementalBeginDestroyEnabled:0=True
 Windows.Engine:/Script/Engine.GarbageCollectionSettings:gc.CreateGCClusters:0=True
-Windows.Engine:/Script/Engine.GarbageCollectionSettings:gc.MergeGCClusters:0=False
 Windows.Engine:/Script/Engine.GarbageCollectionSettings:gc.MinGCClusterSize:0=5
 Windows.Engine:/Script/Engine.GarbageCollectionSettings:gc.ActorClusteringEnabled:0=False
 Windows.Engine:/Script/Engine.GarbageCollectionSettings:gc.BlueprintClusteringEnabled:0=False
@@ -498,10 +521,14 @@ Windows.Engine:/Script/Engine.SoundGroups:SoundGroupProfiles:3=(SoundGroup=SOUND
 Windows.Engine:/Script/Engine.SoundGroups:SoundGroupProfiles:4=(SoundGroup=SOUNDGROUP_Voice, bAlwaysDecompressOnLoad=false, DecompressedDuration=0)
 Windows.Engine:/Script/Engine.Player:ConfiguredInternetSpeed:0=10000
 Windows.Engine:/Script/Engine.Player:ConfiguredLanSpeed:0=20000
+Windows.Engine:/Script/Engine.NetDriver:ChannelDefinitions:0=(ChannelName=Control, ClassName=/Script/Engine.ControlChannel, StaticChannelIndex=0, bTickOnCreate=true, bServerOpen=false, bClientOpen=true, bInitialServer=false, bInitialClient=true)
+Windows.Engine:/Script/Engine.NetDriver:ChannelDefinitions:1=(ChannelName=Voice, ClassName=/Script/Engine.VoiceChannel, StaticChannelIndex=1, bTickOnCreate=true, bServerOpen=true, bClientOpen=true, bInitialServer=true, bInitialClient=true)
+Windows.Engine:/Script/Engine.NetDriver:ChannelDefinitions:2=(ChannelName=Actor, ClassName=/Script/Engine.ActorChannel, StaticChannelIndex=-1, bTickOnCreate=false, bServerOpen=true, bClientOpen=false, bInitialServer=false, bInitialClient=false)
 Windows.Engine:/Script/OnlineSubsystemUtils.IpNetDriver:AllowPeerConnections:0=False
 Windows.Engine:/Script/OnlineSubsystemUtils.IpNetDriver:AllowPeerVoice:0=False
 Windows.Engine:/Script/OnlineSubsystemUtils.IpNetDriver:ConnectionTimeout:0=60.0
 Windows.Engine:/Script/OnlineSubsystemUtils.IpNetDriver:InitialConnectTimeout:0=60.0
+Windows.Engine:/Script/OnlineSubsystemUtils.IpNetDriver:RecentlyDisconnectedTrackingTime:0=120
 Windows.Engine:/Script/OnlineSubsystemUtils.IpNetDriver:TimeoutMultiplierForUnoptimizedBuilds:0=1
 Windows.Engine:/Script/OnlineSubsystemUtils.IpNetDriver:KeepAliveTime:0=0.2
 Windows.Engine:/Script/OnlineSubsystemUtils.IpNetDriver:MaxClientRate:0=15000
@@ -523,8 +550,10 @@ Windows.Engine:DDoSDetection:DetectionSeverity:2=DDoS
 Windows.Engine:DDoSDetection:DetectionSeverity:3=ExpensiveDDoS
 Windows.Engine:DDoSDetection:DetectionSeverity:4=DebilitatingDDoS
 Windows.Engine:DDoSDetection.Burst:EscalateQuotaPacketsPerSec:0=400
+Windows.Engine:DDoSDetection.Burst:EscalateQuotaDisconnPacketsPerSec:0=3200
 Windows.Engine:DDoSDetection.Burst:EscalateQuotaBadPacketsPerSec:0=100
 Windows.Engine:DDoSDetection.PersistentBurst:EscalateQuotaPacketsPerSec:0=800
+Windows.Engine:DDoSDetection.PersistentBurst:EscalateQuotaDisconnPacketsPerSec:0=3200
 Windows.Engine:DDoSDetection.PersistentBurst:EscalateQuotaBadPacketsPerSec:0=200
 Windows.Engine:DDoSDetection.PersistentBurst:EscalateTimeQuotaMSPerFrame:0=8
 Windows.Engine:DDoSDetection.PersistentBurst:CooloffTime:0=60
@@ -541,6 +570,8 @@ Windows.Engine:DDoSDetection.DebilitatingDDoS:CooloffTime:0=10
 Windows.Engine:/Script/Engine.DemoNetDriver:NetConnectionClassName:0=/Script/Engine.DemoNetConnection
 Windows.Engine:/Script/Engine.DemoNetDriver:DemoSpectatorClass:0=Engine.PlayerController
 Windows.Engine:/Script/Engine.DemoNetDriver:SpawnPrioritySeconds:0=60.0
+Windows.Engine:/Script/Engine.DemoNetDriver:ChannelDefinitions:0=(ChannelName=Control, ClassName=/Script/Engine.ControlChannel, StaticChannelIndex=0, bTickOnCreate=true, bServerOpen=false, bClientOpen=true, bInitialServer=false, bInitialClient=true)
+Windows.Engine:/Script/Engine.DemoNetDriver:ChannelDefinitions:1=(ChannelName=Actor, ClassName=/Script/Engine.ActorChannel, StaticChannelIndex=-1, bTickOnCreate=false, bServerOpen=true, bClientOpen=false, bInitialServer=false, bInitialClient=false)
 Windows.Engine:TextureStreaming:NeverStreamOutTextures:0=False
 Windows.Engine:TextureStreaming:MinTextureResidentMipCount:0=7
 Windows.Engine:TextureStreaming:PoolSize:0=160
@@ -554,21 +585,6 @@ Windows.Engine:TextureStreaming:AllowStreamingLightmaps:0=True
 Windows.Engine:TextureStreaming:UseDynamicStreaming:0=True
 Windows.Engine:TextureStreaming:BoostPlayerTextures:0=3.0
 Windows.Engine:TextureStreaming:PoolSizeVRAMPercentage:0=70
-Windows.Engine:/Script/UnrealEd.EditorEngine:LocalPlayerClassName:0=/Script/Engine.LocalPlayer
-Windows.Engine:/Script/UnrealEd.EditorEngine:GameCommandLine:0=-log
-Windows.Engine:/Script/UnrealEd.EditorEngine:FOVAngle:0=90.000000
-Windows.Engine:/Script/UnrealEd.EditorEngine:GodMode:0=True
-Windows.Engine:/Script/UnrealEd.EditorEngine:UseAxisIndicator:0=True
-Windows.Engine:/Script/UnrealEd.EditorEngine:MatineeCurveDetail:0=0.1
-Windows.Engine:/Script/UnrealEd.EditorEngine:HeightMapExportClassName:0=TerrainHeightMapExporterTextT3D
-Windows.Engine:/Script/UnrealEd.EditorEngine:bGroupingActive:0=true
-Windows.Engine:/Script/UnrealEd.EditorEngine:bCustomCameraAlignEmitter:0=true
-Windows.Engine:/Script/UnrealEd.EditorEngine:CustomCameraAlignEmitterDistance:0=100.0
-Windows.Engine:/Script/UnrealEd.EditorEngine:bDrawSocketsInGMode:0=false
-Windows.Engine:/Script/UnrealEd.EditorEngine:bSmoothFrameRate:0=false
-Windows.Engine:/Script/UnrealEd.EditorEngine:SmoothedFrameRateRange:0=(LowerBound=(Type="ERangeBoundTypesInclusive",Value=5),UpperBound=(Type="ERangeBoundTypesInclusive",Value=120))
-Windows.Engine:/Script/UnrealEd.EditorEngine:UseOldStyleMICEditorGroups:0=true
-Windows.Engine:/Script/UnrealEd.EditorEngine:InEditorGameURLOptions:0=
 Windows.Engine:DevOptions.Shaders:bAllowCompilingThroughWorkers:0=True
 Windows.Engine:DevOptions.Shaders:bAllowAsynchronousShaderCompiling:0=True
 Windows.Engine:DevOptions.Shaders:NumUnusedShaderCompilingThreads:0=3
@@ -580,10 +596,6 @@ Windows.Engine:DevOptions.Shaders:ProcessGameThreadTargetTime:0=.01
 Windows.Engine:DevOptions.Shaders:WorkerTimeToLive:0=20
 Windows.Engine:DevOptions.Shaders:BuildWorkerTimeToLive:0=1200
 Windows.Engine:DevOptions.Shaders:bUseVirtualCores:0=False
-Windows.Engine:DevOptions.Shaders:CookerMemoryUsedInGB:0=49
-Windows.Engine:DevOptions.Shaders:MemoryToLeaveForTheOSInGB:0=3
-Windows.Engine:DevOptions.Shaders:MemoryUsedPerSCWProcessInGB:0=0.4
-Windows.Engine:DevOptions.Debug:ShowSelectedLightmap:0=False
 Windows.Engine:LogFiles:PurgeLogsDays:0=5
 Windows.Engine:LogFiles:MaxLogFilesOnDisk:0=10
 Windows.Engine:LogFiles:LogTimes:0=True
@@ -836,20 +848,20 @@ Windows.Engine:DerivedDataBackendGraph:Root:0=(Type=KeyLength, Length=120, Inner
 Windows.Engine:DerivedDataBackendGraph:AsyncPut:0=(Type=AsyncPut, Inner=Hierarchy)
 Windows.Engine:DerivedDataBackendGraph:Hierarchy:0=(Type=Hierarchical, Inner=Boot, Inner=Pak, Inner=EnginePak, Inner=Local, Inner=Shared)
 Windows.Engine:DerivedDataBackendGraph:Boot:0=(Type=Boot, Filename="%GAMEDIR%DerivedDataCache/Boot.ddc", MaxCacheSize=512)
-Windows.Engine:DerivedDataBackendGraph:Local:0=(Type=FileSystem, ReadOnly=false, Clean=false, Flush=false, PurgeTransient=true, DeleteUnused=true, UnusedFileAge=34, FoldersToClean=-1, Path=../../../Engine/DerivedDataCache, EnvPathOverride=UE-LocalDataCachePath, EditorOverrideSetting=LocalDerivedDataCache)
+Windows.Engine:DerivedDataBackendGraph:Local:0=(Type=FileSystem, ReadOnly=false, Clean=false, Flush=false, PurgeTransient=true, DeleteUnused=true, UnusedFileAge=34, FoldersToClean=-1, Path=%ENGINEDIR%DerivedDataCache, EnvPathOverride=UE-LocalDataCachePath, EditorOverrideSetting=LocalDerivedDataCache)
 Windows.Engine:DerivedDataBackendGraph:Shared:0=(Type=FileSystem, ReadOnly=false, Clean=false, Flush=false, DeleteUnused=true, UnusedFileAge=10, FoldersToClean=10, MaxFileChecksPerSec=1, Path=?EpicDDC, EnvPathOverride=UE-SharedDataCachePath, EditorOverrideSetting=SharedDerivedDataCache)
 Windows.Engine:DerivedDataBackendGraph:AltShared:0=(Type=FileSystem, ReadOnly=true, Clean=false, Flush=false, DeleteUnused=true, UnusedFileAge=23, FoldersToClean=10, MaxFileChecksPerSec=1, Path=?EpicDDC2, EnvPathOverride=UE-SharedDataCachePath2)
 Windows.Engine:DerivedDataBackendGraph:Pak:0=(Type=ReadPak, Filename="%GAMEDIR%DerivedDataCache/DDC.ddp")
-Windows.Engine:DerivedDataBackendGraph:EnginePak:0=(Type=ReadPak, Filename=../../../Engine/DerivedDataCache/DDC.ddp)
+Windows.Engine:DerivedDataBackendGraph:EnginePak:0=(Type=ReadPak, Filename=%ENGINEDIR%DerivedDataCache/DDC.ddp)
 Windows.Engine:DerivedDataBackendGraph_Fill_Seattle:MinimumDaysToKeepFile:0=7
 Windows.Engine:DerivedDataBackendGraph_Fill_Seattle:Root:0=(Type=KeyLength, Length=120, Inner=AsyncPut)
 Windows.Engine:DerivedDataBackendGraph_Fill_Seattle:AsyncPut:0=(Type=AsyncPut, Inner=Hierarchy)
 Windows.Engine:DerivedDataBackendGraph_Fill_Seattle:Hierarchy:0=(Type=Hierarchical, Inner=Boot, Inner=Pak, Inner=EnginePak, Inner=Local, Inner=Seattle)
 Windows.Engine:DerivedDataBackendGraph_Fill_Seattle:Boot:0=(Type=Boot, Filename="%GAMEDIR%DerivedDataCache/Boot.ddc", MaxCacheSize=512)
-Windows.Engine:DerivedDataBackendGraph_Fill_Seattle:Local:0=(Type=FileSystem, ReadOnly=false, Clean=false, Flush=false, PurgeTransient=true, DeleteUnused=true, UnusedFileAge=34, FoldersToClean=-1, Path=../../../Engine/DerivedDataCache)
+Windows.Engine:DerivedDataBackendGraph_Fill_Seattle:Local:0=(Type=FileSystem, ReadOnly=false, Clean=false, Flush=false, PurgeTransient=true, DeleteUnused=true, UnusedFileAge=34, FoldersToClean=-1, Path=%ENGINEDIR%DerivedDataCache)
 Windows.Engine:DerivedDataBackendGraph_Fill_Seattle:Seattle:0=(Type=FileSystem, ReadOnly=false, Clean=false, Flush=false, DeleteUnused=true, UnusedFileAge=23, FoldersToClean=10, MaxFileChecksPerSec=1, Path=?EpicSeaDDC, EnvPathOverride=UE-SharedDataCachePath_Seattle)
 Windows.Engine:DerivedDataBackendGraph_Fill_Seattle:Pak:0=(Type=ReadPak, Filename="%GAMEDIR%DerivedDataCache/DDC.ddp")
-Windows.Engine:DerivedDataBackendGraph_Fill_Seattle:EnginePak:0=(Type=ReadPak, Filename=../../../Engine/DerivedDataCache/DDC.ddp)
+Windows.Engine:DerivedDataBackendGraph_Fill_Seattle:EnginePak:0=(Type=ReadPak, Filename=%ENGINEDIR%DerivedDataCache/DDC.ddp)
 Windows.Engine:InstalledDerivedDataBackendGraph:MinimumDaysToKeepFile:0=7
 Windows.Engine:InstalledDerivedDataBackendGraph:Root:0=(Type=KeyLength, Length=120, Inner=AsyncPut)
 Windows.Engine:InstalledDerivedDataBackendGraph:AsyncPut:0=(Type=AsyncPut, Inner=Hierarchy)
@@ -866,14 +878,14 @@ Windows.Engine:NoShared:Root:0=(Type=KeyLength, Length=120, Inner=AsyncPut)
 Windows.Engine:NoShared:AsyncPut:0=(Type=AsyncPut, Inner=Hierarchy)
 Windows.Engine:NoShared:Hierarchy:0=(Type=Hierarchical, Inner=Boot, Inner=Pak, Inner=Local)
 Windows.Engine:NoShared:Boot:0=(Type=Boot, Filename="%GAMEDIR%DerivedDataCache/Boot.ddc", MaxCacheSize=512)
-Windows.Engine:NoShared:Local:0=(Type=FileSystem, ReadOnly=false, Clean=false, Flush=false, PurgeTransient=true, DeleteUnused=true, UnusedFileAge=34, FoldersToClean=-1, Path=../../../Engine/DerivedDataCache, EnvPathOverride=UE-LocalDataCachePath)
+Windows.Engine:NoShared:Local:0=(Type=FileSystem, ReadOnly=false, Clean=false, Flush=false, PurgeTransient=true, DeleteUnused=true, UnusedFileAge=34, FoldersToClean=-1, Path=%ENGINEDIR%DerivedDataCache, EnvPathOverride=UE-LocalDataCachePath)
 Windows.Engine:NoShared:Pak:0=(Type=ReadPak, Filename="%GAMEDIR%DerivedDataCache/DDC.ddp")
 Windows.Engine:CreatePak:MinimumDaysToKeepFile:0=7
 Windows.Engine:CreatePak:Root:0=(Type=KeyLength, Length=120, Inner=AsyncPut)
 Windows.Engine:CreatePak:AsyncPut:0=(Type=AsyncPut, Inner=Hierarchy)
 Windows.Engine:CreatePak:Hierarchy:0=(Type=Hierarchical, Inner=Boot, Inner=PakWrite, Inner=PakRead, Inner=Local, Inner=Shared)
 Windows.Engine:CreatePak:Boot:0=(Type=Boot, Filename="%GAMEDIR%DerivedDataCache/Boot.ddc", MaxCacheSize=512)
-Windows.Engine:CreatePak:Local:0=(Type=FileSystem, ReadOnly=false, Clean=false, Flush=false, PurgeTransient=true, DeleteUnused=true, UnusedFileAge=34, FoldersToClean=-1, Path=../../../Engine/DerivedDataCache)
+Windows.Engine:CreatePak:Local:0=(Type=FileSystem, ReadOnly=false, Clean=false, Flush=false, PurgeTransient=true, DeleteUnused=true, UnusedFileAge=34, FoldersToClean=-1, Path=%ENGINEDIR%DerivedDataCache)
 Windows.Engine:CreatePak:Shared:0=(Type=FileSystem, ReadOnly=false, Clean=false, Flush=false, DeleteUnused=false, UnusedFileAge=23, FoldersToClean=-1, Path=?EpicDDC, EnvPathOverride=UE-SharedDataCachePath)
 Windows.Engine:CreatePak:AltShared:0=(Type=FileSystem, ReadOnly=true, Clean=false, Flush=false, DeleteUnused=false, UnusedFileAge=23, FoldersToClean=-1, Path=?EpicDDC2, EnvPathOverride=UE-SharedDataCachePath2)
 Windows.Engine:CreatePak:PakRead:0=(Type=ReadPak, Filename="%GAMEDIR%DerivedDataCache/DDC.ddp")
@@ -883,7 +895,7 @@ Windows.Engine:CreateInstalledProjectPak:Root:0=(Type=KeyLength, Length=120, Inn
 Windows.Engine:CreateInstalledProjectPak:AsyncPut:0=(Type=AsyncPut, Inner=Hierarchy)
 Windows.Engine:CreateInstalledProjectPak:Hierarchy:0=(Type=Hierarchical, Inner=Boot, Inner=EnginePak, Inner=PakWrite, Inner=PakRead, Inner=Local, Inner=Shared)
 Windows.Engine:CreateInstalledProjectPak:Boot:0=(Type=Boot, Filename="%GAMEDIR%DerivedDataCache/Boot.ddc", MaxCacheSize=512)
-Windows.Engine:CreateInstalledProjectPak:Local:0=(Type=FileSystem, ReadOnly=false, Clean=false, Flush=false, PurgeTransient=true, DeleteUnused=true, UnusedFileAge=34, FoldersToClean=-1, Path=../../../Engine/DerivedDataCache, EnvPathOverride=UE-LocalDataCachePath)
+Windows.Engine:CreateInstalledProjectPak:Local:0=(Type=FileSystem, ReadOnly=false, Clean=false, Flush=false, PurgeTransient=true, DeleteUnused=true, UnusedFileAge=34, FoldersToClean=-1, Path=%ENGINEDIR%DerivedDataCache, EnvPathOverride=UE-LocalDataCachePath)
 Windows.Engine:CreateInstalledProjectPak:Shared:0=(Type=FileSystem, ReadOnly=false, Clean=false, Flush=false, DeleteUnused=false, UnusedFileAge=23, FoldersToClean=-1, Path=?EpicDDC, EnvPathOverride=UE-SharedDataCachePath)
 Windows.Engine:CreateInstalledProjectPak:AltShared:0=(Type=FileSystem, ReadOnly=true, Clean=false, Flush=false, DeleteUnused=false, UnusedFileAge=23, FoldersToClean=-1, Path=?EpicDDC2, EnvPathOverride=UE-SharedDataCachePath2)
 Windows.Engine:CreateInstalledProjectPak:EnginePak:0=(Type=ReadPak, Filename=../../../Engine/DerivedDataCache/Compressed.ddp, Compressed=true)
@@ -894,16 +906,16 @@ Windows.Engine:CreateInstalledEnginePak:Root:0=(Type=KeyLength, Length=120, Inne
 Windows.Engine:CreateInstalledEnginePak:AsyncPut:0=(Type=AsyncPut, Inner=Hierarchy)
 Windows.Engine:CreateInstalledEnginePak:Hierarchy:0=(Type=Hierarchical, Inner=Boot, Inner=PakWrite, Inner=Local, Inner=Shared)
 Windows.Engine:CreateInstalledEnginePak:Boot:0=(Type=Boot, Filename="%GAMEDIR%DerivedDataCache/Boot.ddc", MaxCacheSize=512)
-Windows.Engine:CreateInstalledEnginePak:Local:0=(Type=FileSystem, ReadOnly=false, Clean=false, Flush=false, PurgeTransient=true, DeleteUnused=true, UnusedFileAge=34, FoldersToClean=-1, Path=../../../Engine/DerivedDataCache, EnvPathOverride=UE-LocalDataCachePath)
+Windows.Engine:CreateInstalledEnginePak:Local:0=(Type=FileSystem, ReadOnly=false, Clean=false, Flush=false, PurgeTransient=true, DeleteUnused=true, UnusedFileAge=34, FoldersToClean=-1, Path=%ENGINEDIR%DerivedDataCache, EnvPathOverride=UE-LocalDataCachePath)
 Windows.Engine:CreateInstalledEnginePak:Shared:0=(Type=FileSystem, ReadOnly=false, Clean=false, Flush=false, DeleteUnused=false, UnusedFileAge=23, FoldersToClean=-1, Path=?EpicDDC, EnvPathOverride=UE-SharedDataCachePath)
 Windows.Engine:CreateInstalledEnginePak:AltShared:0=(Type=FileSystem, ReadOnly=true, Clean=false, Flush=false, DeleteUnused=false, UnusedFileAge=23, FoldersToClean=-1, Path=?EpicDDC2, EnvPathOverride=UE-SharedDataCachePath2)
-Windows.Engine:CreateInstalledEnginePak:PakWrite:0=(Type=WritePak, Filename=../../../Engine/DerivedDataCache/Compressed.ddp, Compressed=true)
+Windows.Engine:CreateInstalledEnginePak:PakWrite:0=(Type=WritePak, Filename=%ENGINEDIR%DerivedDataCache/Compressed.ddp, Compressed=true)
 Windows.Engine:CreateInstalledEnterprisePak:MinimumDaysToKeepFile:0=7
 Windows.Engine:CreateInstalledEnterprisePak:Root:0=(Type=KeyLength, Length=120, Inner=AsyncPut)
 Windows.Engine:CreateInstalledEnterprisePak:AsyncPut:0=(Type=AsyncPut, Inner=Hierarchy)
 Windows.Engine:CreateInstalledEnterprisePak:Hierarchy:0=(Type=Hierarchical, Inner=Boot, Inner=PakWrite, Inner=Local, Inner=Shared)
 Windows.Engine:CreateInstalledEnterprisePak:Boot:0=(Type=Boot, Filename="%GAMEDIR%DerivedDataCache/Boot.ddc", MaxCacheSize=512)
-Windows.Engine:CreateInstalledEnterprisePak:Local:0=(Type=FileSystem, ReadOnly=false, Clean=false, Flush=false, PurgeTransient=true, DeleteUnused=true, UnusedFileAge=34, FoldersToClean=-1, Path=../../../Engine/DerivedDataCache, EnvPathOverride=UE-LocalDataCachePath)
+Windows.Engine:CreateInstalledEnterprisePak:Local:0=(Type=FileSystem, ReadOnly=false, Clean=false, Flush=false, PurgeTransient=true, DeleteUnused=true, UnusedFileAge=34, FoldersToClean=-1, Path=%ENGINEDIR%DerivedDataCache, EnvPathOverride=UE-LocalDataCachePath)
 Windows.Engine:CreateInstalledEnterprisePak:Shared:0=(Type=FileSystem, ReadOnly=false, Clean=false, Flush=false, DeleteUnused=false, UnusedFileAge=23, FoldersToClean=-1, Path=?EpicDDC, EnvPathOverride=UE-SharedDataCachePath)
 Windows.Engine:CreateInstalledEnterprisePak:AltShared:0=(Type=FileSystem, ReadOnly=true, Clean=false, Flush=false, DeleteUnused=false, UnusedFileAge=23, FoldersToClean=-1, Path=?EpicDDC2, EnvPathOverride=UE-SharedDataCachePath2)
 Windows.Engine:CreateInstalledEnterprisePak:PakWrite:0=(Type=WritePak, Filename=../../../Enterprise/DerivedDataCache/Compressed.ddp, Compressed=true)
@@ -911,7 +923,7 @@ Windows.Engine:CreateProjectCache:MinimumDaysToKeepFile:0=7
 Windows.Engine:CreateProjectCache:Root:0=(Type=KeyLength, Length=120, Inner=AsyncPut)
 Windows.Engine:CreateProjectCache:AsyncPut:0=(Type=AsyncPut, Inner=Hierarchy)
 Windows.Engine:CreateProjectCache:Hierarchy:0=(Type=Hierarchical, Inner=Local, Inner=Project, Inner=Shared)
-Windows.Engine:CreateProjectCache:Local:0=(Type=FileSystem, ReadOnly=false, Clean=false, Flush=false, PurgeTransient=true, DeleteUnused=true, UnusedFileAge=34, FoldersToClean=-1, Path=../../../Engine/DerivedDataCache, EnvPathOverride=UE-LocalDataCachePath)
+Windows.Engine:CreateProjectCache:Local:0=(Type=FileSystem, ReadOnly=false, Clean=false, Flush=false, PurgeTransient=true, DeleteUnused=true, UnusedFileAge=34, FoldersToClean=-1, Path=%ENGINEDIR%DerivedDataCache, EnvPathOverride=UE-LocalDataCachePath)
 Windows.Engine:CreateProjectCache:Project:0=(Type=FileSystem, ReadOnly=false, Clean=false, Flush=true, PurgeTransient=true, DeleteUnused=true, UnusedFileAge=34, FoldersToClean=-1, Path=%GAMEDIR%ProjectDerivedData)
 Windows.Engine:CreateProjectCache:Shared:0=(Type=FileSystem, ReadOnly=false, Clean=false, Flush=false, DeleteUnused=false, UnusedFileAge=23, FoldersToClean=-1, Path=?EpicDDC, EnvPathOverride=UE-SharedDataCachePath)
 Windows.Engine:CreateProjectCache:AltShared:0=(Type=FileSystem, ReadOnly=true, Clean=false, Flush=false, DeleteUnused=false, UnusedFileAge=23, FoldersToClean=-1, Path=?EpicDDC2, EnvPathOverride=UE-SharedDataCachePath2)
@@ -1030,6 +1042,7 @@ Windows.Engine:Engine.BufferVisualizationMaterials:WorldNormal:0=(Material="/Eng
 Windows.Engine:Engine.BufferVisualizationMaterials:AmbientOcclusion:0=(Material="/Engine/BufferVisualization/AmbientOcclusion.AmbientOcclusion", Name=LOCTEXT("BaseAmbientOcclusionMat", "Ambient Occlusion"))
 Windows.Engine:Engine.BufferVisualizationMaterials:CustomDepthWorldUnits:0=(Material="/Engine/BufferVisualization/CustomDepthWorldUnits.CustomDepthWorldUnits", Name=LOCTEXT("BaseCustomDepthWorldUnitsMat", "Custom Depth World Units"))
 Windows.Engine:Engine.BufferVisualizationMaterials:SceneDepthWorldUnits:0=(Material="/Engine/BufferVisualization/SceneDepthWorldUnits.SceneDepthWorldUnits", Name=LOCTEXT("BaseSceneDepthWorldUnitsMat", "Scene Depth World Units"))
+Windows.Engine:Engine.BufferVisualizationMaterials:Velocity:0=(Material="/Engine/BufferVisualization/Velocity.Velocity", Name=LOCTEXT("Velocity", "Velocity"))
 Windows.Engine:Engine.BufferVisualizationMaterials:PreTonemapHDRColor:0=(Material="/Engine/BufferVisualization/PreTonemapHDRColor.PreTonemapHDRColor", Name=LOCTEXT("PreTonemapHDRColor", "Pre Tonemap HDR Color"))
 Windows.Engine:Engine.BufferVisualizationMaterials:PostTonemapHDRColor:0=(Material="/Engine/BufferVisualization/PostTonemapHDRColor.PostTonemapHDRColor", Name=LOCTEXT("PostTonemapHDRColor", "Post Tonemap HDR Color"))
 Windows.Engine:DeviceProfileManager:DeviceProfileSelectionModule:0=ExampleDeviceProfileSelector
@@ -1045,6 +1058,12 @@ Windows.Engine:Nadzorca:Arguments:0=-pak
 Windows.Engine:Nadzorca:NumberOfInstances:0=3
 Windows.Engine:Nadzorca:StartingEnginePort:0=5000
 Windows.Engine:Nadzorca:StartingBeaconPort:0=15000
+Windows.Engine:Pak:ExtensionsToNotUsePluginCompression:0=uplugin
+Windows.Engine:Pak:ExtensionsToNotUsePluginCompression:1=upluginmanifest
+Windows.Engine:Pak:ExtensionsToNotUsePluginCompression:2=uproject
+Windows.Engine:Pak:ExtensionsToNotUsePluginCompression:3=ini
+Windows.Engine:Pak:ExtensionsToNotUsePluginCompression:4=icu
+Windows.Engine:Pak:ExtensionsToNotUsePluginCompression:5=res
 Windows.Engine:/Script/GameplayDebugger.GameplayDebuggingReplicator:MaxEQSQueries:0=5
 Windows.Engine:/Script/GameplayDebugger.GameplayDebuggingReplicator:DebugComponentClassName:0=/Script/GameplayDebugger.GameplayDebuggingComponent
 Windows.Engine:/Script/GameplayDebugger.GameplayDebuggingReplicator:DebugComponentHUDClassName:0=/Script/GameplayDebugger.GameplayDebuggingHUDComponent
@@ -1055,6 +1074,7 @@ Windows.Engine:/Script/GameplayDebugger.GameplayDebuggingHUDComponent:DebugInfoS
 Windows.Engine:/Script/GameplayDebugger.GameplayDebuggingHUDComponent:DebugInfoStartY:0=60.0
 Windows.Engine:/Script/IOSRuntimeSettings.IOSRuntimeSettings:bEnableGameCenterSupport:0=False
 Windows.Engine:/Script/IOSRuntimeSettings.IOSRuntimeSettings:bSupportsPortraitOrientation:0=False
+Windows.Engine:/Script/IOSRuntimeSettings.IOSRuntimeSettings:bSupportsITunesFileSharing:0=False
 Windows.Engine:/Script/IOSRuntimeSettings.IOSRuntimeSettings:bSupportsUpsideDownOrientation:0=False
 Windows.Engine:/Script/IOSRuntimeSettings.IOSRuntimeSettings:bSupportsLandscapeLeftOrientation:0=True
 Windows.Engine:/Script/IOSRuntimeSettings.IOSRuntimeSettings:bSupportsLandscapeRightOrientation:0=True
@@ -1070,6 +1090,7 @@ Windows.Engine:/Script/IOSRuntimeSettings.IOSRuntimeSettings:bDevForArmV7S:0=Fal
 Windows.Engine:/Script/IOSRuntimeSettings.IOSRuntimeSettings:bShipForArmV7:0=False
 Windows.Engine:/Script/IOSRuntimeSettings.IOSRuntimeSettings:bShipForArm64:0=True
 Windows.Engine:/Script/IOSRuntimeSettings.IOSRuntimeSettings:bShipForArmV7S:0=False
+Windows.Engine:/Script/IOSRuntimeSettings.IOSRuntimeSettings:bShipForBitcode:0=True
 Windows.Engine:/Script/IOSRuntimeSettings.IOSRuntimeSettings:bTreatRemoteAsSeparateController:0=False
 Windows.Engine:/Script/IOSRuntimeSettings.IOSRuntimeSettings:bAllowRemoteRotation:0=True
 Windows.Engine:/Script/IOSRuntimeSettings.IOSRuntimeSettings:bUseRemoteAsVirtualJoystick:0=True
@@ -1092,11 +1113,14 @@ Windows.Engine:/Script/IOSRuntimeSettings.IOSRuntimeSettings:RSyncUsername:0=
 Windows.Engine:/Script/IOSRuntimeSettings.IOSRuntimeSettings:SSHPrivateKeyOverridePath:0=
 Windows.Engine:/Script/IOSRuntimeSettings.IOSRuntimeSettings:bEnableRemoteNotificationsSupport:0=False
 Windows.Engine:/Script/IOSRuntimeSettings.IOSRuntimeSettings:bEnableCloudKitSupport:0=False
+Windows.Engine:/Script/IOSRuntimeSettings.IOSRuntimeSettings:IOSCloudKitSyncStrategy:0=None
 Windows.Engine:/Script/IOSRuntimeSettings.IOSRuntimeSettings:bGenerateCrashReportSymbols:0=false
 Windows.Engine:/Script/IOSRuntimeSettings.IOSRuntimeSettings:bAutomaticSigning:0=false
 Windows.Engine:/Script/IOSRuntimeSettings.IOSRuntimeSettings:UseFastIntrinsics:0=False
+Windows.Engine:/Script/IOSRuntimeSettings.IOSRuntimeSettings:ForceFloats:0=False
 Windows.Engine:/Script/IOSRuntimeSettings.IOSRuntimeSettings:EnableMathOptimisations:0=True
 Windows.Engine:/Script/IOSRuntimeSettings.IOSRuntimeSettings:MaxShaderLanguageVersion:0=2
+Windows.Engine:/Script/IOSRuntimeSettings.IOSRuntimeSettings:bEnableAdvertisingIdentifier:0=True
 Windows.Engine:/Script/AndroidRuntimeSettings.AndroidRuntimeSettings:SDKAPILevelOverride:0=
 Windows.Engine:/Script/AndroidRuntimeSettings.AndroidRuntimeSettings:NDKAPILevelOverride:0=
 Windows.Engine:/Script/AndroidRuntimeSettings.AndroidRuntimeSettings:bEnableGooglePlaySupport:0=false
@@ -1119,7 +1143,7 @@ Windows.Engine:/Script/AndroidRuntimeSettings.AndroidRuntimeSettings:PackageName
 Windows.Engine:/Script/AndroidRuntimeSettings.AndroidRuntimeSettings:StoreVersion:0=1
 Windows.Engine:/Script/AndroidRuntimeSettings.AndroidRuntimeSettings:VersionDisplayName:0=1.0
 Windows.Engine:/Script/AndroidRuntimeSettings.AndroidRuntimeSettings:MinSDKVersion:0=9
-Windows.Engine:/Script/AndroidRuntimeSettings.AndroidRuntimeSettings:TargetSDKVersion:0=9
+Windows.Engine:/Script/AndroidRuntimeSettings.AndroidRuntimeSettings:TargetSDKVersion:0=26
 Windows.Engine:/Script/AndroidRuntimeSettings.AndroidRuntimeSettings:bEnableGradle:0=true
 Windows.Engine:/Script/AndroidRuntimeSettings.AndroidRuntimeSettings:bEnableLint:0=false
 Windows.Engine:/Script/AndroidRuntimeSettings.AndroidRuntimeSettings:bShowLaunchImage:0=true
@@ -1143,7 +1167,8 @@ Windows.Engine:/Script/AndroidRuntimeSettings.AndroidRuntimeSettings:bBuildWithH
 Windows.Engine:/Script/AndroidRuntimeSettings.AndroidRuntimeSettings:bSaveSymbols:0=false
 Windows.Engine:/Script/AndroidRuntimeSettings.AndroidRuntimeSettings:bAllowControllers:0=True
 Windows.Engine:/Script/AndroidRuntimeSettings.AndroidRuntimeSettings:bAllowIMU:0=True
-Windows.Engine:/Script/LuminPlatformEditor.MagicLeapSDKSettings:MLSDKPath:0=(Path="")
+Windows.Engine:/Script/AndroidRuntimeSettings.AndroidRuntimeSettings:bUseDisplayCutout:0=False
+Windows.Engine:/Script/AndroidRuntimeSettings.AndroidRuntimeSettings:bEnableSnapshots:0=False
 Windows.Engine:/Script/MagicLeap.MagicLeapSettings:bEnableZI:0=False
 Windows.Engine:/Script/MagicLeap.MagicLeapSettings:bUseVulkanForZI:0=True
 Windows.Engine:/Script/LuminRuntimeSettings.LuminRuntimeSettings:PackageName:0=com.YourCompany.[PROJECT]
@@ -1154,11 +1179,13 @@ Windows.Engine:/Script/LuminRuntimeSettings.LuminRuntimeSettings:bProtectedConte
 Windows.Engine:/Script/LuminRuntimeSettings.LuminRuntimeSettings:bUseMobileRendering:0=true
 Windows.Engine:/Script/LuminRuntimeSettings.LuminRuntimeSettings:bBuildWithNvTegraGfxDebugger:0=False
 Windows.Engine:/Script/LuminRuntimeSettings.LuminRuntimeSettings:Certificate:0=(FilePath="")
-Windows.Engine:/Script/LuminRuntimeSettings.LuminRuntimeSettings:IconModelPath:0=(Path="../../Build/Lumin/Resources/Model")
-Windows.Engine:/Script/LuminRuntimeSettings.LuminRuntimeSettings:IconPortalPath:0=(Path="../../Build/Lumin/Resources/Portal")
+Windows.Engine:/Script/LuminRuntimeSettings.LuminRuntimeSettings:IconModelPath:0=(Path="Build/Lumin/Resources/Model")
+Windows.Engine:/Script/LuminRuntimeSettings.LuminRuntimeSettings:IconPortalPath:0=(Path="Build/Lumin/Resources/Portal")
 Windows.Engine:/Script/LuminRuntimeSettings.LuminRuntimeSettings:bUseVulkan:0=true
 Windows.Engine:/Script/LuminRuntimeSettings.LuminRuntimeSettings:VersionCode:0=1
-Windows.Engine:/Script/LuminRuntimeSettings.LuminRuntimeSettings:MinimumOSVersion:0=lumin_1.0
+Windows.Engine:/Script/LuminRuntimeSettings.LuminRuntimeSettings:MinimumAPILevel:0=2
+Windows.Engine:/Script/LuminRuntimeSettings.LuminRuntimeSettings:ControllerTrackingType:0=Tracked
+Windows.Engine:/Script/LuminRuntimeSettings.LuminRuntimeSettings:ControllerTrackingMode:0=CoordinateFrameUID
 Windows.Engine:/Script/LuminRuntimeSettings.LuminRuntimeSettings:AppPrivileges:0=LowLatencyLightwear
 Windows.Engine:/Script/LuminRuntimeSettings.LuminRuntimeSettings:AppPrivileges:1=Internet
 Windows.Engine:/Script/LuminRuntimeSettings.LuminRuntimeSettings:AppPrivileges:2=LocalAreaNetwork
@@ -1172,6 +1199,8 @@ Windows.Engine:/Script/LuminRuntimeSettings.LuminRuntimeSettings:AppPrivileges:9
 Windows.Engine:/Script/LuminRuntimeSettings.LuminRuntimeSettings:AppPrivileges:10=IdentityRead
 Windows.Engine:/Script/LuminRuntimeSettings.LuminRuntimeSettings:AppPrivileges:11=AudioRecognizer
 Windows.Engine:/Script/LuminRuntimeSettings.LuminRuntimeSettings:AppPrivileges:12=VoiceInput
+Windows.Engine:/Script/LuminRuntimeSettings.LuminRuntimeSettings:AppPrivileges:13=ControllerPose
+Windows.Engine:/Script/LuminRuntimeSettings.LuminRuntimeSettings:bRemoveDebugInfo:0=true
 Windows.Engine:/Script/UnrealEd.CookerSettings:DefaultPVRTCQuality:0=1
 Windows.Engine:/Script/UnrealEd.CookerSettings:DefaultASTCQualityBySpeed:0=1
 Windows.Engine:/Script/UnrealEd.CookerSettings:DefaultASTCQualityBySize:0=3
@@ -1215,7 +1244,6 @@ Windows.Engine:/Script/Engine.PhysicsSettings:DefaultFluidFriction:0=0.300000
 Windows.Engine:/Script/Engine.PhysicsSettings:SimulateScratchMemorySize:0=262144
 Windows.Engine:/Script/Engine.PhysicsSettings:RagdollAggregateThreshold:0=4
 Windows.Engine:/Script/Engine.PhysicsSettings:TriangleMeshTriangleMinAreaThreshold:0=5.000000
-Windows.Engine:/Script/Engine.PhysicsSettings:bEnableAsyncScene:0=False
 Windows.Engine:/Script/Engine.PhysicsSettings:bEnableShapeSharing:0=False
 Windows.Engine:/Script/Engine.PhysicsSettings:bEnablePCM:0=True
 Windows.Engine:/Script/Engine.PhysicsSettings:bEnableStabilization:0=False
@@ -1247,21 +1275,23 @@ Windows.Engine:/Script/Engine.PhysicsSettings:bSubsteppingAsync:0=False
 Windows.Engine:/Script/Engine.PhysicsSettings:MaxSubstepDeltaTime:0=0.016667
 Windows.Engine:/Script/Engine.PhysicsSettings:MaxSubsteps:0=6
 Windows.Engine:/Script/Engine.PhysicsSettings:SyncSceneSmoothingFactor:0=0.000000
-Windows.Engine:/Script/Engine.PhysicsSettings:AsyncSceneSmoothingFactor:0=0.990000
 Windows.Engine:/Script/Engine.PhysicsSettings:InitialAverageFrameRate:0=0.016667
 Windows.Engine:/Script/Engine.PhysicsSettings:PhysXTreeRebuildRate:0=10
 Windows.Engine:/Script/Engine.PhysicsSettings:DefaultBroadphaseSettings:0=(bUseMBPOnClient=False,bUseMBPOnServer=False,MBPBounds=(Min=(X=0.000000,Y=0.000000,Z=0.000000),Max=(X=0.000000,Y=0.000000,Z=0.000000),IsValid=0),MBPNumSubdivs=2)
 Windows.Engine:/Script/WindowsTargetPlatform.WindowsTargetSettings:TargetedRHIs:0=PCD3D_SM5
 Windows.Engine:/Script/WindowsTargetPlatform.WindowsTargetSettings:TargetedRHIs:1=PCD3D_SM4
 Windows.Engine:/Script/WindowsTargetPlatform.WindowsTargetSettings:MinimumOSVersion:0=MSOS_Vista
+Windows.Engine:/Script/WindowsMixedRealityRuntimeSettings.WindowsMixedRealityRuntimeSettings:RemoteHoloLensIP:0=
+Windows.Engine:/Script/WindowsMixedRealityRuntimeSettings.WindowsMixedRealityRuntimeSettings:MaxBitrate:0=4000
 Windows.Engine:/Script/MacTargetPlatform.MacTargetSettings:MaxShaderLanguageVersion:0=3
 Windows.Engine:/Script/MacTargetPlatform.MacTargetSettings:TargetedRHIs:0=SF_METAL_SM5
 Windows.Engine:/Script/MacTargetPlatform.MacTargetSettings:UseFastIntrinsics:0=False
+Windows.Engine:/Script/MacTargetPlatform.MacTargetSettings:ForceFloats:0=False
 Windows.Engine:/Script/MacTargetPlatform.MacTargetSettings:EnableMathOptimisations:0=True
 Windows.Engine:HMDPluginPriority:WindowsMixedRealityHMD:0=40
+Windows.Engine:HMDPluginPriority:OpenXRHMD:0=30
 Windows.Engine:HMDPluginPriority:OculusHMD:0=20
 Windows.Engine:HMDPluginPriority:SteamVR:0=10
-Windows.Engine:HMDPluginPriority:OSVR:0=5
 Windows.Engine:/Script/Engine.AISystemBase:AISystemModuleName:0=AIModule
 Windows.Engine:/Script/Engine.AISystemBase:AISystemClassName:0=/Script/AIModule.AISystem
 Windows.Engine:/Script/AIModule.AISystem:PerceptionSystemClassName:0=/Script/AIModule.AIPerceptionSystem
@@ -1286,31 +1316,36 @@ Windows.Engine:GameplayDebuggerSettings:NameForGameView3:0=GameView3
 Windows.Engine:GameplayDebuggerSettings:NameForGameView4:0=GameView4
 Windows.Engine:GameplayDebuggerSettings:NameForGameView5:0=GameView5
 Windows.Engine:/Script/HTML5PlatformEditor.HTML5TargetSettings:Compressed:0=False
-Windows.Engine:/Script/HTML5PlatformEditor.HTML5TargetSettings:HeapSizeDevelopment:0=1024
-Windows.Engine:/Script/HTML5PlatformEditor.HTML5TargetSettings:HeapSizeShipping:0=1024
-Windows.Engine:/Script/HTML5PlatformEditor.HTML5TargetSettings:TargetAsmjs:0=True
-Windows.Engine:/Script/HTML5PlatformEditor.HTML5TargetSettings:TargetWebGL1:0=False
 Windows.Engine:/Script/HTML5PlatformEditor.HTML5TargetSettings:EnableIndexedDB:0=False
 Windows.Engine:/Script/HTML5PlatformEditor.HTML5TargetSettings:EnableSIMD:0=False
-Windows.Engine:/Script/HTML5PlatformEditor.HTML5TargetSettings:EnableMultithreading:0=False
 Windows.Engine:/Script/HTML5PlatformEditor.HTML5TargetSettings:DeployServerPort:0=53501
 Windows.Engine:/Script/HTML5PlatformEditor.HTML5TargetSettings:EnableTracing:0=False
 Windows.Engine:/Script/HTML5PlatformEditor.HTML5TargetSettings:CanvasScalingMode:0=Aspect
-Windows.Engine:/Script/HTML5PlatformEditor.HTML5Browsers:BrowserLauncher:0=(BrowserName="Nightly(64bit)", BrowserPath=(FilePath="C/Program Files/Nightly/firefox.exe"))
-Windows.Engine:/Script/HTML5PlatformEditor.HTML5Browsers:BrowserLauncher:1=(BrowserName="Nightly",        BrowserPath=(FilePath="C/Program Files (x86)/Nightly/firefox.exe"))
-Windows.Engine:/Script/HTML5PlatformEditor.HTML5Browsers:BrowserLauncher:2=(BrowserName="Firefox(64bit)", BrowserPath=(FilePath="C/Program Files/Mozilla Firefox/firefox.exe"))
-Windows.Engine:/Script/HTML5PlatformEditor.HTML5Browsers:BrowserLauncher:3=(BrowserName="Firefox",        BrowserPath=(FilePath="C/Program Files (x86)/Mozilla Firefox/firefox.exe"))
-Windows.Engine:/Script/HTML5PlatformEditor.HTML5Browsers:BrowserLauncher:4=(BrowserName="Chrome",         BrowserPath=(FilePath="C/Program Files (x86)/Google/Chrome/Application/chrome.exe"))
-Windows.Engine:/Script/HTML5PlatformEditor.HTML5Browsers:BrowserLauncher:5=(BrowserName="Safari",  BrowserPath=(FilePath="/Applications/Safari.app"))
-Windows.Engine:/Script/HTML5PlatformEditor.HTML5Browsers:BrowserLauncher:6=(BrowserName="Firefox", BrowserPath=(FilePath="/Applications/Firefox.app"))
-Windows.Engine:/Script/HTML5PlatformEditor.HTML5Browsers:BrowserLauncher:7=(BrowserName="Chrome",  BrowserPath=(FilePath="/Applications/Google Chrome.app"))
-Windows.Engine:/Script/HTML5PlatformEditor.HTML5Browsers:BrowserLauncher:8=(BrowserName="Firefox", BrowserPath=(FilePath="/usr/bin/firefox"))
-Windows.Engine:/Script/HTML5PlatformEditor.HTML5Browsers:BrowserLauncher:9=(BrowserName="Chrome", BrowserPath=(FilePath="/usr/bin/google-chrome"))
-Windows.Engine:/Script/HTML5PlatformEditor.HTML5Browsers:BrowserLauncher:10=(BrowserName="Chromium", BrowserPath=(FilePath="/usr/bin/chromium-browser"))
+Windows.Engine:/Script/HTML5PlatformEditor.HTML5TargetSettings:EnableMultithreading:0=False
+Windows.Engine:/Script/HTML5PlatformEditor.HTML5TargetSettings:OffscreenCanvas:0=False
+Windows.Engine:/Script/HTML5PlatformEditor.HTML5TargetSettings:LLVMWasmBackend:0=False
+Windows.Engine:/Script/HTML5PlatformEditor.HTML5Browsers:BrowserLauncher:0=(BrowserName="FF Nightly(32bit)", BrowserPath=(FilePath="C/Program Files (x86)/Firefox Nightly/firefox.exe"))
+Windows.Engine:/Script/HTML5PlatformEditor.HTML5Browsers:BrowserLauncher:1=(BrowserName="FF Dev(32bit)",     BrowserPath=(FilePath="C/Program Files (x86)/Firefox Developer Edition/firefox.exe"))
+Windows.Engine:/Script/HTML5PlatformEditor.HTML5Browsers:BrowserLauncher:2=(BrowserName="Firefox(32bit)",    BrowserPath=(FilePath="C/Program Files (x86)/Mozilla Firefox/firefox.exe"))
+Windows.Engine:/Script/HTML5PlatformEditor.HTML5Browsers:BrowserLauncher:3=(BrowserName="FF Nightly",        BrowserPath=(FilePath="C/Program Files/Firefox Nightly/firefox.exe"))
+Windows.Engine:/Script/HTML5PlatformEditor.HTML5Browsers:BrowserLauncher:4=(BrowserName="FF Dev",            BrowserPath=(FilePath="C/Program Files/Firefox Developer Edition/firefox.exe"))
+Windows.Engine:/Script/HTML5PlatformEditor.HTML5Browsers:BrowserLauncher:5=(BrowserName="Firefox",           BrowserPath=(FilePath="C/Program Files/Mozilla Firefox/firefox.exe"))
+Windows.Engine:/Script/HTML5PlatformEditor.HTML5Browsers:BrowserLauncher:6=(BrowserName="FF Nightly(32bit)", BrowserPath=(FilePath="C/Program Files (x86)/Nightly/firefox.exe"))
+Windows.Engine:/Script/HTML5PlatformEditor.HTML5Browsers:BrowserLauncher:7=(BrowserName="FF Nightly",        BrowserPath=(FilePath="C/Program Files/Nightly/firefox.exe"))
+Windows.Engine:/Script/HTML5PlatformEditor.HTML5Browsers:BrowserLauncher:8=(BrowserName="Chrome",            BrowserPath=(FilePath="C/Program Files (x86)/Google/Chrome/Application/chrome.exe"))
+Windows.Engine:/Script/HTML5PlatformEditor.HTML5Browsers:BrowserLauncher:9=(BrowserName="Canary",            BrowserPath=(FilePath="C/Users/your_username/AppData/Local/Google/Chrome SxS/Application/chrome.exe"))
+Windows.Engine:/Script/HTML5PlatformEditor.HTML5Browsers:BrowserLauncher:10=(BrowserName="Safari",  BrowserPath=(FilePath="/Applications/Safari.app"))
+Windows.Engine:/Script/HTML5PlatformEditor.HTML5Browsers:BrowserLauncher:11=(BrowserName="Firefox", BrowserPath=(FilePath="/Applications/Firefox.app"))
+Windows.Engine:/Script/HTML5PlatformEditor.HTML5Browsers:BrowserLauncher:12=(BrowserName="Chrome",  BrowserPath=(FilePath="/Applications/Google Chrome.app"))
+Windows.Engine:/Script/HTML5PlatformEditor.HTML5Browsers:BrowserLauncher:13=(BrowserName="Firefox", BrowserPath=(FilePath="/usr/bin/firefox"))
+Windows.Engine:/Script/HTML5PlatformEditor.HTML5Browsers:BrowserLauncher:14=(BrowserName="Chrome", BrowserPath=(FilePath="/usr/bin/google-chrome"))
+Windows.Engine:/Script/HTML5PlatformEditor.HTML5Browsers:BrowserLauncher:15=(BrowserName="Chromium", BrowserPath=(FilePath="/usr/bin/chromium-browser"))
+Windows.Engine:Browser:bForceMessageLoop:0=true
 Windows.Engine:/Script/HTML5Networking.WebSocketNetDriver:AllowPeerConnections:0=False
 Windows.Engine:/Script/HTML5Networking.WebSocketNetDriver:AllowPeerVoice:0=False
 Windows.Engine:/Script/HTML5Networking.WebSocketNetDriver:ConnectionTimeout:0=60.0
 Windows.Engine:/Script/HTML5Networking.WebSocketNetDriver:InitialConnectTimeout:0=120.0
+Windows.Engine:/Script/HTML5Networking.WebSocketNetDriver:RecentlyDisconnectedTrackingTime:0=180
 Windows.Engine:/Script/HTML5Networking.WebSocketNetDriver:AckTimeout:0=10.0
 Windows.Engine:/Script/HTML5Networking.WebSocketNetDriver:KeepAliveTime:0=20.2
 Windows.Engine:/Script/HTML5Networking.WebSocketNetDriver:MaxClientRate:0=15000
@@ -1341,6 +1376,7 @@ Windows.Engine:/Script/Engine.SkeletalMeshLODSettings:LODGroups:0=(ScreenSize=(D
 Windows.Engine:/Script/Engine.SkeletalMeshLODSettings:LODGroups:1=(ScreenSize=(Default=.3,PerPlatform=()),ReductionSettings=(NumOfTrianglesPercentage=.25))
 Windows.Engine:/Script/Engine.SkeletalMeshLODSettings:LODGroups:2=(ScreenSize=(Default=.15,PerPlatform=()),ReductionSettings=(NumOfTrianglesPercentage=.125))
 Windows.Engine:/Script/Engine.SkeletalMeshLODSettings:LODGroups:3=(ScreenSize=(Default=.1,PerPlatform=()),ReductionSettings=(NumOfTrianglesPercentage=.06))
+Windows.Engine:/Script/Engine.PlayerCameraManager:ServerUpdateCameraTimeout:0=2.0
 Windows.Engine:/Script/CinematicCamera.CineCameraComponent:FilmbackPresets:0=(Name="169 Film",FilmbackSettings=(SensorWidth=24.892,SensorHeight=14.002))
 Windows.Engine:/Script/CinematicCamera.CineCameraComponent:FilmbackPresets:1=(Name="169 Digital Film",FilmbackSettings=(SensorWidth=23.66,SensorHeight=13.3))
 Windows.Engine:/Script/CinematicCamera.CineCameraComponent:FilmbackPresets:2=(Name="169 DSLR",FilmbackSettings=(SensorWidth=36,SensorHeight=20.25))
@@ -1375,6 +1411,7 @@ Windows.Engine:CrashReportClient:bIsAllowedToCloseWithoutSending:0=true
 Windows.Engine:CrashReportClient:CrashConfigPurgeDays:0=2
 Windows.Engine:SteamVR.Settings:HMDWornMovementThreshold:0=50.0
 Windows.Engine:/Script/Engine.AnimationSettings:bStripAnimationDataOnDedicatedServer:0=False
+Windows.Engine:Animation.DefaultObjectSettings:CurveCompressionSettings:0=/Engine/Animation/DefaultAnimCurveCompressionSettings
 Windows.Engine:/Script/Engine.MeshSimplificationSettings:r.MeshReductionModule:0=QuadricMeshReduction
 Windows.Engine:/Script/ClassViewer.ClassViewerProjectSettings:InternalOnlyPaths:0=(Path="/Engine/VREditor")
 Windows.Engine:/Script/ClassViewer.ClassViewerProjectSettings:InternalOnlyPaths:1=(Path="/Engine/Sequencer")
@@ -1387,6 +1424,8 @@ Windows.Engine:EngineSessionManager:AllowWatchdogDetectHangs:0=false
 Windows.Engine:EngineSessionManager:WatchdogMinimumHangSeconds:0=120
 Windows.Engine:/Script/LevelSequence.LevelSequence:DefaultCompletionMode:0=RestoreState
 Windows.Engine:PlatformCrypto:PlatformRequiresDataCrypto:0=True
+Windows.Engine:PlatformCrypto:PakSigningRequired:0=True
+Windows.Engine:PlatformCrypto:PakEncryptionRequired:0=True
 Windows.Engine:/Script/AppleARKit.AppleARKitSettings:bEnableLiveLinkForFaceTracking:0=true
 Windows.Engine:/Script/AppleARKit.AppleARKitSettings:LiveLinkPublishingPort:0=11111
 Windows.Engine:/Script/Engine.RendererSettings:r.GPUCrashDebugging:0=False
@@ -1511,27 +1550,27 @@ Windows.Engine:/Script/HardwareTargeting.HardwareTargetingSettings:TargetedHardw
 Windows.Engine:/Script/HardwareTargeting.HardwareTargetingSettings:AppliedTargetedHardwareClass:0=Desktop
 Windows.Engine:/Script/HardwareTargeting.HardwareTargetingSettings:DefaultGraphicsPerformance:0=Scalable
 Windows.Engine:/Script/HardwareTargeting.HardwareTargetingSettings:AppliedDefaultGraphicsPerformance:0=Scalable
-Engine:/Script/EngineSettings.GameMapsSettings:GameInstanceClass:0=/Script/Engine.GameInstance
+Engine:/Script/EngineSettings.GameMapsSettings:GameInstanceClass:0=/Game/Blueprints/Framework/BP_GameInstance.BP_GameInstance_C
 Engine:/Script/EngineSettings.GameMapsSettings:GameDefaultMap:0=/Game/Maps/LVL_ACCDClient.LVL_ACCDClient
 Engine:/Script/EngineSettings.GameMapsSettings:ServerDefaultMap:0=/Engine/Maps/Entry
 Engine:/Script/EngineSettings.GameMapsSettings:GlobalDefaultGameMode:0=/Script/Engine.GameModeBase
-Mac.Engine:/Script/EngineSettings.GameMapsSettings:GameInstanceClass:0=/Script/Engine.GameInstance
+Mac.Engine:/Script/EngineSettings.GameMapsSettings:GameInstanceClass:0=/Game/Blueprints/Framework/BP_GameInstance.BP_GameInstance_C
 Mac.Engine:/Script/EngineSettings.GameMapsSettings:GameDefaultMap:0=/Game/Maps/LVL_ACCDClient.LVL_ACCDClient
 Mac.Engine:/Script/EngineSettings.GameMapsSettings:ServerDefaultMap:0=/Engine/Maps/Entry
 Mac.Engine:/Script/EngineSettings.GameMapsSettings:GlobalDefaultGameMode:0=/Script/Engine.GameModeBase
-Android.Engine:/Script/EngineSettings.GameMapsSettings:GameInstanceClass:0=/Script/Engine.GameInstance
+Android.Engine:/Script/EngineSettings.GameMapsSettings:GameInstanceClass:0=/Game/Blueprints/Framework/BP_GameInstance.BP_GameInstance_C
 Android.Engine:/Script/EngineSettings.GameMapsSettings:GameDefaultMap:0=/Game/Maps/LVL_ACCDClient.LVL_ACCDClient
 Android.Engine:/Script/EngineSettings.GameMapsSettings:ServerDefaultMap:0=/Engine/Maps/Entry
 Android.Engine:/Script/EngineSettings.GameMapsSettings:GlobalDefaultGameMode:0=/Script/Engine.GameModeBase
-HTML5.Engine:/Script/EngineSettings.GameMapsSettings:GameInstanceClass:0=/Script/Engine.GameInstance
+HTML5.Engine:/Script/EngineSettings.GameMapsSettings:GameInstanceClass:0=/Game/Blueprints/Framework/BP_GameInstance.BP_GameInstance_C
 HTML5.Engine:/Script/EngineSettings.GameMapsSettings:GameDefaultMap:0=/Game/Maps/LVL_ACCDClient.LVL_ACCDClient
 HTML5.Engine:/Script/EngineSettings.GameMapsSettings:ServerDefaultMap:0=/Engine/Maps/Entry
 HTML5.Engine:/Script/EngineSettings.GameMapsSettings:GlobalDefaultGameMode:0=/Script/Engine.GameModeBase
-IOS.Engine:/Script/EngineSettings.GameMapsSettings:GameInstanceClass:0=/Script/Engine.GameInstance
+IOS.Engine:/Script/EngineSettings.GameMapsSettings:GameInstanceClass:0=/Game/Blueprints/Framework/BP_GameInstance.BP_GameInstance_C
 IOS.Engine:/Script/EngineSettings.GameMapsSettings:GameDefaultMap:0=/Game/Maps/LVL_ACCDClient.LVL_ACCDClient
 IOS.Engine:/Script/EngineSettings.GameMapsSettings:ServerDefaultMap:0=/Engine/Maps/Entry
 IOS.Engine:/Script/EngineSettings.GameMapsSettings:GlobalDefaultGameMode:0=/Script/Engine.GameModeBase
-Linux.Engine:/Script/EngineSettings.GameMapsSettings:GameInstanceClass:0=/Script/Engine.GameInstance
+Linux.Engine:/Script/EngineSettings.GameMapsSettings:GameInstanceClass:0=/Game/Blueprints/Framework/BP_GameInstance.BP_GameInstance_C
 Linux.Engine:/Script/EngineSettings.GameMapsSettings:GameDefaultMap:0=/Game/Maps/LVL_ACCDClient.LVL_ACCDClient
 Linux.Engine:/Script/EngineSettings.GameMapsSettings:ServerDefaultMap:0=/Engine/Maps/Entry
 Linux.Engine:/Script/EngineSettings.GameMapsSettings:GlobalDefaultGameMode:0=/Script/Engine.GameModeBase
@@ -1556,8 +1595,11 @@ Windows.Input:/Script/Engine.InputSettings:AxisConfig:3=(AxisKeyName="Gamepad_Ri
 Windows.Input:/Script/Engine.InputSettings:AxisConfig:4=(AxisKeyName="MouseX",AxisProperties=(DeadZone=0.f,Exponent=1.f,Sensitivity=0.07f))
 Windows.Input:/Script/Engine.InputSettings:AxisConfig:5=(AxisKeyName="MouseY",AxisProperties=(DeadZone=0.f,Exponent=1.f,Sensitivity=0.07f))
 Windows.Input:/Script/Engine.Console:HistoryBuffer:0=stat unit
+Windows.Input:/Script/Engine.Console:HistoryBuffer:1=r.FullScreenMode
+Windows.Input:/Script/Engine.Console:HistoryBuffer:2=r.FullScreenMode 1
+Windows.Input:/Script/Engine.Console:HistoryBuffer:3=r.FullScreenMode 2
 Windows.Input:/Script/Engine.Console:HistoryBot:0=-1
-Windows.Input:/Script/Engine.PlayerInput:DebugExecBindings:0=(Key=F11,Command="LevelEditor.ToggleImmersive")
+Windows.Input:/Script/Engine.PlayerInput:DebugExecBindings:0=(Key=F11,Command="LevelEditor.ToggleImmersive", bIgnoreCtrl=True, bIgnoreAlt=True)
 Windows.Input:/Script/Engine.PlayerInput:DebugExecBindings:1=(Key=F11,Command="MainFrame.ToggleFullscreen",Shift=True)
 Windows.Input:/Script/Engine.PlayerInput:DebugExecBindings:2=(Key=F1,Command="viewmode wireframe", bIgnoreShift=True)
 Windows.Input:/Script/Engine.PlayerInput:DebugExecBindings:3=(Key=F2,Command="viewmode unlit")
@@ -1637,77 +1679,84 @@ Windows.Input:/Script/EngineSettings.ConsoleSettings:ManualAutoCompleteList:58=(
 Windows.Input:/Script/EngineSettings.ConsoleSettings:ManualAutoCompleteList:59=(Command="Stat splitscreen",Desc=)
 Windows.Input:/Script/EngineSettings.ConsoleSettings:ManualAutoCompleteList:60=(Command="MemReport",Desc="Outputs memory stats to a profile file. -Full gives more data, -Log outputs to the log")
 Windows.Input:/Script/EngineSettings.ConsoleSettings:ManualAutoCompleteList:61=(Command="ListTextures",Desc="Lists all loaded textures and their current memory footprint")
-Windows.Input:/Script/EngineSettings.ConsoleSettings:ManualAutoCompleteList:62=(Command="ListStreamingTextures",Desc="Lists info all streaming textures")
-Windows.Input:/Script/EngineSettings.ConsoleSettings:ManualAutoCompleteList:63=(Command="InvestigateTexture",Desc="Shows streaming info about the specified texture")
-Windows.Input:/Script/EngineSettings.ConsoleSettings:ManualAutoCompleteList:64=(Command="RestartLevel",Desc="Restarts the level")
-Windows.Input:/Script/EngineSettings.ConsoleSettings:ManualAutoCompleteList:65=(Command="Module List",Desc="Lists all known modules")
-Windows.Input:/Script/EngineSettings.ConsoleSettings:ManualAutoCompleteList:66=(Command="Module Load",Desc="Attempts to load the specified module name")
-Windows.Input:/Script/EngineSettings.ConsoleSettings:ManualAutoCompleteList:67=(Command="Module Unload",Desc="Unloads the specified module name")
-Windows.Input:/Script/EngineSettings.ConsoleSettings:ManualAutoCompleteList:68=(Command="Module Reload",Desc="Reloads the specified module name, unloading it first if needed")
-Windows.Input:/Script/EngineSettings.ConsoleSettings:ManualAutoCompleteList:69=(Command="Module Recompile",Desc="Attempts to recompile a module, first unloading it if needed")
-Windows.Input:/Script/EngineSettings.ConsoleSettings:ManualAutoCompleteList:70=(Command="HotReload",Desc="<UObject DLL Hot Reload> Attempts to recompile a UObject DLL and reload it on the fly")
-Windows.Input:/Script/EngineSettings.ConsoleSettings:ManualAutoCompleteList:71=(Command="ListSounds",Desc="Lists all the loaded sounds and their memory footprint")
-Windows.Input:/Script/EngineSettings.ConsoleSettings:ManualAutoCompleteList:72=(Command="ListWaves",Desc="List the WaveInstances and whether they have a source")
-Windows.Input:/Script/EngineSettings.ConsoleSettings:ManualAutoCompleteList:73=(Command="ListSoundClasses",Desc="Lists a summary of loaded sound collated by class")
-Windows.Input:/Script/EngineSettings.ConsoleSettings:ManualAutoCompleteList:74=(Command="ListAudioComponents",Desc="Dumps a detailed list of all AudioComponent objects")
-Windows.Input:/Script/EngineSettings.ConsoleSettings:ManualAutoCompleteList:75=(Command="ListSoundDurations",Desc=)
-Windows.Input:/Script/EngineSettings.ConsoleSettings:ManualAutoCompleteList:76=(Command="PlaySoundCue",Desc="Lists a summary of loaded sound collated by class")
-Windows.Input:/Script/EngineSettings.ConsoleSettings:ManualAutoCompleteList:77=(Command="PlaySoundWave",Desc=)
-Windows.Input:/Script/EngineSettings.ConsoleSettings:ManualAutoCompleteList:78=(Command="SetBaseSoundMix",Desc="<MixName>")
-Windows.Input:/Script/EngineSettings.ConsoleSettings:ManualAutoCompleteList:79=(Command="DisableLowPassFilter",Desc=)
-Windows.Input:/Script/EngineSettings.ConsoleSettings:ManualAutoCompleteList:80=(Command="DisableEQFilter",Desc=)
-Windows.Input:/Script/EngineSettings.ConsoleSettings:ManualAutoCompleteList:81=(Command="IsolateDryAudio",Desc=)
-Windows.Input:/Script/EngineSettings.ConsoleSettings:ManualAutoCompleteList:82=(Command="IsolateReverb",Desc=)
-Windows.Input:/Script/EngineSettings.ConsoleSettings:ManualAutoCompleteList:83=(Command="ResetSoundState",Desc="Resets volumes to default and removes test filters")
-Windows.Input:/Script/EngineSettings.ConsoleSettings:ManualAutoCompleteList:84=(Command="DisableAllScreenMessages",Desc="Disables all on-screen warnings/messages")
-Windows.Input:/Script/EngineSettings.ConsoleSettings:ManualAutoCompleteList:85=(Command="EnableAllScreenMessages",Desc="Enables all on-screen warnings/messages")
-Windows.Input:/Script/EngineSettings.ConsoleSettings:ManualAutoCompleteList:86=(Command="ToggleAllScreenMessages",Desc="Toggles display state of all on-screen warnings/messages")
-Windows.Input:/Script/EngineSettings.ConsoleSettings:ManualAutoCompleteList:87=(Command="ToggleAsyncCompute",Desc="Toggles AsyncCompute for platforms that have it")
-Windows.Input:/Script/EngineSettings.ConsoleSettings:ManualAutoCompleteList:88=(Command="ToggleRenderingThread",Desc="Toggles the rendering thread for platforms that have it")
-Windows.Input:/Script/EngineSettings.ConsoleSettings:ManualAutoCompleteList:89=(Command="CaptureMode",Desc="Toggles display state of all on-screen warnings/messages")
-Windows.Input:/Script/EngineSettings.ConsoleSettings:ManualAutoCompleteList:90=(Command="ShowDebug None",Desc="Toggles ShowDebug w/ current debug type selection")
-Windows.Input:/Script/EngineSettings.ConsoleSettings:ManualAutoCompleteList:91=(Command="ShowDebug Reset",Desc="Turns off ShowDebug, and clears debug type selection")
-Windows.Input:/Script/EngineSettings.ConsoleSettings:ManualAutoCompleteList:92=(Command="ShowDebug NET",Desc=)
-Windows.Input:/Script/EngineSettings.ConsoleSettings:ManualAutoCompleteList:93=(Command="ShowDebug PHYSICS",Desc=)
-Windows.Input:/Script/EngineSettings.ConsoleSettings:ManualAutoCompleteList:94=(Command="ShowDebug COLLISION",Desc=)
-Windows.Input:/Script/EngineSettings.ConsoleSettings:ManualAutoCompleteList:95=(Command="ShowDebug AI",Desc=)
-Windows.Input:/Script/EngineSettings.ConsoleSettings:ManualAutoCompleteList:96=(Command="ShowDebug CAMERA",Desc=)
-Windows.Input:/Script/EngineSettings.ConsoleSettings:ManualAutoCompleteList:97=(Command="ShowDebug WEAPON",Desc=)
-Windows.Input:/Script/EngineSettings.ConsoleSettings:ManualAutoCompleteList:98=(Command="ShowDebug ANIMATION",Desc="Toggles display state of animation debug data")
-Windows.Input:/Script/EngineSettings.ConsoleSettings:ManualAutoCompleteList:99=(Command="ShowDebug BONES",Desc="Toggles display of skeletalmesh bones")
-Windows.Input:/Script/EngineSettings.ConsoleSettings:ManualAutoCompleteList:100=(Command="ShowDebug INPUT",Desc=)
-Windows.Input:/Script/EngineSettings.ConsoleSettings:ManualAutoCompleteList:101=(Command="ShowDebug FORCEFEEDBACK",Desc="Toggles display of current force feedback values and what is contributing to that calculation")
-Windows.Input:/Script/EngineSettings.ConsoleSettings:ManualAutoCompleteList:102=(Command="ShowDebugToggleSubCategory 3DBONES",Desc="With ShowDebug Bones Toggles bone rendering between single lines and a more complex 3D model per bone")
-Windows.Input:/Script/EngineSettings.ConsoleSettings:ManualAutoCompleteList:103=(Command="ShowDebugToggleSubCategory SYNCGROUPS",Desc="With ShowDebug Animation Toggles display of sync group data")
-Windows.Input:/Script/EngineSettings.ConsoleSettings:ManualAutoCompleteList:104=(Command="ShowDebugToggleSubCategory MONTAGES",Desc="With ShowDebug Animation Toggles display of montage data")
-Windows.Input:/Script/EngineSettings.ConsoleSettings:ManualAutoCompleteList:105=(Command="ShowDebugToggleSubCategory GRAPH",Desc="With ShowDebug Animation Toggles display of animation blueprint graph")
-Windows.Input:/Script/EngineSettings.ConsoleSettings:ManualAutoCompleteList:106=(Command="ShowDebugToggleSubCategory CURVES",Desc="With ShowDebug Animation Toggles display of curve data")
-Windows.Input:/Script/EngineSettings.ConsoleSettings:ManualAutoCompleteList:107=(Command="ShowDebugToggleSubCategory NOTIFIES",Desc="With ShowDebug Animation Toggles display of notify data")
-Windows.Input:/Script/EngineSettings.ConsoleSettings:ManualAutoCompleteList:108=(Command="ShowDebugToggleSubCategory FULLGRAPH",Desc="With ShowDebug Animation Toggles graph display between active nodes only and all nodes")
-Windows.Input:/Script/EngineSettings.ConsoleSettings:ManualAutoCompleteList:109=(Command="ShowDebugToggleSubCategory FULLBLENDSPACEDISPLAY",Desc="With ShowDebug Animation Toggles display of sample blend weights on blendspaces")
-Windows.Input:/Script/EngineSettings.ConsoleSettings:ManualAutoCompleteList:110=(Command="ShowDebugForReticleTargetToggle ",Desc="<DesiredClass> Toggles 'ShowDebug' from showing debug info between reticle target actor (of subclass <DesiredClass>) and camera view target")
-Windows.Input:/Script/EngineSettings.ConsoleSettings:ManualAutoCompleteList:111=(Command="Stat SOUNDMIXES",Desc="Shows active SoundMixes")
-Windows.Input:/Script/EngineSettings.ConsoleSettings:ManualAutoCompleteList:112=(Command="Stat SOUNDWAVES",Desc="Shows active SoundWaves")
-Windows.Input:/Script/EngineSettings.ConsoleSettings:ManualAutoCompleteList:113=(Command="Stat SOUNDCUES",Desc="Shows active SoundCues")
-Windows.Input:/Script/EngineSettings.ConsoleSettings:ManualAutoCompleteList:114=(Command="Stat SOUNDS",Desc="<?> <sort=distance|class|name|waves|default> <-debug> <off> Shows active SoundCues and SoundWaves")
-Windows.Input:/Script/EngineSettings.ConsoleSettings:ManualAutoCompleteList:115=(Command="StartMovieCapture",Desc=)
-Windows.Input:/Script/EngineSettings.ConsoleSettings:ManualAutoCompleteList:116=(Command="StopMovieCapture",Desc=)
-Windows.Input:/Script/EngineSettings.ConsoleSettings:ManualAutoCompleteList:117=(Command="TraceTag",Desc="Draw traces that use the specified tag")
-Windows.Input:/Script/EngineSettings.ConsoleSettings:ManualAutoCompleteList:118=(Command="TraceTagAll",Desc="Draw all scene queries regardless of the trace tag")
-Windows.Input:/Script/EngineSettings.ConsoleSettings:ManualAutoCompleteList:119=(Command="VisLog",Desc="Launches Log Visualizer tool")
-Windows.Input:/Script/EngineSettings.ConsoleSettings:ManualAutoCompleteList:120=(Command="CycleNavDrawn",Desc="Cycles through navigation data (navmeshes for example) to draw one at a time")
-Windows.Input:/Script/EngineSettings.ConsoleSettings:ManualAutoCompleteList:121=(Command="Log ",Desc="<category> <level> Change verbosity level for a log category")
-Windows.Input:/Script/EngineSettings.ConsoleSettings:ManualAutoCompleteList:122=(Command="Log list",Desc="<search string> Search for log categories")
-Windows.Input:/Script/EngineSettings.ConsoleSettings:ManualAutoCompleteList:123=(Command="Log reset",Desc="Undo any changes to log verbosity")
-Windows.Input:/Script/EngineSettings.ConsoleSettings:ManualAutoCompleteList:124=(Command="RecordAnimation ActorName AnimName",Desc="Record animation for a specified actor to the specified file")
-Windows.Input:/Script/EngineSettings.ConsoleSettings:ManualAutoCompleteList:125=(Command="StopRecordingAnimation All",Desc="Stop all recording animations")
-Windows.Input:/Script/EngineSettings.ConsoleSettings:ManualAutoCompleteList:126=(Command="RecordSequence Filter ActorOrClassName",Desc="Record a level sequence from gameplay. Filter=<All|Actor|Class>")
-Windows.Input:/Script/EngineSettings.ConsoleSettings:ManualAutoCompleteList:127=(Command="StopRecordingSequence",Desc="Stop recording the current sequence. Only one sequence recording can be active at one time.")
-Windows.Input:/Script/EngineSettings.ConsoleSettings:ManualAutoCompleteList:128=(Command="FreezeRendering",Desc="Toggle freezing of most aspects of rendering (such as visibility calculations), useful in conjunction with ToggleDebugCamera to fly around and see how frustum and occlusion culling is working")
-Windows.Input:/Script/EngineSettings.ConsoleSettings:ManualAutoCompleteList:129=(Command="ProfileGPU",Desc="Profile one frame of rendering commands sent to the GPU")
-Windows.Input:/Script/EngineSettings.ConsoleSettings:ManualAutoCompleteList:130=(Command="Automation",Desc="Run an automation command (e.g., Automation RunTests TestName)")
-Windows.Input:/Script/EngineSettings.ConsoleSettings:ManualAutoCompleteList:131=(Command="CsvProfile Start",Desc="Start CSV profiling.")
-Windows.Input:/Script/EngineSettings.ConsoleSettings:ManualAutoCompleteList:132=(Command="CsvProfile Stop",Desc="Stop CSV profiling.")
+Windows.Input:/Script/EngineSettings.ConsoleSettings:ManualAutoCompleteList:62=(Command="ListStreamingTextures",Desc="Lists info for all streaming textures")
+Windows.Input:/Script/EngineSettings.ConsoleSettings:ManualAutoCompleteList:63=(Command="ListAnims",Desc="Lists info for all animations")
+Windows.Input:/Script/EngineSettings.ConsoleSettings:ManualAutoCompleteList:64=(Command="ListSkeletalMeshes",Desc="Lists info for all skeletal meshes")
+Windows.Input:/Script/EngineSettings.ConsoleSettings:ManualAutoCompleteList:65=(Command="ListStaticMeshes",Desc="Lists info for all static meshes")
+Windows.Input:/Script/EngineSettings.ConsoleSettings:ManualAutoCompleteList:66=(Command="AudioMemReport",Desc="Lists info for audio memory")
+Windows.Input:/Script/EngineSettings.ConsoleSettings:ManualAutoCompleteList:67=(Command="InvestigateTexture",Desc="Shows streaming info about the specified texture")
+Windows.Input:/Script/EngineSettings.ConsoleSettings:ManualAutoCompleteList:68=(Command="RestartLevel",Desc="Restarts the level")
+Windows.Input:/Script/EngineSettings.ConsoleSettings:ManualAutoCompleteList:69=(Command="Module List",Desc="Lists all known modules")
+Windows.Input:/Script/EngineSettings.ConsoleSettings:ManualAutoCompleteList:70=(Command="Module Load",Desc="Attempts to load the specified module name")
+Windows.Input:/Script/EngineSettings.ConsoleSettings:ManualAutoCompleteList:71=(Command="Module Unload",Desc="Unloads the specified module name")
+Windows.Input:/Script/EngineSettings.ConsoleSettings:ManualAutoCompleteList:72=(Command="Module Reload",Desc="Reloads the specified module name, unloading it first if needed")
+Windows.Input:/Script/EngineSettings.ConsoleSettings:ManualAutoCompleteList:73=(Command="Module Recompile",Desc="Attempts to recompile a module, first unloading it if needed")
+Windows.Input:/Script/EngineSettings.ConsoleSettings:ManualAutoCompleteList:74=(Command="HotReload",Desc="<UObject DLL Hot Reload> Attempts to recompile a UObject DLL and reload it on the fly")
+Windows.Input:/Script/EngineSettings.ConsoleSettings:ManualAutoCompleteList:75=(Command="ListSounds",Desc="Lists all the loaded sounds and their memory footprint")
+Windows.Input:/Script/EngineSettings.ConsoleSettings:ManualAutoCompleteList:76=(Command="ListWaves",Desc="List the WaveInstances and whether they have a source")
+Windows.Input:/Script/EngineSettings.ConsoleSettings:ManualAutoCompleteList:77=(Command="ListSoundClasses",Desc="Lists a summary of loaded sound collated by class")
+Windows.Input:/Script/EngineSettings.ConsoleSettings:ManualAutoCompleteList:78=(Command="ListAudioComponents",Desc="Dumps a detailed list of all AudioComponent objects")
+Windows.Input:/Script/EngineSettings.ConsoleSettings:ManualAutoCompleteList:79=(Command="ListSoundDurations",Desc=)
+Windows.Input:/Script/EngineSettings.ConsoleSettings:ManualAutoCompleteList:80=(Command="PlaySoundCue",Desc="Lists a summary of loaded sound collated by class")
+Windows.Input:/Script/EngineSettings.ConsoleSettings:ManualAutoCompleteList:81=(Command="PlaySoundWave",Desc=)
+Windows.Input:/Script/EngineSettings.ConsoleSettings:ManualAutoCompleteList:82=(Command="SetBaseSoundMix",Desc="<MixName>")
+Windows.Input:/Script/EngineSettings.ConsoleSettings:ManualAutoCompleteList:83=(Command="DisableLowPassFilter",Desc=)
+Windows.Input:/Script/EngineSettings.ConsoleSettings:ManualAutoCompleteList:84=(Command="DisableEQFilter",Desc=)
+Windows.Input:/Script/EngineSettings.ConsoleSettings:ManualAutoCompleteList:85=(Command="IsolateDryAudio",Desc=)
+Windows.Input:/Script/EngineSettings.ConsoleSettings:ManualAutoCompleteList:86=(Command="IsolateReverb",Desc=)
+Windows.Input:/Script/EngineSettings.ConsoleSettings:ManualAutoCompleteList:87=(Command="ResetSoundState",Desc="Resets volumes to default and removes test filters")
+Windows.Input:/Script/EngineSettings.ConsoleSettings:ManualAutoCompleteList:88=(Command="DisableAllScreenMessages",Desc="Disables all on-screen warnings/messages")
+Windows.Input:/Script/EngineSettings.ConsoleSettings:ManualAutoCompleteList:89=(Command="EnableAllScreenMessages",Desc="Enables all on-screen warnings/messages")
+Windows.Input:/Script/EngineSettings.ConsoleSettings:ManualAutoCompleteList:90=(Command="ToggleAllScreenMessages",Desc="Toggles display state of all on-screen warnings/messages")
+Windows.Input:/Script/EngineSettings.ConsoleSettings:ManualAutoCompleteList:91=(Command="ToggleAsyncCompute",Desc="Toggles AsyncCompute for platforms that have it")
+Windows.Input:/Script/EngineSettings.ConsoleSettings:ManualAutoCompleteList:92=(Command="ToggleRenderingThread",Desc="Toggles the rendering thread for platforms that have it")
+Windows.Input:/Script/EngineSettings.ConsoleSettings:ManualAutoCompleteList:93=(Command="CaptureMode",Desc="Toggles display state of all on-screen warnings/messages")
+Windows.Input:/Script/EngineSettings.ConsoleSettings:ManualAutoCompleteList:94=(Command="ShowDebug None",Desc="Toggles ShowDebug w/ current debug type selection")
+Windows.Input:/Script/EngineSettings.ConsoleSettings:ManualAutoCompleteList:95=(Command="ShowDebug Reset",Desc="Turns off ShowDebug, and clears debug type selection")
+Windows.Input:/Script/EngineSettings.ConsoleSettings:ManualAutoCompleteList:96=(Command="ShowDebug NET",Desc=)
+Windows.Input:/Script/EngineSettings.ConsoleSettings:ManualAutoCompleteList:97=(Command="ShowDebug PHYSICS",Desc=)
+Windows.Input:/Script/EngineSettings.ConsoleSettings:ManualAutoCompleteList:98=(Command="ShowDebug COLLISION",Desc=)
+Windows.Input:/Script/EngineSettings.ConsoleSettings:ManualAutoCompleteList:99=(Command="ShowDebug AI",Desc=)
+Windows.Input:/Script/EngineSettings.ConsoleSettings:ManualAutoCompleteList:100=(Command="ShowDebug CAMERA",Desc=)
+Windows.Input:/Script/EngineSettings.ConsoleSettings:ManualAutoCompleteList:101=(Command="ShowDebug WEAPON",Desc=)
+Windows.Input:/Script/EngineSettings.ConsoleSettings:ManualAutoCompleteList:102=(Command="ShowDebug ANIMATION",Desc="Toggles display state of animation debug data")
+Windows.Input:/Script/EngineSettings.ConsoleSettings:ManualAutoCompleteList:103=(Command="ShowDebug BONES",Desc="Toggles display of skeletalmesh bones")
+Windows.Input:/Script/EngineSettings.ConsoleSettings:ManualAutoCompleteList:104=(Command="ShowDebug INPUT",Desc=)
+Windows.Input:/Script/EngineSettings.ConsoleSettings:ManualAutoCompleteList:105=(Command="ShowDebug FORCEFEEDBACK",Desc="Toggles display of current force feedback values and what is contributing to that calculation")
+Windows.Input:/Script/EngineSettings.ConsoleSettings:ManualAutoCompleteList:106=(Command="ShowDebugToggleSubCategory 3DBONES",Desc="With ShowDebug Bones Toggles bone rendering between single lines and a more complex 3D model per bone")
+Windows.Input:/Script/EngineSettings.ConsoleSettings:ManualAutoCompleteList:107=(Command="ShowDebugToggleSubCategory SYNCGROUPS",Desc="With ShowDebug Animation Toggles display of sync group data")
+Windows.Input:/Script/EngineSettings.ConsoleSettings:ManualAutoCompleteList:108=(Command="ShowDebugToggleSubCategory MONTAGES",Desc="With ShowDebug Animation Toggles display of montage data")
+Windows.Input:/Script/EngineSettings.ConsoleSettings:ManualAutoCompleteList:109=(Command="ShowDebugToggleSubCategory GRAPH",Desc="With ShowDebug Animation Toggles display of animation blueprint graph")
+Windows.Input:/Script/EngineSettings.ConsoleSettings:ManualAutoCompleteList:110=(Command="ShowDebugToggleSubCategory CURVES",Desc="With ShowDebug Animation Toggles display of curve data")
+Windows.Input:/Script/EngineSettings.ConsoleSettings:ManualAutoCompleteList:111=(Command="ShowDebugToggleSubCategory NOTIFIES",Desc="With ShowDebug Animation Toggles display of notify data")
+Windows.Input:/Script/EngineSettings.ConsoleSettings:ManualAutoCompleteList:112=(Command="ShowDebugToggleSubCategory FULLGRAPH",Desc="With ShowDebug Animation Toggles graph display between active nodes only and all nodes")
+Windows.Input:/Script/EngineSettings.ConsoleSettings:ManualAutoCompleteList:113=(Command="ShowDebugToggleSubCategory FULLBLENDSPACEDISPLAY",Desc="With ShowDebug Animation Toggles display of sample blend weights on blendspaces")
+Windows.Input:/Script/EngineSettings.ConsoleSettings:ManualAutoCompleteList:114=(Command="ShowDebugForReticleTargetToggle ",Desc="<DesiredClass> Toggles 'ShowDebug' from showing debug info between reticle target actor (of subclass <DesiredClass>) and camera view target")
+Windows.Input:/Script/EngineSettings.ConsoleSettings:ManualAutoCompleteList:115=(Command="Stat SOUNDMIXES",Desc="Shows active SoundMixes")
+Windows.Input:/Script/EngineSettings.ConsoleSettings:ManualAutoCompleteList:116=(Command="Stat SOUNDWAVES",Desc="Shows active SoundWaves")
+Windows.Input:/Script/EngineSettings.ConsoleSettings:ManualAutoCompleteList:117=(Command="Stat SOUNDCUES",Desc="Shows active SoundCues")
+Windows.Input:/Script/EngineSettings.ConsoleSettings:ManualAutoCompleteList:118=(Command="Stat SOUNDS",Desc="<?> <sort=distance|class|name|waves|default> <-debug> <off> Shows active SoundCues and SoundWaves")
+Windows.Input:/Script/EngineSettings.ConsoleSettings:ManualAutoCompleteList:119=(Command="StartMovieCapture",Desc=)
+Windows.Input:/Script/EngineSettings.ConsoleSettings:ManualAutoCompleteList:120=(Command="StopMovieCapture",Desc=)
+Windows.Input:/Script/EngineSettings.ConsoleSettings:ManualAutoCompleteList:121=(Command="TraceTag",Desc="Draw traces that use the specified tag")
+Windows.Input:/Script/EngineSettings.ConsoleSettings:ManualAutoCompleteList:122=(Command="TraceTagAll",Desc="Draw all scene queries regardless of the trace tag")
+Windows.Input:/Script/EngineSettings.ConsoleSettings:ManualAutoCompleteList:123=(Command="VisLog",Desc="Launches Log Visualizer tool")
+Windows.Input:/Script/EngineSettings.ConsoleSettings:ManualAutoCompleteList:124=(Command="CycleNavDrawn",Desc="Cycles through navigation data (navmeshes for example) to draw one at a time")
+Windows.Input:/Script/EngineSettings.ConsoleSettings:ManualAutoCompleteList:125=(Command="Log ",Desc="<category> <level> Change verbosity level for a log category")
+Windows.Input:/Script/EngineSettings.ConsoleSettings:ManualAutoCompleteList:126=(Command="Log list",Desc="<search string> Search for log categories")
+Windows.Input:/Script/EngineSettings.ConsoleSettings:ManualAutoCompleteList:127=(Command="Log reset",Desc="Undo any changes to log verbosity")
+Windows.Input:/Script/EngineSettings.ConsoleSettings:ManualAutoCompleteList:128=(Command="RecordAnimation ActorName AnimName",Desc="Record animation for a specified actor to the specified file")
+Windows.Input:/Script/EngineSettings.ConsoleSettings:ManualAutoCompleteList:129=(Command="StopRecordingAnimation All",Desc="Stop all recording animations")
+Windows.Input:/Script/EngineSettings.ConsoleSettings:ManualAutoCompleteList:130=(Command="RecordSequence Filter ActorOrClassName",Desc="Record a level sequence from gameplay. Filter=<All|Actor|Class>")
+Windows.Input:/Script/EngineSettings.ConsoleSettings:ManualAutoCompleteList:131=(Command="StopRecordingSequence",Desc="Stop recording the current sequence. Only one sequence recording can be active at one time.")
+Windows.Input:/Script/EngineSettings.ConsoleSettings:ManualAutoCompleteList:132=(Command="RecordTake Filter ActorOrClassName",Desc="Record a level sequence from gameplay. Filter=<All|Actor|Class>")
+Windows.Input:/Script/EngineSettings.ConsoleSettings:ManualAutoCompleteList:133=(Command="StopRecordingTake",Desc="Stop recording the current sequence. Only one sequence recording can be active at one time.")
+Windows.Input:/Script/EngineSettings.ConsoleSettings:ManualAutoCompleteList:134=(Command="FreezeRendering",Desc="Toggle freezing of most aspects of rendering (such as visibility calculations), useful in conjunction with ToggleDebugCamera to fly around and see how frustum and occlusion culling is working")
+Windows.Input:/Script/EngineSettings.ConsoleSettings:ManualAutoCompleteList:135=(Command="ProfileGPU",Desc="Profile one frame of rendering commands sent to the GPU")
+Windows.Input:/Script/EngineSettings.ConsoleSettings:ManualAutoCompleteList:136=(Command="ProfileGPUHitches",Desc="Toggle profiling of GPU hitches.")
+Windows.Input:/Script/EngineSettings.ConsoleSettings:ManualAutoCompleteList:137=(Command="Automation",Desc="Run an automation command (e.g., Automation RunTests TestName)")
+Windows.Input:/Script/EngineSettings.ConsoleSettings:ManualAutoCompleteList:138=(Command="CsvProfile Start",Desc="Start CSV profiling.")
+Windows.Input:/Script/EngineSettings.ConsoleSettings:ManualAutoCompleteList:139=(Command="CsvProfile Stop",Desc="Stop CSV profiling.")
 Windows.Input:/Script/EngineSettings.ConsoleSettings:BackgroundOpacityPercentage:0=85.000000
 Windows.Input:/Script/EngineSettings.ConsoleSettings:InputColor:0=(R=230,G=230,B=230,A=255)
 Windows.Input:/Script/EngineSettings.ConsoleSettings:HistoryColor:0=(R=180,G=180,B=180,A=255)
@@ -1735,6 +1784,11 @@ Windows.Game:/Script/UnrealEd.ProjectPackagingSettings:bEncryptIniFiles:0=False
 Windows.Game:/Script/UnrealEd.ProjectPackagingSettings:bEncryptPakIndex:0=False
 Windows.Game:/Script/UnrealEd.ProjectPackagingSettings:bNativizeBlueprintAssets:0=False
 Windows.Game:/Script/UnrealEd.ProjectPackagingSettings:bNativizeOnlySelectedBlueprints:0=False
+Windows.Game:/Script/UnrealEd.ProjectPackagingSettings:bForceOneChunkPerFile:0=False
+Windows.Game:/Script/UnrealEd.ProjectPackagingSettings:MaxChunkSize:0=0
+Windows.Game:/Script/UnrealEd.ProjectPackagingSettings:PakFileCompressionFormats:0=
+Windows.Game:/Script/UnrealEd.ProjectPackagingSettings:PakFileAdditionalCompressionOptions:0=
+Windows.Game:/Script/UnrealEd.ProjectPackagingSettings:GenerateEarlyDownloaderPakFile:0=False
 Windows.Game:/Script/UnrealEd.ProjectPackagingSettings:FullRebuild:0=False
 Windows.Game:/Script/UnrealEd.ProjectPackagingSettings:UsePakFile:0=True
 Windows.Game:/Script/UnrealEd.ProjectPackagingSettings:bGenerateChunks:0=False
@@ -1780,6 +1834,7 @@ Windows.Game:/Script/Engine.GameNetworkManager:CLIENTADJUSTUPDATECOST:0=180.0f
 Windows.Game:/Script/Engine.GameNetworkManager:MAXCLIENTUPDATEINTERVAL:0=0.25f
 Windows.Game:/Script/Engine.GameNetworkManager:MaxClientForcedUpdateDuration:0=1.0f
 Windows.Game:/Script/Engine.GameNetworkManager:MaxMoveDeltaTime:0=0.125f
+Windows.Game:/Script/Engine.GameNetworkManager:MaxClientSmoothingDeltaTime:0=0.50f
 Windows.Game:/Script/Engine.GameNetworkManager:ClientNetSendMoveDeltaTime:0=0.0166
 Windows.Game:/Script/Engine.GameNetworkManager:ClientNetSendMoveDeltaTimeThrottled:0=0.0222
 Windows.Game:/Script/Engine.GameNetworkManager:ClientNetSendMoveDeltaTimeStationary:0=0.0166
@@ -1807,7 +1862,7 @@ Windows.Game:/Script/EngineSettings.GeneralProjectSettings:CopyrightNotice:0=Fil
 Windows.Game:/Script/EngineSettings.GeneralProjectSettings:Description:0=
 Windows.Game:/Script/EngineSettings.GeneralProjectSettings:LicensingTerms:0=
 Windows.Game:/Script/EngineSettings.GeneralProjectSettings:PrivacyPolicy:0=
-Windows.Game:/Script/EngineSettings.GeneralProjectSettings:ProjectName:0=UE4Game
+Windows.Game:/Script/EngineSettings.GeneralProjectSettings:ProjectName:0=
 Windows.Game:/Script/EngineSettings.GeneralProjectSettings:ProjectVersion:0=1.0.0.0
 Windows.Game:/Script/EngineSettings.GeneralProjectSettings:Homepage:0=
 Windows.Game:/Script/EngineSettings.GeneralProjectSettings:SupportContact:0=
@@ -1912,8 +1967,8 @@ Windows.Editor:/Script/UnrealEd.UnrealEdOptions:NewAssetDefaultClasses:4=(ClassN
 Windows.Editor:/Script/UnrealEd.UnrealEdOptions:NewAssetDefaultClasses:5=(ClassName="/Script/Engine.ActorComponent", AssetClass="/Script/Engine.Blueprint")
 Windows.Editor:/Script/UnrealEd.UnrealEdOptions:NewAssetDefaultClasses:6=(ClassName="/Script/Engine.SceneComponent", AssetClass="/Script/Engine.Blueprint")
 Windows.Editor:EditorLayouts:NullLayout:0="(\\\r\n\t\"Type\" \"Layout\",\\\r\n\t\"Name\" \"NullLayout\",\\\r\n\t\"PrimaryAreaIndex\" 0,\\\r\n\t\"Areas\" [\\\r\n\t\t(\\\r\n\t\t\t\"SizeCoefficient\" 1,\\\r\n\t\t\t\"Type\" \"Area\",\\\r\n\t\t\t\"Orientation\" \"Orient_Horizontal\",\\\r\n\t\t\t\"WindowPlacement\" \"Placement_NoWindow\",\\\r\n\t\t\t\"Nodes\" []\\\r\n\t\t)\\\r\n\t]\\\r\n)"
-Windows.Editor:EditorLayouts:WidgetBlueprintEditor_Designer_Layout_v4_1:0="(\\\r\n\t\"Type\" \"Layout\",\\\r\n\t\"Name\" \"WidgetBlueprintEditor_Designer_Layout_v4_1\",\\\r\n\t\"PrimaryAreaIndex\" 0,\\\r\n\t\"Areas\" [\\\r\n\t\t(\\\r\n\t\t\t\"SizeCoefficient\" 1,\\\r\n\t\t\t\"Type\" \"Area\",\\\r\n\t\t\t\"Orientation\" \"Orient_Vertical\",\\\r\n\t\t\t\"WindowPlacement\" \"Placement_NoWindow\",\\\r\n\t\t\t\"Nodes\" [\\\r\n\t\t\t\t(\\\r\n\t\t\t\t\t\"SizeCoefficient\" 0.20000000298023224,\\\r\n\t\t\t\t\t\"Type\" \"Stack\",\\\r\n\t\t\t\t\t\"HideTabWell\" true,\\\r\n\t\t\t\t\t\"ForegroundTab\" \"AssetEditorToolkit_Toolbar\",\\\r\n\t\t\t\t\t\"Tabs\" [\\\r\n\t\t\t\t\t\t(\\\r\n\t\t\t\t\t\t\t\"TabId\" \"AssetEditorToolkit_Toolbar\",\\\r\n\t\t\t\t\t\t\t\"TabState\" \"OpenedTab\"\\\r\n\t\t\t\t\t\t)\\\r\n\t\t\t\t\t]\\\r\n\t\t\t\t),\\\r\n\t\t\t\t(\\\r\n\t\t\t\t\t\"SizeCoefficient\" 0.69999998807907104,\\\r\n\t\t\t\t\t\"Type\" \"Splitter\",\\\r\n\t\t\t\t\t\"Orientation\" \"Orient_Horizontal\",\\\r\n\t\t\t\t\t\"Nodes\" [\\\r\n\t\t\t\t\t\t(\\\r\n\t\t\t\t\t\t\t\"SizeCoefficient\" 0.15000000596046448,\\\r\n\t\t\t\t\t\t\t\"Type\" \"Splitter\",\\\r\n\t\t\t\t\t\t\t\"Orientation\" \"Orient_Vertical\",\\\r\n\t\t\t\t\t\t\t\"Nodes\" [\\\r\n\t\t\t\t\t\t\t\t(\\\r\n\t\t\t\t\t\t\t\t\t\"SizeCoefficient\" 0.5,\\\r\n\t\t\t\t\t\t\t\t\t\"Type\" \"Stack\",\\\r\n\t\t\t\t\t\t\t\t\t\"HideTabWell\" false,\\\r\n\t\t\t\t\t\t\t\t\t\"ForegroundTab\" \"WidgetTemplates\",\\\r\n\t\t\t\t\t\t\t\t\t\"Tabs\" [\\\r\n\t\t\t\t\t\t\t\t\t\t(\\\r\n\t\t\t\t\t\t\t\t\t\t\t\"TabId\" \"WidgetTemplates\",\\\r\n\t\t\t\t\t\t\t\t\t\t\t\"TabState\" \"OpenedTab\"\\\r\n\t\t\t\t\t\t\t\t\t\t)\\\r\n\t\t\t\t\t\t\t\t\t]\\\r\n\t\t\t\t\t\t\t\t),\\\r\n\t\t\t\t\t\t\t\t(\\\r\n\t\t\t\t\t\t\t\t\t\"SizeCoefficient\" 0.5,\\\r\n\t\t\t\t\t\t\t\t\t\"Type\" \"Stack\",\\\r\n\t\t\t\t\t\t\t\t\t\"HideTabWell\" false,\\\r\n\t\t\t\t\t\t\t\t\t\"ForegroundTab\" \"SlateHierarchy\",\\\r\n\t\t\t\t\t\t\t\t\t\"Tabs\" [\\\r\n\t\t\t\t\t\t\t\t\t\t(\\\r\n\t\t\t\t\t\t\t\t\t\t\t\"TabId\" \"SlateHierarchy\",\\\r\n\t\t\t\t\t\t\t\t\t\t\t\"TabState\" \"OpenedTab\"\\\r\n\t\t\t\t\t\t\t\t\t\t)\\\r\n\t\t\t\t\t\t\t\t\t]\\\r\n\t\t\t\t\t\t\t\t)\\\r\n\t\t\t\t\t\t\t]\\\r\n\t\t\t\t\t\t),\\\r\n\t\t\t\t\t\t(\\\r\n\t\t\t\t\t\t\t\"SizeCoefficient\" 0.61888539791107178,\\\r\n\t\t\t\t\t\t\t\"Type\" \"Stack\",\\\r\n\t\t\t\t\t\t\t\"HideTabWell\" true,\\\r\n\t\t\t\t\t\t\t\"ForegroundTab\" \"SlatePreview\",\\\r\n\t\t\t\t\t\t\t\"Tabs\" [\\\r\n\t\t\t\t\t\t\t\t(\\\r\n\t\t\t\t\t\t\t\t\t\"TabId\" \"SlatePreview\",\\\r\n\t\t\t\t\t\t\t\t\t\"TabState\" \"OpenedTab\"\\\r\n\t\t\t\t\t\t\t\t)\\\r\n\t\t\t\t\t\t\t]\\\r\n\t\t\t\t\t\t),\\\r\n\t\t\t\t\t\t(\\\r\n\t\t\t\t\t\t\t\"SizeCoefficient\" 0.23111443221569061,\\\r\n\t\t\t\t\t\t\t\"Type\" \"Stack\",\\\r\n\t\t\t\t\t\t\t\"HideTabWell\" false,\\\r\n\t\t\t\t\t\t\t\"ForegroundTab\" \"WidgetDetails\",\\\r\n\t\t\t\t\t\t\t\"Tabs\" [\\\r\n\t\t\t\t\t\t\t\t(\\\r\n\t\t\t\t\t\t\t\t\t\"TabId\" \"WidgetDetails\",\\\r\n\t\t\t\t\t\t\t\t\t\"TabState\" \"OpenedTab\"\\\r\n\t\t\t\t\t\t\t\t)\\\r\n\t\t\t\t\t\t\t]\\\r\n\t\t\t\t\t\t)\\\r\n\t\t\t\t\t]\\\r\n\t\t\t\t),\\\r\n\t\t\t\t(\\\r\n\t\t\t\t\t\"SizeCoefficient\" 0.30000001192092896,\\\r\n\t\t\t\t\t\"Type\" \"Splitter\",\\\r\n\t\t\t\t\t\"Orientation\" \"Orient_Horizontal\",\\\r\n\t\t\t\t\t\"Nodes\" [\\\r\n\t\t\t\t\t\t(\\\r\n\t\t\t\t\t\t\t\"SizeCoefficient\" 0.15000000596046448,\\\r\n\t\t\t\t\t\t\t\"Type\" \"Stack\",\\\r\n\t\t\t\t\t\t\t\"HideTabWell\" false,\\\r\n\t\t\t\t\t\t\t\"ForegroundTab\" \"Animations\",\\\r\n\t\t\t\t\t\t\t\"Tabs\" [\\\r\n\t\t\t\t\t\t\t\t(\\\r\n\t\t\t\t\t\t\t\t\t\"TabId\" \"Animations\",\\\r\n\t\t\t\t\t\t\t\t\t\"TabState\" \"OpenedTab\"\\\r\n\t\t\t\t\t\t\t\t)\\\r\n\t\t\t\t\t\t\t]\\\r\n\t\t\t\t\t\t),\\\r\n\t\t\t\t\t\t(\\\r\n\t\t\t\t\t\t\t\"SizeCoefficient\" 0.85000002384185791,\\\r\n\t\t\t\t\t\t\t\"Type\" \"Stack\",\\\r\n\t\t\t\t\t\t\t\"HideTabWell\" false,\\\r\n\t\t\t\t\t\t\t\"ForegroundTab\" \"CompilerResults\",\\\r\n\t\t\t\t\t\t\t\"Tabs\" [\\\r\n\t\t\t\t\t\t\t\t(\\\r\n\t\t\t\t\t\t\t\t\t\"TabId\" \"Sequencer\",\\\r\n\t\t\t\t\t\t\t\t\t\"TabState\" \"OpenedTab\"\\\r\n\t\t\t\t\t\t\t\t),\\\r\n\t\t\t\t\t\t\t\t(\\\r\n\t\t\t\t\t\t\t\t\t\"TabId\" \"CompilerResults\",\\\r\n\t\t\t\t\t\t\t\t\t\"TabState\" \"OpenedTab\"\\\r\n\t\t\t\t\t\t\t\t)\\\r\n\t\t\t\t\t\t\t]\\\r\n\t\t\t\t\t\t)\\\r\n\t\t\t\t\t]\\\r\n\t\t\t\t)\\\r\n\t\t\t]\\\r\n\t\t)\\\r\n\t]\\\r\n)"
-Windows.Editor:EditorLayouts:WidgetBlueprintEditor_Graph_Layout_v1:0="(\\\r\n\t\"Type\" \"Layout\",\\\r\n\t\"Name\" \"WidgetBlueprintEditor_Graph_Layout_v1\",\\\r\n\t\"PrimaryAreaIndex\" 0,\\\r\n\t\"Areas\" [\\\r\n\t\t(\\\r\n\t\t\t\"SizeCoefficient\" 1,\\\r\n\t\t\t\"Type\" \"Area\",\\\r\n\t\t\t\"Orientation\" \"Orient_Vertical\",\\\r\n\t\t\t\"WindowPlacement\" \"Placement_NoWindow\",\\\r\n\t\t\t\"Nodes\" [\\\r\n\t\t\t\t(\\\r\n\t\t\t\t\t\"SizeCoefficient\" 0.18672099709510803,\\\r\n\t\t\t\t\t\"Type\" \"Stack\",\\\r\n\t\t\t\t\t\"HideTabWell\" true,\\\r\n\t\t\t\t\t\"ForegroundTab\" \"AssetEditorToolkit_Toolbar\",\\\r\n\t\t\t\t\t\"Tabs\" [\\\r\n\t\t\t\t\t\t(\\\r\n\t\t\t\t\t\t\t\"TabId\" \"AssetEditorToolkit_Toolbar\",\\\r\n\t\t\t\t\t\t\t\"TabState\" \"OpenedTab\"\\\r\n\t\t\t\t\t\t)\\\r\n\t\t\t\t\t]\\\r\n\t\t\t\t),\\\r\n\t\t\t\t(\\\r\n\t\t\t\t\t\"SizeCoefficient\" 1,\\\r\n\t\t\t\t\t\"Type\" \"Splitter\",\\\r\n\t\t\t\t\t\"Orientation\" \"Orient_Horizontal\",\\\r\n\t\t\t\t\t\"Nodes\" [\\\r\n\t\t\t\t\t\t(\\\r\n\t\t\t\t\t\t\t\"SizeCoefficient\" 0.13911391794681549,\\\r\n\t\t\t\t\t\t\t\"Type\" \"Splitter\",\\\r\n\t\t\t\t\t\t\t\"Orientation\" \"Orient_Vertical\",\\\r\n\t\t\t\t\t\t\t\"Nodes\" [\\\r\n\t\t\t\t\t\t\t\t(\\\r\n\t\t\t\t\t\t\t\t\t\"SizeCoefficient\" 0.5,\\\r\n\t\t\t\t\t\t\t\t\t\"Type\" \"Stack\",\\\r\n\t\t\t\t\t\t\t\t\t\"HideTabWell\" false,\\\r\n\t\t\t\t\t\t\t\t\t\"ForegroundTab\" \"MyBlueprint\",\\\r\n\t\t\t\t\t\t\t\t\t\"Tabs\" [\\\r\n\t\t\t\t\t\t\t\t\t\t(\\\r\n\t\t\t\t\t\t\t\t\t\t\t\"TabId\" \"MyBlueprint\",\\\r\n\t\t\t\t\t\t\t\t\t\t\t\"TabState\" \"OpenedTab\"\\\r\n\t\t\t\t\t\t\t\t\t\t)\\\r\n\t\t\t\t\t\t\t\t\t]\\\r\n\t\t\t\t\t\t\t\t),\\\r\n\t\t\t\t\t\t\t\t(\\\r\n\t\t\t\t\t\t\t\t\t\"SizeCoefficient\" 0.5,\\\r\n\t\t\t\t\t\t\t\t\t\"Type\" \"Stack\",\\\r\n\t\t\t\t\t\t\t\t\t\"HideTabWell\" false,\\\r\n\t\t\t\t\t\t\t\t\t\"ForegroundTab\" \"Inspector\",\\\r\n\t\t\t\t\t\t\t\t\t\"Tabs\" [\\\r\n\t\t\t\t\t\t\t\t\t\t(\\\r\n\t\t\t\t\t\t\t\t\t\t\t\"TabId\" \"Inspector\",\\\r\n\t\t\t\t\t\t\t\t\t\t\t\"TabState\" \"OpenedTab\"\\\r\n\t\t\t\t\t\t\t\t\t\t)\\\r\n\t\t\t\t\t\t\t\t\t]\\\r\n\t\t\t\t\t\t\t\t)\\\r\n\t\t\t\t\t\t\t]\\\r\n\t\t\t\t\t\t),\\\r\n\t\t\t\t\t\t(\\\r\n\t\t\t\t\t\t\t\"SizeCoefficient\" 0.71088439226150513,\\\r\n\t\t\t\t\t\t\t\"Type\" \"Splitter\",\\\r\n\t\t\t\t\t\t\t\"Orientation\" \"Orient_Vertical\",\\\r\n\t\t\t\t\t\t\t\"Nodes\" [\\\r\n\t\t\t\t\t\t\t\t(\\\r\n\t\t\t\t\t\t\t\t\t\"SizeCoefficient\" 0.80000001192092896,\\\r\n\t\t\t\t\t\t\t\t\t\"Type\" \"Stack\",\\\r\n\t\t\t\t\t\t\t\t\t\"HideTabWell\" false,\\\r\n\t\t\t\t\t\t\t\t\t\"ForegroundTab\" \"Document  6\",\\\r\n\t\t\t\t\t\t\t\t\t\"Tabs\" [\\\r\n\t\t\t\t\t\t\t\t\t\t(\\\r\n\t\t\t\t\t\t\t\t\t\t\t\"TabId\" \"Document\",\\\r\n\t\t\t\t\t\t\t\t\t\t\t\"TabState\" \"ClosedTab\"\\\r\n\t\t\t\t\t\t\t\t\t\t)\\\r\n\t\t\t\t\t\t\t\t\t]\\\r\n\t\t\t\t\t\t\t\t),\\\r\n\t\t\t\t\t\t\t\t(\\\r\n\t\t\t\t\t\t\t\t\t\"SizeCoefficient\" 0.20000000298023224,\\\r\n\t\t\t\t\t\t\t\t\t\"Type\" \"Stack\",\\\r\n\t\t\t\t\t\t\t\t\t\"HideTabWell\" false,\\\r\n\t\t\t\t\t\t\t\t\t\"ForegroundTab\" \"FindResults\",\\\r\n\t\t\t\t\t\t\t\t\t\"Tabs\" [\\\r\n\t\t\t\t\t\t\t\t\t\t(\\\r\n\t\t\t\t\t\t\t\t\t\t\t\"TabId\" \"CompilerResults\",\\\r\n\t\t\t\t\t\t\t\t\t\t\t\"TabState\" \"OpenedTab\"\\\r\n\t\t\t\t\t\t\t\t\t\t),\\\r\n\t\t\t\t\t\t\t\t\t\t(\\\r\n\t\t\t\t\t\t\t\t\t\t\t\"TabId\" \"FindResults\",\\\r\n\t\t\t\t\t\t\t\t\t\t\t\"TabState\" \"OpenedTab\"\\\r\n\t\t\t\t\t\t\t\t\t\t)\\\r\n\t\t\t\t\t\t\t\t\t]\\\r\n\t\t\t\t\t\t\t\t)\\\r\n\t\t\t\t\t\t\t]\\\r\n\t\t\t\t\t\t),\\\r\n\t\t\t\t\t\t(\\\r\n\t\t\t\t\t\t\t\"SizeCoefficient\" 0.15000000596046448,\\\r\n\t\t\t\t\t\t\t\"Type\" \"Stack\",\\\r\n\t\t\t\t\t\t\t\"HideTabWell\" false,\\\r\n\t\t\t\t\t\t\t\"ForegroundTab\" \"None\",\\\r\n\t\t\t\t\t\t\t\"Tabs\" [\\\r\n\t\t\t\t\t\t\t\t(\\\r\n\t\t\t\t\t\t\t\t\t\"TabId\" \"PaletteList\",\\\r\n\t\t\t\t\t\t\t\t\t\"TabState\" \"ClosedTab\"\\\r\n\t\t\t\t\t\t\t\t)\\\r\n\t\t\t\t\t\t\t]\\\r\n\t\t\t\t\t\t)\\\r\n\t\t\t\t\t]\\\r\n\t\t\t\t)\\\r\n\t\t\t]\\\r\n\t\t)\\\r\n\t]\\\r\n)"
+Windows.Editor:EditorLayouts:WidgetBlueprintEditor_Designer_Layout_v4_1:0="(\\\r\n\t\"Type\" \"Layout\",\\\r\n\t\"Name\" \"WidgetBlueprintEditor_Designer_Layout_v4_1\",\\\r\n\t\"PrimaryAreaIndex\" 0,\\\r\n\t\"Areas\" [\\\r\n\t\t(\\\r\n\t\t\t\"SizeCoefficient\" 1,\\\r\n\t\t\t\"Type\" \"Area\",\\\r\n\t\t\t\"Orientation\" \"Orient_Vertical\",\\\r\n\t\t\t\"WindowPlacement\" \"Placement_NoWindow\",\\\r\n\t\t\t\"Nodes\" [\\\r\n\t\t\t\t(\\\r\n\t\t\t\t\t\"SizeCoefficient\" 0.20000000298023224,\\\r\n\t\t\t\t\t\"Type\" \"Stack\",\\\r\n\t\t\t\t\t\"HideTabWell\" true,\\\r\n\t\t\t\t\t\"ForegroundTab\" \"AssetEditorToolkit_Toolbar\",\\\r\n\t\t\t\t\t\"Tabs\" [\\\r\n\t\t\t\t\t\t(\\\r\n\t\t\t\t\t\t\t\"TabId\" \"AssetEditorToolkit_Toolbar\",\\\r\n\t\t\t\t\t\t\t\"TabState\" \"OpenedTab\"\\\r\n\t\t\t\t\t\t)\\\r\n\t\t\t\t\t]\\\r\n\t\t\t\t),\\\r\n\t\t\t\t(\\\r\n\t\t\t\t\t\"SizeCoefficient\" 0.69999998807907104,\\\r\n\t\t\t\t\t\"Type\" \"Splitter\",\\\r\n\t\t\t\t\t\"Orientation\" \"Orient_Horizontal\",\\\r\n\t\t\t\t\t\"Nodes\" [\\\r\n\t\t\t\t\t\t(\\\r\n\t\t\t\t\t\t\t\"SizeCoefficient\" 0.15000000596046448,\\\r\n\t\t\t\t\t\t\t\"Type\" \"Splitter\",\\\r\n\t\t\t\t\t\t\t\"Orientation\" \"Orient_Vertical\",\\\r\n\t\t\t\t\t\t\t\"Nodes\" [\\\r\n\t\t\t\t\t\t\t\t(\\\r\n\t\t\t\t\t\t\t\t\t\"SizeCoefficient\" 0.5,\\\r\n\t\t\t\t\t\t\t\t\t\"Type\" \"Stack\",\\\r\n\t\t\t\t\t\t\t\t\t\"HideTabWell\" false,\\\r\n\t\t\t\t\t\t\t\t\t\"ForegroundTab\" \"WidgetTemplates\",\\\r\n\t\t\t\t\t\t\t\t\t\"Tabs\" [\\\r\n\t\t\t\t\t\t\t\t\t\t(\\\r\n\t\t\t\t\t\t\t\t\t\t\t\"TabId\" \"WidgetTemplates\",\\\r\n\t\t\t\t\t\t\t\t\t\t\t\"TabState\" \"OpenedTab\"\\\r\n\t\t\t\t\t\t\t\t\t\t)\\\r\n\t\t\t\t\t\t\t\t\t]\\\r\n\t\t\t\t\t\t\t\t),\\\r\n\t\t\t\t\t\t\t\t(\\\r\n\t\t\t\t\t\t\t\t\t\"SizeCoefficient\" 0.5,\\\r\n\t\t\t\t\t\t\t\t\t\"Type\" \"Stack\",\\\r\n\t\t\t\t\t\t\t\t\t\"HideTabWell\" false,\\\r\n\t\t\t\t\t\t\t\t\t\"ForegroundTab\" \"SlateHierarchy\",\\\r\n\t\t\t\t\t\t\t\t\t\"Tabs\" [\\\r\n\t\t\t\t\t\t\t\t\t\t(\\\r\n\t\t\t\t\t\t\t\t\t\t\t\"TabId\" \"SlateHierarchy\",\\\r\n\t\t\t\t\t\t\t\t\t\t\t\"TabState\" \"OpenedTab\"\\\r\n\t\t\t\t\t\t\t\t\t\t)\\\r\n\t\t\t\t\t\t\t\t\t]\\\r\n\t\t\t\t\t\t\t\t)\\\r\n\t\t\t\t\t\t\t]\\\r\n\t\t\t\t\t\t),\\\r\n\t\t\t\t\t\t(\\\r\n\t\t\t\t\t\t\t\"SizeCoefficient\" 0.56044727563858032,\\\r\n\t\t\t\t\t\t\t\"Type\" \"Stack\",\\\r\n\t\t\t\t\t\t\t\"HideTabWell\" true,\\\r\n\t\t\t\t\t\t\t\"ForegroundTab\" \"SlatePreview\",\\\r\n\t\t\t\t\t\t\t\"Tabs\" [\\\r\n\t\t\t\t\t\t\t\t(\\\r\n\t\t\t\t\t\t\t\t\t\"TabId\" \"SlatePreview\",\\\r\n\t\t\t\t\t\t\t\t\t\"TabState\" \"OpenedTab\"\\\r\n\t\t\t\t\t\t\t\t)\\\r\n\t\t\t\t\t\t\t]\\\r\n\t\t\t\t\t\t),\\\r\n\t\t\t\t\t\t(\\\r\n\t\t\t\t\t\t\t\"SizeCoefficient\" 0.28955253958702087,\\\r\n\t\t\t\t\t\t\t\"Type\" \"Stack\",\\\r\n\t\t\t\t\t\t\t\"HideTabWell\" false,\\\r\n\t\t\t\t\t\t\t\"ForegroundTab\" \"WidgetDetails\",\\\r\n\t\t\t\t\t\t\t\"Tabs\" [\\\r\n\t\t\t\t\t\t\t\t(\\\r\n\t\t\t\t\t\t\t\t\t\"TabId\" \"WidgetDetails\",\\\r\n\t\t\t\t\t\t\t\t\t\"TabState\" \"OpenedTab\"\\\r\n\t\t\t\t\t\t\t\t)\\\r\n\t\t\t\t\t\t\t]\\\r\n\t\t\t\t\t\t)\\\r\n\t\t\t\t\t]\\\r\n\t\t\t\t),\\\r\n\t\t\t\t(\\\r\n\t\t\t\t\t\"SizeCoefficient\" 0.30000001192092896,\\\r\n\t\t\t\t\t\"Type\" \"Splitter\",\\\r\n\t\t\t\t\t\"Orientation\" \"Orient_Horizontal\",\\\r\n\t\t\t\t\t\"Nodes\" [\\\r\n\t\t\t\t\t\t(\\\r\n\t\t\t\t\t\t\t\"SizeCoefficient\" 0.15000000596046448,\\\r\n\t\t\t\t\t\t\t\"Type\" \"Stack\",\\\r\n\t\t\t\t\t\t\t\"HideTabWell\" false,\\\r\n\t\t\t\t\t\t\t\"ForegroundTab\" \"Animations\",\\\r\n\t\t\t\t\t\t\t\"Tabs\" [\\\r\n\t\t\t\t\t\t\t\t(\\\r\n\t\t\t\t\t\t\t\t\t\"TabId\" \"Animations\",\\\r\n\t\t\t\t\t\t\t\t\t\"TabState\" \"OpenedTab\"\\\r\n\t\t\t\t\t\t\t\t)\\\r\n\t\t\t\t\t\t\t]\\\r\n\t\t\t\t\t\t),\\\r\n\t\t\t\t\t\t(\\\r\n\t\t\t\t\t\t\t\"SizeCoefficient\" 0.85000002384185791,\\\r\n\t\t\t\t\t\t\t\"Type\" \"Stack\",\\\r\n\t\t\t\t\t\t\t\"HideTabWell\" false,\\\r\n\t\t\t\t\t\t\t\"ForegroundTab\" \"CompilerResults\",\\\r\n\t\t\t\t\t\t\t\"Tabs\" [\\\r\n\t\t\t\t\t\t\t\t(\\\r\n\t\t\t\t\t\t\t\t\t\"TabId\" \"Sequencer\",\\\r\n\t\t\t\t\t\t\t\t\t\"TabState\" \"OpenedTab\"\\\r\n\t\t\t\t\t\t\t\t),\\\r\n\t\t\t\t\t\t\t\t(\\\r\n\t\t\t\t\t\t\t\t\t\"TabId\" \"CompilerResults\",\\\r\n\t\t\t\t\t\t\t\t\t\"TabState\" \"OpenedTab\"\\\r\n\t\t\t\t\t\t\t\t)\\\r\n\t\t\t\t\t\t\t]\\\r\n\t\t\t\t\t\t)\\\r\n\t\t\t\t\t]\\\r\n\t\t\t\t)\\\r\n\t\t\t]\\\r\n\t\t)\\\r\n\t]\\\r\n)"
+Windows.Editor:EditorLayouts:WidgetBlueprintEditor_Graph_Layout_v1:0="(\\\r\n\t\"Type\" \"Layout\",\\\r\n\t\"Name\" \"WidgetBlueprintEditor_Graph_Layout_v1\",\\\r\n\t\"PrimaryAreaIndex\" 0,\\\r\n\t\"Areas\" [\\\r\n\t\t(\\\r\n\t\t\t\"SizeCoefficient\" 1,\\\r\n\t\t\t\"Type\" \"Area\",\\\r\n\t\t\t\"Orientation\" \"Orient_Vertical\",\\\r\n\t\t\t\"WindowPlacement\" \"Placement_NoWindow\",\\\r\n\t\t\t\"Nodes\" [\\\r\n\t\t\t\t(\\\r\n\t\t\t\t\t\"SizeCoefficient\" 0.18672099709510803,\\\r\n\t\t\t\t\t\"Type\" \"Stack\",\\\r\n\t\t\t\t\t\"HideTabWell\" true,\\\r\n\t\t\t\t\t\"ForegroundTab\" \"AssetEditorToolkit_Toolbar\",\\\r\n\t\t\t\t\t\"Tabs\" [\\\r\n\t\t\t\t\t\t(\\\r\n\t\t\t\t\t\t\t\"TabId\" \"AssetEditorToolkit_Toolbar\",\\\r\n\t\t\t\t\t\t\t\"TabState\" \"OpenedTab\"\\\r\n\t\t\t\t\t\t)\\\r\n\t\t\t\t\t]\\\r\n\t\t\t\t),\\\r\n\t\t\t\t(\\\r\n\t\t\t\t\t\"SizeCoefficient\" 1,\\\r\n\t\t\t\t\t\"Type\" \"Splitter\",\\\r\n\t\t\t\t\t\"Orientation\" \"Orient_Horizontal\",\\\r\n\t\t\t\t\t\"Nodes\" [\\\r\n\t\t\t\t\t\t(\\\r\n\t\t\t\t\t\t\t\"SizeCoefficient\" 0.17291601002216339,\\\r\n\t\t\t\t\t\t\t\"Type\" \"Splitter\",\\\r\n\t\t\t\t\t\t\t\"Orientation\" \"Orient_Vertical\",\\\r\n\t\t\t\t\t\t\t\"Nodes\" [\\\r\n\t\t\t\t\t\t\t\t(\\\r\n\t\t\t\t\t\t\t\t\t\"SizeCoefficient\" 0.5,\\\r\n\t\t\t\t\t\t\t\t\t\"Type\" \"Stack\",\\\r\n\t\t\t\t\t\t\t\t\t\"HideTabWell\" false,\\\r\n\t\t\t\t\t\t\t\t\t\"ForegroundTab\" \"MyBlueprint\",\\\r\n\t\t\t\t\t\t\t\t\t\"Tabs\" [\\\r\n\t\t\t\t\t\t\t\t\t\t(\\\r\n\t\t\t\t\t\t\t\t\t\t\t\"TabId\" \"MyBlueprint\",\\\r\n\t\t\t\t\t\t\t\t\t\t\t\"TabState\" \"OpenedTab\"\\\r\n\t\t\t\t\t\t\t\t\t\t)\\\r\n\t\t\t\t\t\t\t\t\t]\\\r\n\t\t\t\t\t\t\t\t),\\\r\n\t\t\t\t\t\t\t\t(\\\r\n\t\t\t\t\t\t\t\t\t\"SizeCoefficient\" 0.5,\\\r\n\t\t\t\t\t\t\t\t\t\"Type\" \"Stack\",\\\r\n\t\t\t\t\t\t\t\t\t\"HideTabWell\" false,\\\r\n\t\t\t\t\t\t\t\t\t\"ForegroundTab\" \"Inspector\",\\\r\n\t\t\t\t\t\t\t\t\t\"Tabs\" [\\\r\n\t\t\t\t\t\t\t\t\t\t(\\\r\n\t\t\t\t\t\t\t\t\t\t\t\"TabId\" \"Inspector\",\\\r\n\t\t\t\t\t\t\t\t\t\t\t\"TabState\" \"OpenedTab\"\\\r\n\t\t\t\t\t\t\t\t\t\t)\\\r\n\t\t\t\t\t\t\t\t\t]\\\r\n\t\t\t\t\t\t\t\t)\\\r\n\t\t\t\t\t\t\t]\\\r\n\t\t\t\t\t\t),\\\r\n\t\t\t\t\t\t(\\\r\n\t\t\t\t\t\t\t\"SizeCoefficient\" 0.67708462476730347,\\\r\n\t\t\t\t\t\t\t\"Type\" \"Splitter\",\\\r\n\t\t\t\t\t\t\t\"Orientation\" \"Orient_Vertical\",\\\r\n\t\t\t\t\t\t\t\"Nodes\" [\\\r\n\t\t\t\t\t\t\t\t(\\\r\n\t\t\t\t\t\t\t\t\t\"SizeCoefficient\" 0.80000001192092896,\\\r\n\t\t\t\t\t\t\t\t\t\"Type\" \"Stack\",\\\r\n\t\t\t\t\t\t\t\t\t\"HideTabWell\" false,\\\r\n\t\t\t\t\t\t\t\t\t\"ForegroundTab\" \"Document  3\",\\\r\n\t\t\t\t\t\t\t\t\t\"Tabs\" [\\\r\n\t\t\t\t\t\t\t\t\t\t(\\\r\n\t\t\t\t\t\t\t\t\t\t\t\"TabId\" \"Document\",\\\r\n\t\t\t\t\t\t\t\t\t\t\t\"TabState\" \"ClosedTab\"\\\r\n\t\t\t\t\t\t\t\t\t\t)\\\r\n\t\t\t\t\t\t\t\t\t]\\\r\n\t\t\t\t\t\t\t\t),\\\r\n\t\t\t\t\t\t\t\t(\\\r\n\t\t\t\t\t\t\t\t\t\"SizeCoefficient\" 0.20000000298023224,\\\r\n\t\t\t\t\t\t\t\t\t\"Type\" \"Stack\",\\\r\n\t\t\t\t\t\t\t\t\t\"HideTabWell\" false,\\\r\n\t\t\t\t\t\t\t\t\t\"ForegroundTab\" \"FindResults\",\\\r\n\t\t\t\t\t\t\t\t\t\"Tabs\" [\\\r\n\t\t\t\t\t\t\t\t\t\t(\\\r\n\t\t\t\t\t\t\t\t\t\t\t\"TabId\" \"CompilerResults\",\\\r\n\t\t\t\t\t\t\t\t\t\t\t\"TabState\" \"OpenedTab\"\\\r\n\t\t\t\t\t\t\t\t\t\t),\\\r\n\t\t\t\t\t\t\t\t\t\t(\\\r\n\t\t\t\t\t\t\t\t\t\t\t\"TabId\" \"FindResults\",\\\r\n\t\t\t\t\t\t\t\t\t\t\t\"TabState\" \"OpenedTab\"\\\r\n\t\t\t\t\t\t\t\t\t\t)\\\r\n\t\t\t\t\t\t\t\t\t]\\\r\n\t\t\t\t\t\t\t\t)\\\r\n\t\t\t\t\t\t\t]\\\r\n\t\t\t\t\t\t),\\\r\n\t\t\t\t\t\t(\\\r\n\t\t\t\t\t\t\t\"SizeCoefficient\" 0.15000000596046448,\\\r\n\t\t\t\t\t\t\t\"Type\" \"Stack\",\\\r\n\t\t\t\t\t\t\t\"HideTabWell\" false,\\\r\n\t\t\t\t\t\t\t\"ForegroundTab\" \"None\",\\\r\n\t\t\t\t\t\t\t\"Tabs\" [\\\r\n\t\t\t\t\t\t\t\t(\\\r\n\t\t\t\t\t\t\t\t\t\"TabId\" \"PaletteList\",\\\r\n\t\t\t\t\t\t\t\t\t\"TabState\" \"ClosedTab\"\\\r\n\t\t\t\t\t\t\t\t)\\\r\n\t\t\t\t\t\t\t]\\\r\n\t\t\t\t\t\t)\\\r\n\t\t\t\t\t]\\\r\n\t\t\t\t)\\\r\n\t\t\t]\\\r\n\t\t)\\\r\n\t]\\\r\n)"
 Windows.Editor:Internationalization:LocalizationPaths:0=../../../Engine/Content/Localization/Editor
 Windows.Editor:Internationalization:LocalizationPaths:1=../../../Engine/Content/Localization/EditorTutorials
 Windows.Editor:Internationalization:LocalizationPaths:2=../../../Engine/Content/Localization/Keywords
@@ -2121,6 +2176,7 @@ Windows.Editor:/Script/UnrealEd.EditorProjectAppearanceSettings:AngleUnits:0=EUn
 Windows.Editor:/Script/UnrealEd.EditorProjectAppearanceSettings:SpeedUnits:0=EUnitMetersPerSecond
 Windows.Editor:/Script/UnrealEd.EditorProjectAppearanceSettings:TemperatureUnits:0=EUnitCelsius
 Windows.Editor:/Script/UnrealEd.EditorProjectAppearanceSettings:ForceUnits:0=EUnitNewtons
+Windows.Editor:BlueprintSearchSettings:bDisableDeferredIndexing:0=false
 Windows.Editor:BlueprintNativizationSettings:bUseStaticVariablesInWrappers:0=true
 Windows.Editor:BlueprintNativizationSettings:bUseStaticVariablesInClasses:0=true
 Windows.Editor:BlueprintNativizationSettings:bSkipUFUNCTION:0=false
@@ -3306,50 +3362,56 @@ Windows.DeviceProfiles:DeviceProfiles:DeviceProfileNameAndTypes:58=Android_Adren
 Windows.DeviceProfiles:DeviceProfiles:DeviceProfileNameAndTypes:59=Android_Adreno4xx_Nexus6,Android
 Windows.DeviceProfiles:DeviceProfiles:DeviceProfileNameAndTypes:60=Android_Adreno4xx,Android
 Windows.DeviceProfiles:DeviceProfiles:DeviceProfileNameAndTypes:61=Android_Adreno5xx,Android
-Windows.DeviceProfiles:DeviceProfiles:DeviceProfileNameAndTypes:62=Android_Adreno6xx,Android
-Windows.DeviceProfiles:DeviceProfiles:DeviceProfileNameAndTypes:63=Android_PowerVR54x,Android
-Windows.DeviceProfiles:DeviceProfiles:DeviceProfileNameAndTypes:64=Android_PowerVRLow,Android
-Windows.DeviceProfiles:DeviceProfiles:DeviceProfileNameAndTypes:65=Android_PowerVRMid,Android
-Windows.DeviceProfiles:DeviceProfiles:DeviceProfileNameAndTypes:66=Android_TegraK1,Android
-Windows.DeviceProfiles:DeviceProfiles:DeviceProfileNameAndTypes:67=Android_Tegra4,Android
-Windows.DeviceProfiles:DeviceProfiles:DeviceProfileNameAndTypes:68=Android_IntelHD,Android
-Windows.DeviceProfiles:DeviceProfiles:DeviceProfileNameAndTypes:69=Android_IntelHD_ES3,Android
-Windows.DeviceProfiles:DeviceProfiles:DeviceProfileNameAndTypes:70=Android_Mali_4xx,Android
-Windows.DeviceProfiles:DeviceProfiles:DeviceProfileNameAndTypes:71=Android_Mali_T6xx,Android
-Windows.DeviceProfiles:DeviceProfiles:DeviceProfileNameAndTypes:72=Android_Mali_T7xx,Android
-Windows.DeviceProfiles:DeviceProfiles:DeviceProfileNameAndTypes:73=Android_Mali_T8xx,Android
-Windows.DeviceProfiles:DeviceProfiles:DeviceProfileNameAndTypes:74=Android_Mali_T8xx_No_Vulkan,Android
-Windows.DeviceProfiles:DeviceProfiles:DeviceProfileNameAndTypes:75=Android_Mali_G71,Android
-Windows.DeviceProfiles:DeviceProfiles:DeviceProfileNameAndTypes:76=Android_Mali_G72,Android
-Windows.DeviceProfiles:DeviceProfiles:DeviceProfileNameAndTypes:77=Lumin,Android
-Windows.DeviceProfiles:/Script/Engine.TextureLODSettings:TextureLODGroups:0=(Group=TEXTUREGROUP_World,MinLODSize=1,MaxLODSize=4096,LODBias=0,MinMagFilter=aniso,MipFilter=point,MipGenSettings=TMGS_SimpleAverage)
-Windows.DeviceProfiles:/Script/Engine.TextureLODSettings:TextureLODGroups:1=(Group=TEXTUREGROUP_WorldNormalMap,MinLODSize=1,MaxLODSize=4096,LODBias=0,MinMagFilter=aniso,MipFilter=point,MipGenSettings=TMGS_SimpleAverage)
-Windows.DeviceProfiles:/Script/Engine.TextureLODSettings:TextureLODGroups:2=(Group=TEXTUREGROUP_WorldSpecular,MinLODSize=1,MaxLODSize=4096,LODBias=0,MinMagFilter=aniso,MipFilter=point,MipGenSettings=TMGS_SimpleAverage)
-Windows.DeviceProfiles:/Script/Engine.TextureLODSettings:TextureLODGroups:3=(Group=TEXTUREGROUP_Character,MinLODSize=1,MaxLODSize=4096,LODBias=0,MinMagFilter=aniso,MipFilter=point,MipGenSettings=TMGS_SimpleAverage)
-Windows.DeviceProfiles:/Script/Engine.TextureLODSettings:TextureLODGroups:4=(Group=TEXTUREGROUP_CharacterNormalMap,MinLODSize=1,MaxLODSize=4096,LODBias=0,MinMagFilter=aniso,MipFilter=point,MipGenSettings=TMGS_SimpleAverage)
-Windows.DeviceProfiles:/Script/Engine.TextureLODSettings:TextureLODGroups:5=(Group=TEXTUREGROUP_CharacterSpecular,MinLODSize=1,MaxLODSize=4096,LODBias=0,MinMagFilter=aniso,MipFilter=point,MipGenSettings=TMGS_SimpleAverage)
-Windows.DeviceProfiles:/Script/Engine.TextureLODSettings:TextureLODGroups:6=(Group=TEXTUREGROUP_Weapon,MinLODSize=1,MaxLODSize=4096,LODBias=0,MinMagFilter=aniso,MipFilter=point,MipGenSettings=TMGS_SimpleAverage)
-Windows.DeviceProfiles:/Script/Engine.TextureLODSettings:TextureLODGroups:7=(Group=TEXTUREGROUP_WeaponNormalMap,MinLODSize=1,MaxLODSize=4096,LODBias=0,MinMagFilter=aniso,MipFilter=point,MipGenSettings=TMGS_SimpleAverage)
-Windows.DeviceProfiles:/Script/Engine.TextureLODSettings:TextureLODGroups:8=(Group=TEXTUREGROUP_WeaponSpecular,MinLODSize=1,MaxLODSize=4096,LODBias=0,MinMagFilter=aniso,MipFilter=point,MipGenSettings=TMGS_SimpleAverage)
-Windows.DeviceProfiles:/Script/Engine.TextureLODSettings:TextureLODGroups:9=(Group=TEXTUREGROUP_Vehicle,MinLODSize=1,MaxLODSize=4096,LODBias=0,MinMagFilter=aniso,MipFilter=point,MipGenSettings=TMGS_SimpleAverage)
-Windows.DeviceProfiles:/Script/Engine.TextureLODSettings:TextureLODGroups:10=(Group=TEXTUREGROUP_VehicleNormalMap,MinLODSize=1,MaxLODSize=4096,LODBias=0,MinMagFilter=aniso,MipFilter=point,MipGenSettings=TMGS_SimpleAverage)
-Windows.DeviceProfiles:/Script/Engine.TextureLODSettings:TextureLODGroups:11=(Group=TEXTUREGROUP_VehicleSpecular,MinLODSize=1,MaxLODSize=4096,LODBias=0,MinMagFilter=aniso,MipFilter=point,MipGenSettings=TMGS_SimpleAverage)
-Windows.DeviceProfiles:/Script/Engine.TextureLODSettings:TextureLODGroups:12=(Group=TEXTUREGROUP_Cinematic,MinLODSize=1,MaxLODSize=4096,LODBias=0,MinMagFilter=aniso,MipFilter=point,MipGenSettings=TMGS_SimpleAverage)
-Windows.DeviceProfiles:/Script/Engine.TextureLODSettings:TextureLODGroups:13=(Group=TEXTUREGROUP_Effects,MinLODSize=1,MaxLODSize=4096,LODBias=0,MinMagFilter=linear,MipFilter=point,MipGenSettings=TMGS_SimpleAverage)
-Windows.DeviceProfiles:/Script/Engine.TextureLODSettings:TextureLODGroups:14=(Group=TEXTUREGROUP_EffectsNotFiltered,MinLODSize=1,MaxLODSize=4096,LODBias=0,MinMagFilter=aniso,MipFilter=point,MipGenSettings=TMGS_SimpleAverage)
-Windows.DeviceProfiles:/Script/Engine.TextureLODSettings:TextureLODGroups:15=(Group=TEXTUREGROUP_Skybox,MinLODSize=1,MaxLODSize=4096,LODBias=0,MinMagFilter=aniso,MipFilter=point,MipGenSettings=TMGS_SimpleAverage)
-Windows.DeviceProfiles:/Script/Engine.TextureLODSettings:TextureLODGroups:16=(Group=TEXTUREGROUP_UI,MinLODSize=1,MaxLODSize=4096,LODBias=0,MinMagFilter=aniso,MipFilter=point,MipGenSettings=TMGS_SimpleAverage)
-Windows.DeviceProfiles:/Script/Engine.TextureLODSettings:TextureLODGroups:17=(Group=TEXTUREGROUP_Lightmap,MinLODSize=1,MaxLODSize=4096,LODBias=0,MinMagFilter=aniso,MipFilter=point,MipGenSettings=TMGS_SimpleAverage)
-Windows.DeviceProfiles:/Script/Engine.TextureLODSettings:TextureLODGroups:18=(Group=TEXTUREGROUP_Shadowmap,MinLODSize=1,MaxLODSize=4096,LODBias=0,MinMagFilter=aniso,MipFilter=point,NumStreamedMips=3,MipGenSettings=TMGS_SimpleAverage)
-Windows.DeviceProfiles:/Script/Engine.TextureLODSettings:TextureLODGroups:19=(Group=TEXTUREGROUP_RenderTarget,MinLODSize=1,MaxLODSize=4096,LODBias=0,MinMagFilter=aniso,MipFilter=point,MipGenSettings=TMGS_SimpleAverage)
-Windows.DeviceProfiles:/Script/Engine.TextureLODSettings:TextureLODGroups:20=(Group=TEXTUREGROUP_MobileFlattened,MinLODSize=1,MaxLODSize=4096,LODBias=0,MinMagFilter=aniso,MipFilter=point,MipGenSettings=TMGS_SimpleAverage)
-Windows.DeviceProfiles:/Script/Engine.TextureLODSettings:TextureLODGroups:21=(Group=TEXTUREGROUP_Terrain_Heightmap,MinLODSize=1,MaxLODSize=4096,LODBias=0,MinMagFilter=aniso,MipFilter=point,MipGenSettings=TMGS_SimpleAverage)
-Windows.DeviceProfiles:/Script/Engine.TextureLODSettings:TextureLODGroups:22=(Group=TEXTUREGROUP_Terrain_Weightmap,MinLODSize=1,MaxLODSize=4096,LODBias=0,MinMagFilter=aniso,MipFilter=point,MipGenSettings=TMGS_SimpleAverage)
+Windows.DeviceProfiles:DeviceProfiles:DeviceProfileNameAndTypes:62=Android_Adreno5xx_No_Vulkan,Android
+Windows.DeviceProfiles:DeviceProfiles:DeviceProfileNameAndTypes:63=Android_Adreno5xx_Vulkan_Nougat,Android
+Windows.DeviceProfiles:DeviceProfiles:DeviceProfileNameAndTypes:64=Android_Adreno6xx,Android
+Windows.DeviceProfiles:DeviceProfiles:DeviceProfileNameAndTypes:65=Android_PowerVR54x,Android
+Windows.DeviceProfiles:DeviceProfiles:DeviceProfileNameAndTypes:66=Android_PowerVR_G6xxx,Android
+Windows.DeviceProfiles:DeviceProfiles:DeviceProfileNameAndTypes:67=Android_PowerVRHigh,Android
+Windows.DeviceProfiles:DeviceProfiles:DeviceProfileNameAndTypes:68=Android_PowerVRLow,Android
+Windows.DeviceProfiles:DeviceProfiles:DeviceProfileNameAndTypes:69=Android_PowerVRMid,Android
+Windows.DeviceProfiles:DeviceProfiles:DeviceProfileNameAndTypes:70=Android_TegraK1,Android
+Windows.DeviceProfiles:DeviceProfiles:DeviceProfileNameAndTypes:71=Android_Tegra4,Android
+Windows.DeviceProfiles:DeviceProfiles:DeviceProfileNameAndTypes:72=Android_IntelHD,Android
+Windows.DeviceProfiles:DeviceProfiles:DeviceProfileNameAndTypes:73=Android_IntelHD_ES3,Android
+Windows.DeviceProfiles:DeviceProfiles:DeviceProfileNameAndTypes:74=Android_Mali_4xx,Android
+Windows.DeviceProfiles:DeviceProfiles:DeviceProfileNameAndTypes:75=Android_Mali_T6xx,Android
+Windows.DeviceProfiles:DeviceProfiles:DeviceProfileNameAndTypes:76=Android_Mali_T7xx,Android
+Windows.DeviceProfiles:DeviceProfiles:DeviceProfileNameAndTypes:77=Android_Mali_T8xx,Android
+Windows.DeviceProfiles:DeviceProfiles:DeviceProfileNameAndTypes:78=Android_Mali_T8xx_No_Vulkan,Android
+Windows.DeviceProfiles:DeviceProfiles:DeviceProfileNameAndTypes:79=Android_Mali_G71,Android
+Windows.DeviceProfiles:DeviceProfiles:DeviceProfileNameAndTypes:80=Android_Mali_G72,Android
+Windows.DeviceProfiles:DeviceProfiles:DeviceProfileNameAndTypes:81=Android_Mali_G76,Android
+Windows.DeviceProfiles:DeviceProfiles:DeviceProfileNameAndTypes:82=Lumin,Lumin
+Windows.DeviceProfiles:DeviceProfiles:DeviceProfileNameAndTypes:83=Lumin_Desktop,Lumin
+Windows.DeviceProfiles:/Script/Engine.TextureLODSettings:TextureLODGroups:0=(Group=TEXTUREGROUP_World,MinLODSize=1,MaxLODSize=8192,LODBias=0,MinMagFilter=aniso,MipFilter=point,MipGenSettings=TMGS_SimpleAverage)
+Windows.DeviceProfiles:/Script/Engine.TextureLODSettings:TextureLODGroups:1=(Group=TEXTUREGROUP_WorldNormalMap,MinLODSize=1,MaxLODSize=8192,LODBias=0,MinMagFilter=aniso,MipFilter=point,MipGenSettings=TMGS_SimpleAverage)
+Windows.DeviceProfiles:/Script/Engine.TextureLODSettings:TextureLODGroups:2=(Group=TEXTUREGROUP_WorldSpecular,MinLODSize=1,MaxLODSize=8192,LODBias=0,MinMagFilter=aniso,MipFilter=point,MipGenSettings=TMGS_SimpleAverage)
+Windows.DeviceProfiles:/Script/Engine.TextureLODSettings:TextureLODGroups:3=(Group=TEXTUREGROUP_Character,MinLODSize=1,MaxLODSize=8192,LODBias=0,MinMagFilter=aniso,MipFilter=point,MipGenSettings=TMGS_SimpleAverage)
+Windows.DeviceProfiles:/Script/Engine.TextureLODSettings:TextureLODGroups:4=(Group=TEXTUREGROUP_CharacterNormalMap,MinLODSize=1,MaxLODSize=8192,LODBias=0,MinMagFilter=aniso,MipFilter=point,MipGenSettings=TMGS_SimpleAverage)
+Windows.DeviceProfiles:/Script/Engine.TextureLODSettings:TextureLODGroups:5=(Group=TEXTUREGROUP_CharacterSpecular,MinLODSize=1,MaxLODSize=8192,LODBias=0,MinMagFilter=aniso,MipFilter=point,MipGenSettings=TMGS_SimpleAverage)
+Windows.DeviceProfiles:/Script/Engine.TextureLODSettings:TextureLODGroups:6=(Group=TEXTUREGROUP_Weapon,MinLODSize=1,MaxLODSize=8192,LODBias=0,MinMagFilter=aniso,MipFilter=point,MipGenSettings=TMGS_SimpleAverage)
+Windows.DeviceProfiles:/Script/Engine.TextureLODSettings:TextureLODGroups:7=(Group=TEXTUREGROUP_WeaponNormalMap,MinLODSize=1,MaxLODSize=8192,LODBias=0,MinMagFilter=aniso,MipFilter=point,MipGenSettings=TMGS_SimpleAverage)
+Windows.DeviceProfiles:/Script/Engine.TextureLODSettings:TextureLODGroups:8=(Group=TEXTUREGROUP_WeaponSpecular,MinLODSize=1,MaxLODSize=8192,LODBias=0,MinMagFilter=aniso,MipFilter=point,MipGenSettings=TMGS_SimpleAverage)
+Windows.DeviceProfiles:/Script/Engine.TextureLODSettings:TextureLODGroups:9=(Group=TEXTUREGROUP_Vehicle,MinLODSize=1,MaxLODSize=8192,LODBias=0,MinMagFilter=aniso,MipFilter=point,MipGenSettings=TMGS_SimpleAverage)
+Windows.DeviceProfiles:/Script/Engine.TextureLODSettings:TextureLODGroups:10=(Group=TEXTUREGROUP_VehicleNormalMap,MinLODSize=1,MaxLODSize=8192,LODBias=0,MinMagFilter=aniso,MipFilter=point,MipGenSettings=TMGS_SimpleAverage)
+Windows.DeviceProfiles:/Script/Engine.TextureLODSettings:TextureLODGroups:11=(Group=TEXTUREGROUP_VehicleSpecular,MinLODSize=1,MaxLODSize=8192,LODBias=0,MinMagFilter=aniso,MipFilter=point,MipGenSettings=TMGS_SimpleAverage)
+Windows.DeviceProfiles:/Script/Engine.TextureLODSettings:TextureLODGroups:12=(Group=TEXTUREGROUP_Cinematic,MinLODSize=1,MaxLODSize=8192,LODBias=0,MinMagFilter=aniso,MipFilter=point,MipGenSettings=TMGS_SimpleAverage)
+Windows.DeviceProfiles:/Script/Engine.TextureLODSettings:TextureLODGroups:13=(Group=TEXTUREGROUP_Effects,MinLODSize=1,MaxLODSize=8192,LODBias=0,MinMagFilter=linear,MipFilter=point,MipGenSettings=TMGS_SimpleAverage)
+Windows.DeviceProfiles:/Script/Engine.TextureLODSettings:TextureLODGroups:14=(Group=TEXTUREGROUP_EffectsNotFiltered,MinLODSize=1,MaxLODSize=8192,LODBias=0,MinMagFilter=aniso,MipFilter=point,MipGenSettings=TMGS_SimpleAverage)
+Windows.DeviceProfiles:/Script/Engine.TextureLODSettings:TextureLODGroups:15=(Group=TEXTUREGROUP_Skybox,MinLODSize=1,MaxLODSize=8192,LODBias=0,MinMagFilter=aniso,MipFilter=point,MipGenSettings=TMGS_SimpleAverage)
+Windows.DeviceProfiles:/Script/Engine.TextureLODSettings:TextureLODGroups:16=(Group=TEXTUREGROUP_UI,MinLODSize=1,MaxLODSize=8192,LODBias=0,MinMagFilter=aniso,MipFilter=point,MipGenSettings=TMGS_NoMipmaps)
+Windows.DeviceProfiles:/Script/Engine.TextureLODSettings:TextureLODGroups:17=(Group=TEXTUREGROUP_Lightmap,MinLODSize=1,MaxLODSize=8192,LODBias=0,MinMagFilter=aniso,MipFilter=point,MipGenSettings=TMGS_SimpleAverage)
+Windows.DeviceProfiles:/Script/Engine.TextureLODSettings:TextureLODGroups:18=(Group=TEXTUREGROUP_Shadowmap,MinLODSize=1,MaxLODSize=8192,LODBias=0,MinMagFilter=aniso,MipFilter=point,NumStreamedMips=3,MipGenSettings=TMGS_SimpleAverage)
+Windows.DeviceProfiles:/Script/Engine.TextureLODSettings:TextureLODGroups:19=(Group=TEXTUREGROUP_RenderTarget,MinLODSize=1,MaxLODSize=8192,LODBias=0,MinMagFilter=aniso,MipFilter=point,MipGenSettings=TMGS_SimpleAverage)
+Windows.DeviceProfiles:/Script/Engine.TextureLODSettings:TextureLODGroups:20=(Group=TEXTUREGROUP_MobileFlattened,MinLODSize=1,MaxLODSize=8192,LODBias=0,MinMagFilter=aniso,MipFilter=point,MipGenSettings=TMGS_SimpleAverage)
+Windows.DeviceProfiles:/Script/Engine.TextureLODSettings:TextureLODGroups:21=(Group=TEXTUREGROUP_Terrain_Heightmap,MinLODSize=1,MaxLODSize=8192,LODBias=0,MinMagFilter=aniso,MipFilter=point,MipGenSettings=TMGS_SimpleAverage)
+Windows.DeviceProfiles:/Script/Engine.TextureLODSettings:TextureLODGroups:22=(Group=TEXTUREGROUP_Terrain_Weightmap,MinLODSize=1,MaxLODSize=8192,LODBias=0,MinMagFilter=aniso,MipFilter=point,MipGenSettings=TMGS_SimpleAverage)
 Windows.DeviceProfiles:/Script/Engine.TextureLODSettings:TextureLODGroups:23=(Group=TEXTUREGROUP_Bokeh,MinLODSize=1,MaxLODSize=256,LODBias=0,MinMagFilter=linear,MipFilter=linear,MipGenSettings=TMGS_SimpleAverage)
-Windows.DeviceProfiles:/Script/Engine.TextureLODSettings:TextureLODGroups:24=(Group=TEXTUREGROUP_Pixels2D,MinLODSize=1,MaxLODSize=4096,LODBias=0,MinMagFilter=point,MipFilter=point,MipGenSettings=TMGS_SimpleAverage)
+Windows.DeviceProfiles:/Script/Engine.TextureLODSettings:TextureLODGroups:24=(Group=TEXTUREGROUP_Pixels2D,MinLODSize=1,MaxLODSize=8192,LODBias=0,MinMagFilter=point,MipFilter=point,MipGenSettings=TMGS_SimpleAverage)
 Windows.DeviceProfiles:Windows DeviceProfile:DeviceType:0=Windows
 Windows.DeviceProfiles:Windows DeviceProfile:BaseProfileName:0=
-Windows.DeviceProfiles:Windows DeviceProfile:CVars:0=r.Vulkan.UseRealUBs=1
+Windows.DeviceProfiles:Windows DeviceProfile:CVars:0=r.Vulkan.UseRealUBs=0		; Required until we fix HLR fall-out
 Windows.DeviceProfiles:WindowsNoEditor DeviceProfile:DeviceType:0=Windows
 Windows.DeviceProfiles:WindowsNoEditor DeviceProfile:BaseProfileName:0=Windows
 Windows.DeviceProfiles:WindowsClient DeviceProfile:DeviceType:0=Windows
@@ -3507,37 +3569,41 @@ Windows.DeviceProfiles:iPadPro2_129 DeviceProfile:BaseProfileName:0=IPadPro
 Windows.DeviceProfiles:iPadPro3_129 DeviceProfile:DeviceType:0=IOS
 Windows.DeviceProfiles:iPadPro3_129 DeviceProfile:BaseProfileName:0=IPadPro
 Windows.DeviceProfiles:/Script/AndroidDeviceProfileSelector.AndroidDeviceProfileMatchingRules:MatchProfile:0=(Profile="Android_PowerVR54x",Match=((SourceType=SRC_GpuFamily,CompareType=CMP_Regex,MatchString="PowerVR SGX 54[0-9]")))
-Windows.DeviceProfiles:/Script/AndroidDeviceProfileSelector.AndroidDeviceProfileMatchingRules:MatchProfile:1=(Profile="Android_PowerVRMid",Match=((SourceType=SRC_GpuFamily,CompareType=CMP_Regex,MatchString="PowerVR"),(SourceType=SRC_GlVersion,CompareType=CMP_Regex,MatchString="^OpenGL ES 3\\.")))
-Windows.DeviceProfiles:/Script/AndroidDeviceProfileSelector.AndroidDeviceProfileMatchingRules:MatchProfile:2=(Profile="Android_PowerVRLow",Match=((SourceType=SRC_GpuFamily,CompareType=CMP_Regex,MatchString="PowerVR")))
-Windows.DeviceProfiles:/Script/AndroidDeviceProfileSelector.AndroidDeviceProfileMatchingRules:MatchProfile:3=(Profile="Android_Adreno2xx",Match=((SourceType=SRC_GpuFamily,CompareType=CMP_Regex,MatchString="Adreno \\(TM\\) 2[0-9][0-9]")))
-Windows.DeviceProfiles:/Script/AndroidDeviceProfileSelector.AndroidDeviceProfileMatchingRules:MatchProfile:4=(Profile="Android_Adreno320",Match=((SourceType=SRC_GpuFamily,CompareType=CMP_Equal,MatchString="Adreno (TM) 320")))
-Windows.DeviceProfiles:/Script/AndroidDeviceProfileSelector.AndroidDeviceProfileMatchingRules:MatchProfile:5=(Profile="Android_Adreno330_Ver53",Match=((SourceType=SRC_GpuFamily,CompareType=CMP_Equal,MatchString="Adreno (TM) 330"),(SourceType=SRC_GlVersion,CompareType=CMP_Regex,MatchString="ES 3\\.0 V@([0-9]+)"),(SourceType=SRC_PreviousRegexMatch,CompareType=CMP_GreaterEqual,MatchString="53")))
-Windows.DeviceProfiles:/Script/AndroidDeviceProfileSelector.AndroidDeviceProfileMatchingRules:MatchProfile:6=(Profile="Android_Adreno330",Match=((SourceType=SRC_GpuFamily,CompareType=CMP_Equal,MatchString="Adreno (TM) 330")))
-Windows.DeviceProfiles:/Script/AndroidDeviceProfileSelector.AndroidDeviceProfileMatchingRules:MatchProfile:7=(Profile="Android_Adreno4xx_Nexus6",Match=((SourceType=SRC_DeviceModel,CompareType=CMP_Equal,MatchString="Nexus 6")))
-Windows.DeviceProfiles:/Script/AndroidDeviceProfileSelector.AndroidDeviceProfileMatchingRules:MatchProfile:8=(Profile="Android_Adreno4xx",Match=((SourceType=SRC_GpuFamily,CompareType=CMP_Regex,MatchString="Adreno \\(TM\\) 4[0-9][0-9]")))
-Windows.DeviceProfiles:/Script/AndroidDeviceProfileSelector.AndroidDeviceProfileMatchingRules:MatchProfile:9=(Profile="Android_Adreno51x",Match=((SourceType=SRC_GpuFamily,CompareType=CMP_Regex,MatchString="Adreno \\(TM\\) 51[0-9]")))
-Windows.DeviceProfiles:/Script/AndroidDeviceProfileSelector.AndroidDeviceProfileMatchingRules:MatchProfile:10=(Profile="Android_Adreno5xx_Vulkan_Nougat",Match=((SourceType=SRC_GpuFamily,CompareType=CMP_Regex,MatchString="Adreno \\(TM\\) 5[0-9][0-9]"),,(SourceType=SRC_VulkanAvailable,CompareType=CMP_Equal,MatchString="true"),(SourceType=SRC_AndroidVersion,CompareType=CMP_Regex,MatchString="7\\.")))
-Windows.DeviceProfiles:/Script/AndroidDeviceProfileSelector.AndroidDeviceProfileMatchingRules:MatchProfile:11=(Profile="Android_Adreno5xx",Match=((SourceType=SRC_GpuFamily,CompareType=CMP_Regex,MatchString="Adreno \\(TM\\) 5[0-9][0-9]")))
-Windows.DeviceProfiles:/Script/AndroidDeviceProfileSelector.AndroidDeviceProfileMatchingRules:MatchProfile:12=(Profile="Android_Adreno6xx",Match=((SourceType=SRC_GpuFamily,CompareType=CMP_Regex,MatchString="Adreno \\(TM\\) 6[0-9][0-9]")))
-Windows.DeviceProfiles:/Script/AndroidDeviceProfileSelector.AndroidDeviceProfileMatchingRules:MatchProfile:13=(Profile="Android_TegraK1",Match=((SourceType=SRC_GpuFamily,CompareType=CMP_Equal,MatchString="NVIDIA Tegra"),(SourceType=SRC_GlVersion,CompareType=CMP_Regex,MatchString="^OpenGL ES 3\\.")))
-Windows.DeviceProfiles:/Script/AndroidDeviceProfileSelector.AndroidDeviceProfileMatchingRules:MatchProfile:14=(Profile="Android_Tegra4",Match=((SourceType=SRC_GpuFamily,CompareType=CMP_Equal,MatchString="NVIDIA Tegra"),(SourceType=SRC_GlVersion,CompareType=CMP_Regex,MatchString="^OpenGL ES 2\\.")))
-Windows.DeviceProfiles:/Script/AndroidDeviceProfileSelector.AndroidDeviceProfileMatchingRules:MatchProfile:15=(Profile="Android_IntelHD_ES3",Match=((SourceType=SRC_GpuFamily,CompareType=CMP_Equal,MatchString="Intel(R) HD Graphics"),(SourceType=SRC_GlVersion,CompareType=CMP_Regex,MatchString="^OpenGL ES 3\\.")))
-Windows.DeviceProfiles:/Script/AndroidDeviceProfileSelector.AndroidDeviceProfileMatchingRules:MatchProfile:16=(Profile="Android_IntelHD",Match=((SourceType=SRC_GpuFamily,CompareType=CMP_Equal,MatchString="Intel(R) HD Graphics"),(SourceType=SRC_GlVersion,CompareType=CMP_Regex,MatchString="^OpenGL ES 2\\.")))
-Windows.DeviceProfiles:/Script/AndroidDeviceProfileSelector.AndroidDeviceProfileMatchingRules:MatchProfile:17=(Profile="Android_Mali_4xx_LenovoS939",Match=((SourceType=SRC_DeviceModel,CompareType=CMP_Equal,MatchString="Lenovo S939")))
-Windows.DeviceProfiles:/Script/AndroidDeviceProfileSelector.AndroidDeviceProfileMatchingRules:MatchProfile:18=(Profile="Android_Mali_4xx_LenovoA7600",Match=((SourceType=SRC_DeviceModel,CompareType=CMP_Regex,MatchString="^Lenovo A7600")))
-Windows.DeviceProfiles:/Script/AndroidDeviceProfileSelector.AndroidDeviceProfileMatchingRules:MatchProfile:19=(Profile="Android_Mali_4xx_WikoHighwaySigns",Match=((SourceType=SRC_DeviceMake,CompareType=CMP_Equal,MatchString="Wiko"),(SourceType=SRC_DeviceModel,CompareType=CMP_Equal,MatchString="Highway Signs")))
-Windows.DeviceProfiles:/Script/AndroidDeviceProfileSelector.AndroidDeviceProfileMatchingRules:MatchProfile:20=(Profile="Android_Mali_4xx_AlcatelPixi3",Match=((SourceType=SRC_DeviceMake,CompareType=CMP_Equal,MatchString="Alcatel"),(SourceType=SRC_DeviceModel,CompareType=CMP_Equal,MatchString="Pixi 3 (4) 3G")))
-Windows.DeviceProfiles:/Script/AndroidDeviceProfileSelector.AndroidDeviceProfileMatchingRules:MatchProfile:21=(Profile="Android_Mali_4xx_KindleFire7",Match=((SourceType=SRC_DeviceModel,CompareType=CMP_Equal,MatchString="KFFOWI")))
-Windows.DeviceProfiles:/Script/AndroidDeviceProfileSelector.AndroidDeviceProfileMatchingRules:MatchProfile:22=(Profile="Android_Mali_4xx",Match=((SourceType=SRC_GpuFamily,CompareType=CMP_Regex,MatchString="^Mali\\-4")))
-Windows.DeviceProfiles:/Script/AndroidDeviceProfileSelector.AndroidDeviceProfileMatchingRules:MatchProfile:23=(Profile="Android_Mali_T6xx",Match=((SourceType=SRC_GpuFamily,CompareType=CMP_Regex,MatchString="^Mali\\-T6")))
-Windows.DeviceProfiles:/Script/AndroidDeviceProfileSelector.AndroidDeviceProfileMatchingRules:MatchProfile:24=(Profile="Android_Mali_T7xx",Match=((SourceType=SRC_GpuFamily,CompareType=CMP_Regex,MatchString="^Mali\\-T7")))
-Windows.DeviceProfiles:/Script/AndroidDeviceProfileSelector.AndroidDeviceProfileMatchingRules:MatchProfile:25=(Profile="Android_Mali_T8xx_No_Vulkan",Match=((SourceType=SRC_GpuFamily,CompareType=CMP_Regex,MatchString="^Mali\\-T8"),(SourceType=SRC_VulkanVersion,CompareType=CMP_Regex,MatchString="^1\\.0\\.([0-9]+)"),(SourceType=SRC_PreviousRegexMatch,CompareType=CMP_Less,MatchString="11")))
-Windows.DeviceProfiles:/Script/AndroidDeviceProfileSelector.AndroidDeviceProfileMatchingRules:MatchProfile:26=(Profile="Android_Mali_T8xx_No_Vulkan",Match=((SourceType=SRC_GpuFamily,CompareType=CMP_Regex,MatchString="^Mali\\-T8"),(SourceType=SRC_AndroidVersion, CompareType=CMP_Regex,MatchString="([0-9]).*"),(SourceType=SRC_PreviousRegexMatch,CompareType=CMP_Less,MatchString="8")))
-Windows.DeviceProfiles:/Script/AndroidDeviceProfileSelector.AndroidDeviceProfileMatchingRules:MatchProfile:27=(Profile="Android_Mali_T8xx",Match=((SourceType=SRC_GpuFamily,CompareType=CMP_Regex,MatchString="^Mali\\-T8")))
-Windows.DeviceProfiles:/Script/AndroidDeviceProfileSelector.AndroidDeviceProfileMatchingRules:MatchProfile:28=(Profile="Android_Mali_G71",Match=((SourceType=SRC_GpuFamily,CompareType=CMP_Regex,MatchString="^Mali\\-G71")))
-Windows.DeviceProfiles:/Script/AndroidDeviceProfileSelector.AndroidDeviceProfileMatchingRules:MatchProfile:29=(Profile="Android_Mali_G72",Match=((SourceType=SRC_GpuFamily,CompareType=CMP_Regex,MatchString="^Mali\\-G72")))
-Windows.DeviceProfiles:/Script/AndroidDeviceProfileSelector.AndroidDeviceProfileMatchingRules:MatchProfile:30=(Profile="Android_Mid",Match=((SourceType=SRC_GlVersion,CompareType=CMP_Regex,MatchString="^OpenGL ES 3\\.")))
-Windows.DeviceProfiles:/Script/AndroidDeviceProfileSelector.AndroidDeviceProfileMatchingRules:MatchProfile:31=(Profile="Android_Low",Match=((SourceType=SRC_GlVersion,CompareType=CMP_Regex,MatchString="^OpenGL ES 2\\.")))
+Windows.DeviceProfiles:/Script/AndroidDeviceProfileSelector.AndroidDeviceProfileMatchingRules:MatchProfile:1=(Profile="Android_PowerVR_G6xxx",Match=((SourceType=SRC_GpuFamily,CompareType=CMP_Regex,MatchString="PowerVR Rogue G6[0-9]+")))
+Windows.DeviceProfiles:/Script/AndroidDeviceProfileSelector.AndroidDeviceProfileMatchingRules:MatchProfile:2=(Profile="Android_PowerVRHigh",Match=((SourceType=SRC_GpuFamily,CompareType=CMP_Regex,MatchString="PowerVR Rogue G"),(SourceType=SRC_GlVersion,CompareType=CMP_Regex,MatchString="^OpenGL ES 3\\.")))
+Windows.DeviceProfiles:/Script/AndroidDeviceProfileSelector.AndroidDeviceProfileMatchingRules:MatchProfile:3=(Profile="Android_PowerVRMid",Match=((SourceType=SRC_GpuFamily,CompareType=CMP_Regex,MatchString="PowerVR"),(SourceType=SRC_GlVersion,CompareType=CMP_Regex,MatchString="^OpenGL ES 3\\.")))
+Windows.DeviceProfiles:/Script/AndroidDeviceProfileSelector.AndroidDeviceProfileMatchingRules:MatchProfile:4=(Profile="Android_PowerVRLow",Match=((SourceType=SRC_GpuFamily,CompareType=CMP_Regex,MatchString="PowerVR")))
+Windows.DeviceProfiles:/Script/AndroidDeviceProfileSelector.AndroidDeviceProfileMatchingRules:MatchProfile:5=(Profile="Android_Adreno2xx",Match=((SourceType=SRC_GpuFamily,CompareType=CMP_Regex,MatchString="Adreno \\(TM\\) 2[0-9][0-9]")))
+Windows.DeviceProfiles:/Script/AndroidDeviceProfileSelector.AndroidDeviceProfileMatchingRules:MatchProfile:6=(Profile="Android_Adreno320",Match=((SourceType=SRC_GpuFamily,CompareType=CMP_Equal,MatchString="Adreno (TM) 320")))
+Windows.DeviceProfiles:/Script/AndroidDeviceProfileSelector.AndroidDeviceProfileMatchingRules:MatchProfile:7=(Profile="Android_Adreno330_Ver53",Match=((SourceType=SRC_GpuFamily,CompareType=CMP_Equal,MatchString="Adreno (TM) 330"),(SourceType=SRC_GlVersion,CompareType=CMP_Regex,MatchString="ES 3\\.0 V@([0-9]+)"),(SourceType=SRC_PreviousRegexMatch,CompareType=CMP_GreaterEqual,MatchString="53")))
+Windows.DeviceProfiles:/Script/AndroidDeviceProfileSelector.AndroidDeviceProfileMatchingRules:MatchProfile:8=(Profile="Android_Adreno330",Match=((SourceType=SRC_GpuFamily,CompareType=CMP_Equal,MatchString="Adreno (TM) 330")))
+Windows.DeviceProfiles:/Script/AndroidDeviceProfileSelector.AndroidDeviceProfileMatchingRules:MatchProfile:9=(Profile="Android_Adreno4xx_Nexus6",Match=((SourceType=SRC_DeviceModel,CompareType=CMP_Equal,MatchString="Nexus 6")))
+Windows.DeviceProfiles:/Script/AndroidDeviceProfileSelector.AndroidDeviceProfileMatchingRules:MatchProfile:10=(Profile="Android_Adreno4xx",Match=((SourceType=SRC_GpuFamily,CompareType=CMP_Regex,MatchString="Adreno \\(TM\\) 4[0-9][0-9]")))
+Windows.DeviceProfiles:/Script/AndroidDeviceProfileSelector.AndroidDeviceProfileMatchingRules:MatchProfile:11=(Profile="Android_Adreno51x",Match=((SourceType=SRC_GpuFamily,CompareType=CMP_Regex,MatchString="Adreno \\(TM\\) 51[0-9]")))
+Windows.DeviceProfiles:/Script/AndroidDeviceProfileSelector.AndroidDeviceProfileMatchingRules:MatchProfile:12=(Profile="Android_Adreno5xx_No_Vulkan",Match=((SourceType=SRC_GpuFamily,CompareType=CMP_Regex,MatchString="Adreno \\(TM\\) 5[0-9][0-9]"),(SourceType=SRC_AndroidVersion,CompareType=CMP_Regex,MatchString="6\\.")))
+Windows.DeviceProfiles:/Script/AndroidDeviceProfileSelector.AndroidDeviceProfileMatchingRules:MatchProfile:13=(Profile="Android_Adreno5xx_Vulkan_Nougat",Match=((SourceType=SRC_GpuFamily,CompareType=CMP_Regex,MatchString="Adreno \\(TM\\) 5[0-9][0-9]"),,(SourceType=SRC_VulkanAvailable,CompareType=CMP_Equal,MatchString="true"),(SourceType=SRC_AndroidVersion,CompareType=CMP_Regex,MatchString="7\\.")))
+Windows.DeviceProfiles:/Script/AndroidDeviceProfileSelector.AndroidDeviceProfileMatchingRules:MatchProfile:14=(Profile="Android_Adreno5xx",Match=((SourceType=SRC_GpuFamily,CompareType=CMP_Regex,MatchString="Adreno \\(TM\\) 5[0-9][0-9]")))
+Windows.DeviceProfiles:/Script/AndroidDeviceProfileSelector.AndroidDeviceProfileMatchingRules:MatchProfile:15=(Profile="Android_Adreno6xx",Match=((SourceType=SRC_GpuFamily,CompareType=CMP_Regex,MatchString="Adreno \\(TM\\) 6[0-9][0-9]")))
+Windows.DeviceProfiles:/Script/AndroidDeviceProfileSelector.AndroidDeviceProfileMatchingRules:MatchProfile:16=(Profile="Android_TegraK1",Match=((SourceType=SRC_GpuFamily,CompareType=CMP_Equal,MatchString="NVIDIA Tegra"),(SourceType=SRC_GlVersion,CompareType=CMP_Regex,MatchString="^OpenGL ES 3\\.")))
+Windows.DeviceProfiles:/Script/AndroidDeviceProfileSelector.AndroidDeviceProfileMatchingRules:MatchProfile:17=(Profile="Android_Tegra4",Match=((SourceType=SRC_GpuFamily,CompareType=CMP_Equal,MatchString="NVIDIA Tegra"),(SourceType=SRC_GlVersion,CompareType=CMP_Regex,MatchString="^OpenGL ES 2\\.")))
+Windows.DeviceProfiles:/Script/AndroidDeviceProfileSelector.AndroidDeviceProfileMatchingRules:MatchProfile:18=(Profile="Android_IntelHD_ES3",Match=((SourceType=SRC_GpuFamily,CompareType=CMP_Equal,MatchString="Intel(R) HD Graphics"),(SourceType=SRC_GlVersion,CompareType=CMP_Regex,MatchString="^OpenGL ES 3\\.")))
+Windows.DeviceProfiles:/Script/AndroidDeviceProfileSelector.AndroidDeviceProfileMatchingRules:MatchProfile:19=(Profile="Android_IntelHD",Match=((SourceType=SRC_GpuFamily,CompareType=CMP_Equal,MatchString="Intel(R) HD Graphics"),(SourceType=SRC_GlVersion,CompareType=CMP_Regex,MatchString="^OpenGL ES 2\\.")))
+Windows.DeviceProfiles:/Script/AndroidDeviceProfileSelector.AndroidDeviceProfileMatchingRules:MatchProfile:20=(Profile="Android_Mali_4xx_LenovoS939",Match=((SourceType=SRC_DeviceModel,CompareType=CMP_Equal,MatchString="Lenovo S939")))
+Windows.DeviceProfiles:/Script/AndroidDeviceProfileSelector.AndroidDeviceProfileMatchingRules:MatchProfile:21=(Profile="Android_Mali_4xx_LenovoA7600",Match=((SourceType=SRC_DeviceModel,CompareType=CMP_Regex,MatchString="^Lenovo A7600")))
+Windows.DeviceProfiles:/Script/AndroidDeviceProfileSelector.AndroidDeviceProfileMatchingRules:MatchProfile:22=(Profile="Android_Mali_4xx_WikoHighwaySigns",Match=((SourceType=SRC_DeviceMake,CompareType=CMP_Equal,MatchString="Wiko"),(SourceType=SRC_DeviceModel,CompareType=CMP_Equal,MatchString="Highway Signs")))
+Windows.DeviceProfiles:/Script/AndroidDeviceProfileSelector.AndroidDeviceProfileMatchingRules:MatchProfile:23=(Profile="Android_Mali_4xx_AlcatelPixi3",Match=((SourceType=SRC_DeviceMake,CompareType=CMP_Equal,MatchString="Alcatel"),(SourceType=SRC_DeviceModel,CompareType=CMP_Equal,MatchString="Pixi 3 (4) 3G")))
+Windows.DeviceProfiles:/Script/AndroidDeviceProfileSelector.AndroidDeviceProfileMatchingRules:MatchProfile:24=(Profile="Android_Mali_4xx_KindleFire7",Match=((SourceType=SRC_DeviceModel,CompareType=CMP_Equal,MatchString="KFFOWI")))
+Windows.DeviceProfiles:/Script/AndroidDeviceProfileSelector.AndroidDeviceProfileMatchingRules:MatchProfile:25=(Profile="Android_Mali_4xx",Match=((SourceType=SRC_GpuFamily,CompareType=CMP_Regex,MatchString="^Mali\\-4")))
+Windows.DeviceProfiles:/Script/AndroidDeviceProfileSelector.AndroidDeviceProfileMatchingRules:MatchProfile:26=(Profile="Android_Mali_T6xx",Match=((SourceType=SRC_GpuFamily,CompareType=CMP_Regex,MatchString="^Mali\\-T6")))
+Windows.DeviceProfiles:/Script/AndroidDeviceProfileSelector.AndroidDeviceProfileMatchingRules:MatchProfile:27=(Profile="Android_Mali_T7xx",Match=((SourceType=SRC_GpuFamily,CompareType=CMP_Regex,MatchString="^Mali\\-T7")))
+Windows.DeviceProfiles:/Script/AndroidDeviceProfileSelector.AndroidDeviceProfileMatchingRules:MatchProfile:28=(Profile="Android_Mali_T8xx_No_Vulkan",Match=((SourceType=SRC_GpuFamily,CompareType=CMP_Regex,MatchString="^Mali\\-T8"),(SourceType=SRC_VulkanVersion,CompareType=CMP_Regex,MatchString="^1\\.0\\.([0-9]+)"),(SourceType=SRC_PreviousRegexMatch,CompareType=CMP_Less,MatchString="11")))
+Windows.DeviceProfiles:/Script/AndroidDeviceProfileSelector.AndroidDeviceProfileMatchingRules:MatchProfile:29=(Profile="Android_Mali_T8xx_No_Vulkan",Match=((SourceType=SRC_GpuFamily,CompareType=CMP_Regex,MatchString="^Mali\\-T8"),(SourceType=SRC_AndroidVersion, CompareType=CMP_Regex,MatchString="([0-9]).*"),(SourceType=SRC_PreviousRegexMatch,CompareType=CMP_Less,MatchString="8")))
+Windows.DeviceProfiles:/Script/AndroidDeviceProfileSelector.AndroidDeviceProfileMatchingRules:MatchProfile:30=(Profile="Android_Mali_T8xx",Match=((SourceType=SRC_GpuFamily,CompareType=CMP_Regex,MatchString="^Mali\\-T8")))
+Windows.DeviceProfiles:/Script/AndroidDeviceProfileSelector.AndroidDeviceProfileMatchingRules:MatchProfile:31=(Profile="Android_Mali_G71",Match=((SourceType=SRC_GpuFamily,CompareType=CMP_Regex,MatchString="^Mali\\-G71")))
+Windows.DeviceProfiles:/Script/AndroidDeviceProfileSelector.AndroidDeviceProfileMatchingRules:MatchProfile:32=(Profile="Android_Mali_G72",Match=((SourceType=SRC_GpuFamily,CompareType=CMP_Regex,MatchString="^Mali\\-G72")))
+Windows.DeviceProfiles:/Script/AndroidDeviceProfileSelector.AndroidDeviceProfileMatchingRules:MatchProfile:33=(Profile="Android_Mali_G76",Match=((SourceType=SRC_GpuFamily,CompareType=CMP_Regex,MatchString="^Mali\\-G76")))
+Windows.DeviceProfiles:/Script/AndroidDeviceProfileSelector.AndroidDeviceProfileMatchingRules:MatchProfile:34=(Profile="Android_Mid",Match=((SourceType=SRC_GlVersion,CompareType=CMP_Regex,MatchString="^OpenGL ES 3\\.")))
+Windows.DeviceProfiles:/Script/AndroidDeviceProfileSelector.AndroidDeviceProfileMatchingRules:MatchProfile:35=(Profile="Android_Low",Match=((SourceType=SRC_GlVersion,CompareType=CMP_Regex,MatchString="^OpenGL ES 2\\.")))
 Windows.DeviceProfiles:/Script/AndroidDeviceProfileSelector.AndroidJavaSurfaceViewDevices:SurfaceViewDevices:0=(Manufacturer="Amazon",Model="Kindle Fire")	; Kindle Fire (2011)
 Windows.DeviceProfiles:/Script/AndroidDeviceProfileSelector.AndroidJavaSurfaceViewDevices:SurfaceViewDevices:1=(Manufacturer="Amazon",Model="KFOT")		; Kindle Fire (2012)
 Windows.DeviceProfiles:/Script/AndroidDeviceProfileSelector.AndroidJavaSurfaceViewDevices:SurfaceViewDevices:2=(Manufacturer="Amazon",Model="KFTT")		; Kindle Fire HD 7" 2012 (WiFi)
@@ -3590,6 +3656,9 @@ Windows.DeviceProfiles:Android_Adreno51x DeviceProfile:CVars:0=r.OpenGL.StripExt
 Windows.DeviceProfiles:Android_Adreno5xx DeviceProfile:DeviceType:0=Android
 Windows.DeviceProfiles:Android_Adreno5xx DeviceProfile:BaseProfileName:0=Android_High
 Windows.DeviceProfiles:Android_Adreno5xx DeviceProfile:CVars:0=r.DisjointTimerQueries=1
+Windows.DeviceProfiles:Android_Adreno5xx_No_Vulkan DeviceProfile:DeviceType:0=Android
+Windows.DeviceProfiles:Android_Adreno5xx_No_Vulkan DeviceProfile:BaseProfileName:0=Android_Adreno5xx
+Windows.DeviceProfiles:Android_Adreno5xx_No_Vulkan DeviceProfile:CVars:0=r.Android.DisableVulkanSupport=1
 Windows.DeviceProfiles:Android_Adreno5xx_Vulkan_Nougat DeviceProfile:DeviceType:0=Android
 Windows.DeviceProfiles:Android_Adreno5xx_Vulkan_Nougat DeviceProfile:BaseProfileName:0=Android_Adreno5xx
 Windows.DeviceProfiles:Android_Adreno5xx_Vulkan_Nougat DeviceProfile:CVars:0=r.AllowOcclusionQueries=0
@@ -3608,10 +3677,15 @@ Windows.DeviceProfiles:Android_PowerVRMid DeviceProfile:DeviceType:0=Android
 Windows.DeviceProfiles:Android_PowerVRMid DeviceProfile:BaseProfileName:0=Android_Mid
 Windows.DeviceProfiles:Android_PowerVRMid DeviceProfile:CVars:0=r.Mobile.ForceDepthResolve=1
 Windows.DeviceProfiles:Android_PowerVRMid DeviceProfile:CVars:1=r.Android.DisableASTCSupport=1
+Windows.DeviceProfiles:Android_PowerVR_G6xxx DeviceProfile:DeviceType:0=Android
+Windows.DeviceProfiles:Android_PowerVR_G6xxx DeviceProfile:BaseProfileName:0=Android_PowerVRMid
+Windows.DeviceProfiles:Android_PowerVR_G6xxx DeviceProfile:CVars:0=r.Android.DisableOpenGLES31Support=1
 Windows.DeviceProfiles:Android_PowerVRLow DeviceProfile:DeviceType:0=Android
 Windows.DeviceProfiles:Android_PowerVRLow DeviceProfile:BaseProfileName:0=Android_Low
 Windows.DeviceProfiles:Android_PowerVRLow DeviceProfile:CVars:0=r.Mobile.ForceDepthResolve=1
 Windows.DeviceProfiles:Android_PowerVRLow DeviceProfile:CVars:1=r.Android.DisableASTCSupport=1
+Windows.DeviceProfiles:Android_PowerVRHigh DeviceProfile:DeviceType:0=Android
+Windows.DeviceProfiles:Android_PowerVRHigh DeviceProfile:BaseProfileName:0=Android_High
 Windows.DeviceProfiles:Android_IntelHD DeviceProfile:DeviceType:0=Android
 Windows.DeviceProfiles:Android_IntelHD DeviceProfile:BaseProfileName:0=Android_Low
 Windows.DeviceProfiles:Android_IntelHD_ES3 DeviceProfile:DeviceType:0=Android
@@ -3645,6 +3719,8 @@ Windows.DeviceProfiles:Android_Mali_G71 DeviceProfile:DeviceType:0=Android
 Windows.DeviceProfiles:Android_Mali_G71 DeviceProfile:BaseProfileName:0=Android_High
 Windows.DeviceProfiles:Android_Mali_G72 DeviceProfile:DeviceType:0=Android
 Windows.DeviceProfiles:Android_Mali_G72 DeviceProfile:BaseProfileName:0=Android_High
+Windows.DeviceProfiles:Android_Mali_G76 DeviceProfile:DeviceType:0=Android
+Windows.DeviceProfiles:Android_Mali_G76 DeviceProfile:BaseProfileName:0=Android_High
 Windows.DeviceProfiles:Android_TegraK1 DeviceProfile:DeviceType:0=Android
 Windows.DeviceProfiles:Android_TegraK1 DeviceProfile:BaseProfileName:0=Android_High
 Windows.DeviceProfiles:Android_Tegra4 DeviceProfile:DeviceType:0=Android
@@ -3652,12 +3728,41 @@ Windows.DeviceProfiles:Android_Tegra4 DeviceProfile:BaseProfileName:0=Android_Mi
 Windows.DeviceProfiles:Android_Mali_T8xx_No_Vulkan DeviceProfile:DeviceType:0=Android
 Windows.DeviceProfiles:Android_Mali_T8xx_No_Vulkan DeviceProfile:BaseProfileName:0=Android_Mali_T8xx
 Windows.DeviceProfiles:Android_Mali_T8xx_No_Vulkan DeviceProfile:CVars:0=r.Android.DisableVulkanSupport=1
-Windows.DeviceProfiles:Lumin DeviceProfile:DeviceType:0=Android
+Windows.DeviceProfiles:Lumin DeviceProfile:DeviceType:0=Lumin
+Windows.DeviceProfiles:Lumin DeviceProfile:BaseProfileName:0=
 Windows.DeviceProfiles:Lumin DeviceProfile:CVars:0=r.defaultfeature.postprocessing=0
 Windows.DeviceProfiles:Lumin DeviceProfile:CVars:1=r.Lumin.OverrideExternalTextureSupport=4
 Windows.DeviceProfiles:Lumin DeviceProfile:CVars:2=r.Vulkan.DelayAcquireBackBuffer=1
 Windows.DeviceProfiles:Lumin DeviceProfile:CVars:3=vr.DebugCanvasInLayer=1
-Windows.DeviceProfiles:Lumin DeviceProfile:CVars:4=r.Vulkan.RHIThread=0
+Windows.DeviceProfiles:Lumin DeviceProfile:CVars:4=r.Vulkan.RHIThread=1
+Windows.DeviceProfiles:Lumin DeviceProfile:CVars:5=Slate.EnableFastWidgetPath=0
+Windows.DeviceProfiles:Lumin DeviceProfile:CVars:6=r.DisjointTimerQueries=0
+Windows.DeviceProfiles:Lumin DeviceProfile:CVars:7=r.MobileContentScaleFactor=1
+Windows.DeviceProfiles:Lumin DeviceProfile:CVars:8=r.BloomQuality=0
+Windows.DeviceProfiles:Lumin DeviceProfile:CVars:9=r.DepthOfFieldQuality=0
+Windows.DeviceProfiles:Lumin DeviceProfile:CVars:10=r.LightShaftQuality=0
+Windows.DeviceProfiles:Lumin DeviceProfile:CVars:11=r.RefractionQuality=0
+Windows.DeviceProfiles:Lumin DeviceProfile:CVars:12=r.ShadowQuality=2
+Windows.DeviceProfiles:Lumin DeviceProfile:CVars:13=r.Vulkan.UseRealUBs=0		; Required until we fix HLR fall-out
+Windows.DeviceProfiles:LuminClient DeviceProfile:DeviceType:0=Lumin
+Windows.DeviceProfiles:LuminClient DeviceProfile:BaseProfileName:0=Lumin
+Windows.DeviceProfiles:Lumin_Desktop DeviceProfile:DeviceType:0=Lumin
+Windows.DeviceProfiles:Lumin_Desktop DeviceProfile:BaseProfileName:0=Lumin
+Windows.DeviceProfiles:Lumin_Desktop DeviceProfile:CVars:0=r.BloomQuality=1
+Windows.DeviceProfiles:Lumin_Desktop DeviceProfile:CVars:1=r.DepthOfFieldQuality=1
+Windows.DeviceProfiles:Lumin_Desktop DeviceProfile:CVars:2=r.LightShaftQuality=1
+Windows.DeviceProfiles:Lumin_Desktop DeviceProfile:CVars:3=r.RefractionQuality=1
+Windows.DeviceProfiles:Lumin_Desktop DeviceProfile:CVars:4=r.MobileContentScaleFactor=1.0
+Windows.DeviceProfiles:Lumin_Desktop DeviceProfile:CVars:5=r.PostProcessAAQuality=0
+Windows.DeviceProfiles:Lumin_Desktop DeviceProfile:CVars:6=r.SSR.Quality=0
+Windows.DeviceProfiles:Lumin_Desktop DeviceProfile:CVars:7=r.AmbientOcclusionLevels=0
+Windows.DeviceProfiles:Lumin_Desktop DeviceProfile:CVars:8=r.ReflectionEnvironment=0
+Windows.DeviceProfiles:Lumin_Desktop DeviceProfile:CVars:9=r.MotionBlurQuality=0
+Windows.DeviceProfiles:Lumin_Desktop DeviceProfile:CVars:10=r.LPV.Intensity=0
+Windows.DeviceProfiles:Lumin_Desktop DeviceProfile:CVars:11=r.HZBOcclusion=0
+Windows.DeviceProfiles:Lumin_Desktop DeviceProfile:CVars:12=r.TranslucentLightingVolume=0
+Windows.DeviceProfiles:Lumin_Desktop DeviceProfile:CVars:13=r.AllowOcclusionQueries=0
+Windows.DeviceProfiles:Lumin_Desktop DeviceProfile:CVars:14=r.DepthOfFieldQuality=0
 Windows.DeviceProfiles:HTML5 DeviceProfile:DeviceType:0=HTML5
 Windows.DeviceProfiles:HTML5 DeviceProfile:BaseProfileName:0=
 Windows.DeviceProfiles:HTML5 DeviceProfile:CVars:0=r.RefractionQuality=1
@@ -3679,6 +3784,10 @@ Windows.DeviceProfiles:LinuxNoEditor DeviceProfile:DeviceType:0=Linux
 Windows.DeviceProfiles:LinuxNoEditor DeviceProfile:BaseProfileName:0=Linux
 Windows.DeviceProfiles:LinuxNoEditor DeviceProfile:MeshLODSettings:0=
 Windows.DeviceProfiles:LinuxNoEditor DeviceProfile:TextureLODSettings:0=
+Windows.DeviceProfiles:LinuxNoEditor DeviceProfile:CVars:0=r.RHICmdBypass=0
+Windows.DeviceProfiles:LinuxClient DeviceProfile:DeviceType:0=Linux
+Windows.DeviceProfiles:LinuxClient DeviceProfile:BaseProfileName:0=Linux
+Windows.DeviceProfiles:LinuxClient DeviceProfile:CVars:0=r.RHICmdBypass=0
 Windows.DeviceProfiles:LinuxServer DeviceProfile:DeviceType:0=Linux
 Windows.DeviceProfiles:LinuxServer DeviceProfile:BaseProfileName:0=Linux
 Windows.DeviceProfiles:LinuxServer DeviceProfile:MeshLODSettings:0=
@@ -3711,23 +3820,23 @@ TextureFormat:RGBA16F:VersionNumber=0
 TextureFormat:XGXR8:VersionNumber=0
 TextureFormat:RGBA8:VersionNumber=0
 TextureFormat:POTERROR:VersionNumber=0
-ShaderFormat:PCD3D_SM5:VersionNumber=7
-ShaderFormat:PCD3D_SM4:VersionNumber=7
+ShaderFormat:PCD3D_SM5:VersionNumber=8
+ShaderFormat:PCD3D_SM4:VersionNumber=8
 ShaderFormat:PCD3D_ES31:VersionNumber=8
 ShaderFormat:PCD3D_ES2:VersionNumber=8
 Release:9C54D522A8264FBE9421074661B482D0=20
 Dev-Blueprints:B0D832E41F894F0DACCF7EB736FD4AA2=10
 Dev-Build:E1C64328A22C4D53A36C8E866417BD8C=0
-Dev-Core:375EC13C06E448FBB50084F0262A717E=2
-Dev-Editor:E4B068EDF49442E9A231DA0B2E46BB41=26
-Dev-Framework:CFFC743F43B04480939114DF171D2073=34
+Dev-Core:375EC13C06E448FBB50084F0262A717E=3
+Dev-Editor:E4B068EDF49442E9A231DA0B2E46BB41=30
+Dev-Framework:CFFC743F43B04480939114DF171D2073=35
 Dev-Mobile:B02B49B5BB2044E9A30432B752E40360=2
 Dev-Networking:A4E4105C59A149B5A7C540C4547EDFEE=0
 Dev-Online:39C831C95AE647DC9A449C173E1C8E7C=0
 Dev-Physics:78F01B33EBEA4F98B9B484EACCB95AA2=0
 Dev-Platform:6631380F2D4D43E08009CF276956A95A=0
-Dev-Rendering:12F88B9F88754AFCA67CD90C383ABD29=27
-Dev-Sequencer:7B5AE74CD2704C10A95857980B212A5A=9
+Dev-Rendering:12F88B9F88754AFCA67CD90C383ABD29=28
+Dev-Sequencer:7B5AE74CD2704C10A95857980B212A5A=11
 Dev-VR:D72969181DD64BDD9DE264A83CC13884=2
 Dev-LoadTimes:C2A15278BFE74AFE6C1790FF531DF755=1
 Private-Geometry:6EACA3D440EC4CC1B7868BED09428FC5=3
@@ -3735,13 +3844,13 @@ Dev-AnimPhys:29E575DDE0A346279D10D276232CDCEA=17
 Dev-Anim:AF43A65D7FD3494798733E8ED9C1BB05=2
 Dev-ReflectionCapture:6B266CEC1EC74B8FA30BE4D90942FC07=1
 Dev-Automation:0DF73D61A23F47EAB72789E90C41499A=1
-FortniteMain:601D1886AC644F84AA16D3DE0DEAC7D6=17
-Dev-Enterprise:9DFFBCD6494F0158E22112823C92A888=4
+FortniteMain:601D1886AC644F84AA16D3DE0DEAC7D6=25
+Dev-Enterprise:9DFFBCD6494F0158E22112823C92A888=6
 Dev-Niagara:F2AED0AC9AFE416F8664AA7FFA26D6FC=1
-ShaderCacheVersion:B954F018C9624DD6A74E79B18EA113C2=16
-ShaderCacheGameVersion:03D4EB48B50B4CC3A598DE415C6CC993=4753647
+Dev-Destruction:174F1F0BB4C645A5B13F2EE8D0FB917D=2
 AssetRegistry:717F9EE7E9B0493A88B391321B388107=6
 FileCacheVersion:8E7DDCB380DA47BB9FD346A293984DF6=1
+LiveLinkCustomVersion:CB8AB0CDE78C4BDEA862139314E9EF62=0
 ClothingAssetVer:FB680AF259EF4BA3BAA819B573C8443D=1
 PoseDriverVer:AFE086913A0D4952B673673B7CF22D1E=2
 AnimGraphVer:2EB5FDBD01AC4D108136F38F3393A5DA=5
@@ -3759,7 +3868,7 @@ VirtualTextureBuiltDataVersion:804E3F7570884B49A4D68C063C7EB6DC=3
 VirtualTextureSpaceVersion:A5ADCF5263B24351A4D68C06905560C8=1
 Paper2DVer:11310AED2E554D61AF679AA3C5A1082C=17
 PackageFileVersions:517=0
-MaterialShaderMapDDCVersion=F1CC9C7A48F5422EB67E3ADC82465189
-GlobalDDCVersion=4A393A7FDF3048EF8376E103162A8ED6
+MaterialShaderMapDDCVersion=AD9DE195370D4C7DB112DF9967877D21
+GlobalDDCVersion=A97D25A9914A43C193801914248E0F66
 
 

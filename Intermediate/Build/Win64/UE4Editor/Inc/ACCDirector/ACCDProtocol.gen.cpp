@@ -13,8 +13,10 @@
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodeACCDProtocol() {}
 // Cross Module References
-	ACCDIRECTOR_API UFunction* Z_Construct_UDelegateFunction_ACCDirector_TrackDataUpdateDelegate__DelegateSignature();
+	ACCDIRECTOR_API UFunction* Z_Construct_UDelegateFunction_ACCDirector_BroadcastingEventDelegate__DelegateSignature();
 	UPackage* Z_Construct_UPackage__Script_ACCDirector();
+	ACCDIRECTOR_API UScriptStruct* Z_Construct_UScriptStruct_FBroadcastingEvent();
+	ACCDIRECTOR_API UFunction* Z_Construct_UDelegateFunction_ACCDirector_TrackDataUpdateDelegate__DelegateSignature();
 	ACCDIRECTOR_API UScriptStruct* Z_Construct_UScriptStruct_FTrackData();
 	ACCDIRECTOR_API UFunction* Z_Construct_UDelegateFunction_ACCDirector_EntryListUpdateDelegate__DelegateSignature();
 	ACCDIRECTOR_API UScriptStruct* Z_Construct_UScriptStruct_FCarInfo();
@@ -38,6 +40,58 @@ void EmptyLinkFunctionForGeneratedCodeACCDProtocol() {}
 	ACCDIRECTOR_API UFunction* Z_Construct_UFunction_AACCDProtocol_SetFocus();
 	ACCDIRECTOR_API UFunction* Z_Construct_UFunction_AACCDProtocol_SetFocusWithCam();
 // End Cross Module References
+	struct Z_Construct_UDelegateFunction_ACCDirector_BroadcastingEventDelegate__DelegateSignature_Statics
+	{
+		struct _Script_ACCDirector_eventBroadcastingEventDelegate_Parms
+		{
+			FString ConnectionIdentifier;
+			FBroadcastingEvent BroadcastingEvent;
+		};
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_BroadcastingEvent_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FStructPropertyParams NewProp_BroadcastingEvent;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_ConnectionIdentifier_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FStrPropertyParams NewProp_ConnectionIdentifier;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UDelegateFunction_ACCDirector_BroadcastingEventDelegate__DelegateSignature_Statics::NewProp_BroadcastingEvent_MetaData[] = {
+		{ "NativeConst", "" },
+	};
+#endif
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UDelegateFunction_ACCDirector_BroadcastingEventDelegate__DelegateSignature_Statics::NewProp_BroadcastingEvent = { "BroadcastingEvent", nullptr, (EPropertyFlags)0x0010000000000082, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(_Script_ACCDirector_eventBroadcastingEventDelegate_Parms, BroadcastingEvent), Z_Construct_UScriptStruct_FBroadcastingEvent, METADATA_PARAMS(Z_Construct_UDelegateFunction_ACCDirector_BroadcastingEventDelegate__DelegateSignature_Statics::NewProp_BroadcastingEvent_MetaData, ARRAY_COUNT(Z_Construct_UDelegateFunction_ACCDirector_BroadcastingEventDelegate__DelegateSignature_Statics::NewProp_BroadcastingEvent_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UDelegateFunction_ACCDirector_BroadcastingEventDelegate__DelegateSignature_Statics::NewProp_ConnectionIdentifier_MetaData[] = {
+		{ "NativeConst", "" },
+	};
+#endif
+	const UE4CodeGen_Private::FStrPropertyParams Z_Construct_UDelegateFunction_ACCDirector_BroadcastingEventDelegate__DelegateSignature_Statics::NewProp_ConnectionIdentifier = { "ConnectionIdentifier", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(_Script_ACCDirector_eventBroadcastingEventDelegate_Parms, ConnectionIdentifier), METADATA_PARAMS(Z_Construct_UDelegateFunction_ACCDirector_BroadcastingEventDelegate__DelegateSignature_Statics::NewProp_ConnectionIdentifier_MetaData, ARRAY_COUNT(Z_Construct_UDelegateFunction_ACCDirector_BroadcastingEventDelegate__DelegateSignature_Statics::NewProp_ConnectionIdentifier_MetaData)) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UDelegateFunction_ACCDirector_BroadcastingEventDelegate__DelegateSignature_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UDelegateFunction_ACCDirector_BroadcastingEventDelegate__DelegateSignature_Statics::NewProp_BroadcastingEvent,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UDelegateFunction_ACCDirector_BroadcastingEventDelegate__DelegateSignature_Statics::NewProp_ConnectionIdentifier,
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UDelegateFunction_ACCDirector_BroadcastingEventDelegate__DelegateSignature_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "Private/ACCD/ACCDProtocol.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UDelegateFunction_ACCDirector_BroadcastingEventDelegate__DelegateSignature_Statics::FuncParams = { (UObject*(*)())Z_Construct_UPackage__Script_ACCDirector, nullptr, "BroadcastingEventDelegate__DelegateSignature", sizeof(_Script_ACCDirector_eventBroadcastingEventDelegate_Parms), Z_Construct_UDelegateFunction_ACCDirector_BroadcastingEventDelegate__DelegateSignature_Statics::PropPointers, ARRAY_COUNT(Z_Construct_UDelegateFunction_ACCDirector_BroadcastingEventDelegate__DelegateSignature_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00130000, 0, 0, METADATA_PARAMS(Z_Construct_UDelegateFunction_ACCDirector_BroadcastingEventDelegate__DelegateSignature_Statics::Function_MetaDataParams, ARRAY_COUNT(Z_Construct_UDelegateFunction_ACCDirector_BroadcastingEventDelegate__DelegateSignature_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UDelegateFunction_ACCDirector_BroadcastingEventDelegate__DelegateSignature()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UDelegateFunction_ACCDirector_BroadcastingEventDelegate__DelegateSignature_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
 	struct Z_Construct_UDelegateFunction_ACCDirector_TrackDataUpdateDelegate__DelegateSignature_Statics
 	{
 		struct _Script_ACCDirector_eventTrackDataUpdateDelegate_Parms
@@ -97,6 +151,9 @@ void EmptyLinkFunctionForGeneratedCodeACCDProtocol() {}
 			FString ConnectionIdentifier;
 			FCarInfo CarInfo;
 		};
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_CarInfo_MetaData[];
+#endif
 		static const UE4CodeGen_Private::FStructPropertyParams NewProp_CarInfo;
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_ConnectionIdentifier_MetaData[];
@@ -108,7 +165,12 @@ void EmptyLinkFunctionForGeneratedCodeACCDProtocol() {}
 #endif
 		static const UE4CodeGen_Private::FFunctionParams FuncParams;
 	};
-	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UDelegateFunction_ACCDirector_EntryListUpdateDelegate__DelegateSignature_Statics::NewProp_CarInfo = { "CarInfo", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(_Script_ACCDirector_eventEntryListUpdateDelegate_Parms, CarInfo), Z_Construct_UScriptStruct_FCarInfo, METADATA_PARAMS(nullptr, 0) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UDelegateFunction_ACCDirector_EntryListUpdateDelegate__DelegateSignature_Statics::NewProp_CarInfo_MetaData[] = {
+		{ "NativeConst", "" },
+	};
+#endif
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UDelegateFunction_ACCDirector_EntryListUpdateDelegate__DelegateSignature_Statics::NewProp_CarInfo = { "CarInfo", nullptr, (EPropertyFlags)0x0010000000000082, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(_Script_ACCDirector_eventEntryListUpdateDelegate_Parms, CarInfo), Z_Construct_UScriptStruct_FCarInfo, METADATA_PARAMS(Z_Construct_UDelegateFunction_ACCDirector_EntryListUpdateDelegate__DelegateSignature_Statics::NewProp_CarInfo_MetaData, ARRAY_COUNT(Z_Construct_UDelegateFunction_ACCDirector_EntryListUpdateDelegate__DelegateSignature_Statics::NewProp_CarInfo_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UDelegateFunction_ACCDirector_EntryListUpdateDelegate__DelegateSignature_Statics::NewProp_ConnectionIdentifier_MetaData[] = {
 		{ "NativeConst", "" },
@@ -704,6 +766,10 @@ void EmptyLinkFunctionForGeneratedCodeACCDProtocol() {}
 		static const UE4CodeGen_Private::FMetaDataPairParam Class_MetaDataParams[];
 #endif
 #if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_OnBroadcastingEvent_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FMulticastDelegatePropertyParams NewProp_OnBroadcastingEvent;
+#if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_OnTrackDataUpdate_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FMulticastDelegatePropertyParams NewProp_OnTrackDataUpdate;
@@ -753,6 +819,13 @@ void EmptyLinkFunctionForGeneratedCodeACCDProtocol() {}
 	};
 #endif
 #if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AACCDProtocol_Statics::NewProp_OnBroadcastingEvent_MetaData[] = {
+		{ "Category", "ACCD|Protocol" },
+		{ "ModuleRelativePath", "Private/ACCD/ACCDProtocol.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_AACCDProtocol_Statics::NewProp_OnBroadcastingEvent = { "OnBroadcastingEvent", nullptr, (EPropertyFlags)0x0010000010080000, UE4CodeGen_Private::EPropertyGenFlags::MulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AACCDProtocol, OnBroadcastingEvent), Z_Construct_UDelegateFunction_ACCDirector_BroadcastingEventDelegate__DelegateSignature, METADATA_PARAMS(Z_Construct_UClass_AACCDProtocol_Statics::NewProp_OnBroadcastingEvent_MetaData, ARRAY_COUNT(Z_Construct_UClass_AACCDProtocol_Statics::NewProp_OnBroadcastingEvent_MetaData)) };
+#if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AACCDProtocol_Statics::NewProp_OnTrackDataUpdate_MetaData[] = {
 		{ "Category", "ACCD|Protocol" },
 		{ "ModuleRelativePath", "Private/ACCD/ACCDProtocol.h" },
@@ -795,6 +868,7 @@ void EmptyLinkFunctionForGeneratedCodeACCDProtocol() {}
 #endif
 	const UE4CodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_AACCDProtocol_Statics::NewProp_OnConnectionStateChanged = { "OnConnectionStateChanged", nullptr, (EPropertyFlags)0x0010000010080000, UE4CodeGen_Private::EPropertyGenFlags::MulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AACCDProtocol, OnConnectionStateChanged), Z_Construct_UDelegateFunction_ACCDirector_ConnectionStateChangedDelegate__DelegateSignature, METADATA_PARAMS(Z_Construct_UClass_AACCDProtocol_Statics::NewProp_OnConnectionStateChanged_MetaData, ARRAY_COUNT(Z_Construct_UClass_AACCDProtocol_Statics::NewProp_OnConnectionStateChanged_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AACCDProtocol_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AACCDProtocol_Statics::NewProp_OnBroadcastingEvent,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AACCDProtocol_Statics::NewProp_OnTrackDataUpdate,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AACCDProtocol_Statics::NewProp_OnEntryListUpdate,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AACCDProtocol_Statics::NewProp_OnRealTimeCarUpdate,
@@ -829,7 +903,7 @@ void EmptyLinkFunctionForGeneratedCodeACCDProtocol() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AACCDProtocol, 834713810);
+	IMPLEMENT_CLASS(AACCDProtocol, 3383725272);
 	template<> ACCDIRECTOR_API UClass* StaticClass<AACCDProtocol>()
 	{
 		return AACCDProtocol::StaticClass();

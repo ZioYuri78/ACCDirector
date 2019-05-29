@@ -26,20 +26,20 @@ enum class EOutboundMessageTypes : uint8
 UENUM()
 enum class EInboundMessageTypes : uint8
 {
-	NONE = 255,
 	REGISTRATION_RESULT = 1,
 	REALTIME_UPDATE = 2,
 	REALTIME_CAR_UPDATE = 3,
 	ENTRY_LIST = 4,
-	ENTRY_LIST_CAR = 6,
 	TRACK_DATA = 5,
+	ENTRY_LIST_CAR = 6,
+	BROADCASTING_EVENT = 7
 };
 
 
 UENUM()
-enum class EBNProtocol : uint8
+enum class EBNProtocolVersion : uint8
 {
-	BROADCAST_PROTOCOL_VERSION = 2
+	BROADCAST_PROTOCOL_VERSION = 3
 };
 
 
@@ -100,6 +100,19 @@ enum class ERaceSessionType : uint8
 	Hotlap = 11,
 	Hotstint = 12,
 	HotlapSuperpole = 13,
-	Replay = 14,
-	NONE = 255
+	Replay = 14
+};
+
+
+UENUM(BlueprintType)
+enum class EBroadcastingCarEventType : uint8
+{
+	None = 0,
+	GreenFlag = 1,
+	SessionOver = 2,
+	PenaltyCommMsg = 3,
+	Accident = 4,
+	LapCompleted = 5,
+	BestSessionLap = 6,
+	BestPersonalLap = 7
 };

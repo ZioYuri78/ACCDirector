@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\ACCDirector.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{BDE5C386-5752-40D9-B6B2-E81BF8B44C8F}</UniqueIdentifier>
+      <UniqueIdentifier>{454964AE-C157-4229-8714-B36A420E655F}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\ACCDirector.Target.cs">
       <Filter>Source</Filter>
@@ -15,7 +15,7 @@
     <None Include="..\..\.gitignore" />
     <None Include="..\..\README.md" />
     <Filter Include="Config">
-      <UniqueIdentifier>{0F9205BC-16D2-4FFC-BAE0-D0B2378F43D3}</UniqueIdentifier>
+      <UniqueIdentifier>{AB31E38A-714E-4D36-8529-D06946407790}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -30,7 +30,7 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Source\ACCDirector">
-      <UniqueIdentifier>{5756763E-6826-4979-A96F-A458FCE3DD57}</UniqueIdentifier>
+      <UniqueIdentifier>{61964FCB-8EC0-47C4-8D10-97A841AD5CE6}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\ACCDirector\ACCDirector.Build.cs">
       <Filter>Source\ACCDirector</Filter>
@@ -42,10 +42,10 @@
       <Filter>Source\ACCDirector</Filter>
     </ClInclude>
     <Filter Include="Source\ACCDirector\Private">
-      <UniqueIdentifier>{2838AB28-7B0B-41F0-9EF0-51D818F49577}</UniqueIdentifier>
+      <UniqueIdentifier>{C48D6682-5145-4A9E-A5C1-1EA987B85279}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source\ACCDirector\Private\ACCD">
-      <UniqueIdentifier>{EEEC19B0-C1D7-42E2-8A89-CAED9C43CA49}</UniqueIdentifier>
+      <UniqueIdentifier>{119AF2D2-812D-43DC-B8CC-08247238213E}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\ACCDirector\Private\ACCD\ACCDBaseWidget.cpp">
       <Filter>Source\ACCDirector\Private\ACCD</Filter>
@@ -57,7 +57,7 @@
       <Filter>Source\ACCDirector\Private\ACCD</Filter>
     </ClInclude>
     <Filter Include="Source\ACCDirector\Private\Framework">
-      <UniqueIdentifier>{94C215BD-FEBB-410C-9923-D3E60EB1EA35}</UniqueIdentifier>
+      <UniqueIdentifier>{D096733F-E3DE-4F4C-B1B4-783C8A7B8217}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\ACCDirector\Private\Framework\ACCDGameInstance.cpp">
       <Filter>Source\ACCDirector\Private\Framework</Filter>
@@ -66,10 +66,10 @@
       <Filter>Source\ACCDirector\Private\Framework</Filter>
     </ClCompile>
     <Filter Include="Source\ACCDirector\Public">
-      <UniqueIdentifier>{7E5A5379-0120-4EED-9F0E-2D661D5A2F51}</UniqueIdentifier>
+      <UniqueIdentifier>{ACE8B707-FB69-4710-8BD2-4460A8023C79}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source\ACCDirector\Public\ACCD">
-      <UniqueIdentifier>{83D159CC-BAD9-4296-914E-9C6FF6273AB6}</UniqueIdentifier>
+      <UniqueIdentifier>{EDD778BC-E447-4EC5-9281-E01C433367F3}</UniqueIdentifier>
     </Filter>
     <ClInclude Include="..\..\Source\ACCDirector\Public\ACCD\ACCDBaseWidget.h">
       <Filter>Source\ACCDirector\Public\ACCD</Filter>
@@ -81,7 +81,7 @@
       <Filter>Source\ACCDirector\Public\ACCD</Filter>
     </ClInclude>
     <Filter Include="Source\ACCDirector\Public\Framework">
-      <UniqueIdentifier>{28AA7656-5079-4C65-848A-4AB8D1A44485}</UniqueIdentifier>
+      <UniqueIdentifier>{A72D4EFB-64D4-4956-8A43-05C98D7561D1}</UniqueIdentifier>
     </Filter>
     <ClInclude Include="..\..\Source\ACCDirector\Public\Framework\ACCDGameInstance.h">
       <Filter>Source\ACCDirector\Public\Framework</Filter>

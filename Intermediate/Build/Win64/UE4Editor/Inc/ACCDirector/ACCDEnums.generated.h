@@ -17,6 +17,19 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #define CURRENT_FILE_ID ACCDirector_Source_ACCDirector_Public_ACCD_ACCDEnums_h
 
 
+#define FOREACH_ENUM_EBROADCASTINGCAREVENTTYPE(op) \
+	op(EBroadcastingCarEventType::None) \
+	op(EBroadcastingCarEventType::GreenFlag) \
+	op(EBroadcastingCarEventType::SessionOver) \
+	op(EBroadcastingCarEventType::PenaltyCommMsg) \
+	op(EBroadcastingCarEventType::Accident) \
+	op(EBroadcastingCarEventType::LapCompleted) \
+	op(EBroadcastingCarEventType::BestSessionLap) \
+	op(EBroadcastingCarEventType::BestPersonalLap) 
+
+enum class EBroadcastingCarEventType : uint8;
+template<> ACCDIRECTOR_API UEnum* StaticEnum<EBroadcastingCarEventType>();
+
 #define FOREACH_ENUM_ERACESESSIONTYPE(op) \
 	op(ERaceSessionType::Practice) \
 	op(ERaceSessionType::Qualifying) \
@@ -25,8 +38,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 	op(ERaceSessionType::Hotlap) \
 	op(ERaceSessionType::Hotstint) \
 	op(ERaceSessionType::HotlapSuperpole) \
-	op(ERaceSessionType::Replay) \
-	op(ERaceSessionType::NONE) 
+	op(ERaceSessionType::Replay) 
 
 enum class ERaceSessionType : uint8;
 template<> ACCDIRECTOR_API UEnum* StaticEnum<ERaceSessionType>();
@@ -74,20 +86,20 @@ template<> ACCDIRECTOR_API UEnum* StaticEnum<ELapType>();
 enum class EDriverCategory : uint8;
 template<> ACCDIRECTOR_API UEnum* StaticEnum<EDriverCategory>();
 
-#define FOREACH_ENUM_EBNPROTOCOL(op) \
-	op(EBNProtocol::BROADCAST_PROTOCOL_VERSION) 
+#define FOREACH_ENUM_EBNPROTOCOLVERSION(op) \
+	op(EBNProtocolVersion::BROADCAST_PROTOCOL_VERSION) 
 
-enum class EBNProtocol : uint8;
-template<> ACCDIRECTOR_API UEnum* StaticEnum<EBNProtocol>();
+enum class EBNProtocolVersion : uint8;
+template<> ACCDIRECTOR_API UEnum* StaticEnum<EBNProtocolVersion>();
 
 #define FOREACH_ENUM_EINBOUNDMESSAGETYPES(op) \
-	op(EInboundMessageTypes::NONE) \
 	op(EInboundMessageTypes::REGISTRATION_RESULT) \
 	op(EInboundMessageTypes::REALTIME_UPDATE) \
 	op(EInboundMessageTypes::REALTIME_CAR_UPDATE) \
 	op(EInboundMessageTypes::ENTRY_LIST) \
+	op(EInboundMessageTypes::TRACK_DATA) \
 	op(EInboundMessageTypes::ENTRY_LIST_CAR) \
-	op(EInboundMessageTypes::TRACK_DATA) 
+	op(EInboundMessageTypes::BROADCASTING_EVENT) 
 
 enum class EInboundMessageTypes : uint8;
 template<> ACCDIRECTOR_API UEnum* StaticEnum<EInboundMessageTypes>();

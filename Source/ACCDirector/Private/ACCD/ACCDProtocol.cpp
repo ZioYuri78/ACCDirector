@@ -35,6 +35,8 @@ void AACCDProtocol::EndPlay(const EEndPlayReason::Type EndPlayReason)
 {
 	Super::EndPlay(EndPlayReason);
 
+	RequestDisconnection();
+
 	if (UDPReceiver)
 	{
 		UDPReceiver->Stop();
@@ -77,7 +79,7 @@ bool AACCDProtocol::RequestConnection(const FString& IP, const int32 Port, FStri
 
 	UDPSenderSocket = FUdpSocketBuilder(SocketDescriptiopn).AsReusable().WithBroadcast();
 
-	int32 SendBufferSize = 1024;
+	int32 SendBufferSize = 2*1024*1024;
 	UDPSenderSocket->SetSendBufferSize(SendBufferSize, SendBufferSize);
 	UDPSenderSocket->SetReceiveBufferSize(SendBufferSize, SendBufferSize);
 
@@ -88,13 +90,13 @@ bool AACCDProtocol::RequestConnection(const FString& IP, const int32 Port, FStri
 	// Request Connection
 	FArrayWriter Message;
 	uint8 CommandType = (uint8)EOutboundMessageTypes::REGISTER_COMMAND_APPLICATION;
-	uint8 ProtocolVersion = (uint8)EBNProtocol::BROADCAST_PROTOCOL_VERSION;
+	uint8 ProtocolVersion = (uint8)EBNProtocolVersion::BROADCAST_PROTOCOL_VERSION;
 
 	Message << CommandType;
 	Message << ProtocolVersion;
 
 	WriteString(Message, DisplayName);
-
+	
 	WriteString(Message, ConnectionPsw);
 
 	Message << RTUpdateInterval;
@@ -118,11 +120,11 @@ bool AACCDProtocol::RequestConnection(const FString& IP, const int32 Port, FStri
 
 	FIPv4Endpoint Endpoint(IPAddress, UDPSenderSocket->GetPortNo());
 
-	int32 ReceiveBufferSize = 1024;
+	int32 ReceiveBufferSize = 2*1024*1024;
 
 	UDPReceiverSocket = FUdpSocketBuilder(SocketDescriptiopn).AsNonBlocking().AsReusable().BoundToEndpoint(Endpoint).WithReceiveBufferSize(ReceiveBufferSize);
 
-	FTimespan ThreadWaitTime = FTimespan::FromMilliseconds(100);
+	FTimespan ThreadWaitTime = FTimespan::FromMilliseconds(50);
 	UDPReceiver = new FUdpSocketReceiver(UDPReceiverSocket, ThreadWaitTime, TEXT("UDPReceiver thread"));
 	UDPReceiver->OnDataReceived().BindUObject(this, &AACCDProtocol::Recv);
 
@@ -133,11 +135,8 @@ bool AACCDProtocol::RequestConnection(const FString& IP, const int32 Port, FStri
 
 void AACCDProtocol::RequestDisconnection()
 {
-	/* #ACCD_TODO figure out how to disconnect, ask Minolin on the forum
-
 	FArrayWriter Message;
 	uint8 CommandType = (uint8)EOutboundMessageTypes::UNREGISTER_COMMAND_APPLICATION;
-
 
 	Message << CommandType;
 	Message << RegistrationResult.ConnectionID;
@@ -153,7 +152,6 @@ void AACCDProtocol::RequestDisconnection()
 		UE_LOG(LogACCDProtocol, Warning, TEXT("RequestDisconnection() invalid RemoteAddr"));
 	}
 
-	*/
 }
 
 void AACCDProtocol::RequestEntryList()
@@ -270,15 +268,15 @@ void AACCDProtocol::RequestHUDPage(FString HudPage)
 
 void AACCDProtocol::Recv(const FArrayReaderPtr & ArrayReaderPtr, const FIPv4Endpoint & Endpoint)
 {
-	EInboundMessageTypes MessageType = EInboundMessageTypes::NONE;
+	EInboundMessageTypes MessageType;
 	*ArrayReaderPtr << MessageType;
 
 	switch (MessageType)
 	{
-		// #ACCD_CASE: REGISTRATION_RESULT
+	
+	// #ACCD_CASE: REGISTRATION_RESULT
 	case EInboundMessageTypes::REGISTRATION_RESULT:
 	{
-
 		*ArrayReaderPtr << RegistrationResult.ConnectionID;
 		*ArrayReaderPtr << RegistrationResult.ConnectionSuccess;
 		*ArrayReaderPtr << RegistrationResult.IsReadOnly;
@@ -293,14 +291,18 @@ void AACCDProtocol::Recv(const FArrayReaderPtr & ArrayReaderPtr, const FIPv4Endp
 			RequestEntryList();
 			RequestTrackData();
 		}
-	} GDRegResultCounter++;
+		else
+		{
+			UE_LOG(LogACCDProtocol, Error, TEXT("%s"), *RegistrationResult.ErrMsg);
+		}
+	} 
 	break;
 
 	// #ACCD_CASE: ENTRY_LIST
 	case EInboundMessageTypes::ENTRY_LIST:
 	{
 		GCarsEntryList.Empty();
-		TArray<uint16> DriverIndexes;
+
 		int32 ConnectionID = 0;
 		uint16 CarEntryCount = 0;
 
@@ -311,20 +313,11 @@ void AACCDProtocol::Recv(const FArrayReaderPtr & ArrayReaderPtr, const FIPv4Endp
 			uint16 TempCarIndex;
 			*ArrayReaderPtr << TempCarIndex;
 			GCarsEntryList.Add(FCarInfo(TempCarIndex));
-		}
-
-		uint16 DriverEntryCount = 0;
-		*ArrayReaderPtr << DriverEntryCount;
-		for (int j = 0; j < DriverEntryCount; j++)
-		{
-			uint16 TempDriverIndex = 0;
-			*ArrayReaderPtr << TempDriverIndex;
-			DriverIndexes.Add(TempDriverIndex);
-		}
+		}	
 
 		AsyncTask(ENamedThreads::GameThread, [&]() {OnEntryList.Broadcast(ConnectionIdentifier, GCarsEntryList);});
 
-	} GDEntryListCounter++;
+	} 
 	break;
 
 	// #ACCD_CASE: ENTRY_LIST_CAR
@@ -333,7 +326,7 @@ void AACCDProtocol::Recv(const FArrayReaderPtr & ArrayReaderPtr, const FIPv4Endp
 		uint16 CarIndex;
 		*ArrayReaderPtr << CarIndex;
 
-		if (GCarsEntryList.Contains(GCarInfo))
+		if (GCarsEntryList.Contains(CarIndex))
 		{			
 			GCarInfo = *GCarsEntryList.FindByKey(CarIndex);			
 		}
@@ -343,47 +336,35 @@ void AACCDProtocol::Recv(const FArrayReaderPtr & ArrayReaderPtr, const FIPv4Endp
 			break;
 		}
 
-		*ArrayReaderPtr << GCarInfo.CarModelType;
+		*ArrayReaderPtr << GCarInfo.CarModelType;	// Byte sized car model
 		ReadString(ArrayReaderPtr, GCarInfo.TeamName);
 		*ArrayReaderPtr << GCarInfo.RaceNumber;
-		ReadString(ArrayReaderPtr, GCarInfo.TeamCarName);
-		ReadString(ArrayReaderPtr, GCarInfo.DisplayName);
-		*ArrayReaderPtr << GCarInfo.CupCategory; 
-
+		*ArrayReaderPtr << GCarInfo.CupCategory;	// Cup: Overall/Pro = 0, ProAm = 1, Am = 2, Silver = 3, National = 4
+		
+		uint8 TempCurrentDriverIndex;
+		*ArrayReaderPtr << TempCurrentDriverIndex;
+		GCarInfo.CurrentDriverIndex = (int32)TempCurrentDriverIndex;
+		
 		// Now the drivers on this car
 		uint8 DriversOnCarCount;
 		*ArrayReaderPtr << DriversOnCarCount;
 		for (int32 i = 0; i < DriversOnCarCount; i++)
 		{
-			uint16 DriverIndex;
-			*ArrayReaderPtr << DriverIndex;
+			FDriverInfo DriverInfo = FDriverInfo();
+			
+			ReadString(ArrayReaderPtr, DriverInfo.FirstName);
+			ReadString(ArrayReaderPtr, DriverInfo.LastName);			
+			ReadString(ArrayReaderPtr, DriverInfo.ShortName);
+			*ArrayReaderPtr << DriverInfo.Category;	// Platinum = 3, Gold = 2, Silver = 1, Bronze = 0
 
-			uint8 HasDriverInfo;
-			*ArrayReaderPtr << HasDriverInfo;
-			if (HasDriverInfo)
-			{
-				FDriverInfo DriverInfo = FDriverInfo(DriverIndex);
-
-				ReadString(ArrayReaderPtr, DriverInfo.FirstName);
-				ReadString(ArrayReaderPtr, DriverInfo.LastName);
-				ReadString(ArrayReaderPtr, DriverInfo.NickName);
-				ReadString(ArrayReaderPtr, DriverInfo.ShortName);
-				
-				*ArrayReaderPtr << DriverInfo.Category;				
-
-				GCarInfo.AddDriver(DriverInfo);
-			}
+			GCarInfo.AddDriver(DriverInfo);
 		}
 
 		int32 Index = GCarsEntryList.IndexOfByKey(GCarInfo);
 		GCarsEntryList[Index] = GCarInfo;
 		
-#if 1
-		OnEntryListUpdate.Broadcast(ConnectionIdentifier, GCarInfo);
-#else
 		AsyncTask(ENamedThreads::GameThread, [&] {OnEntryListUpdate.Broadcast(ConnectionIdentifier, GCarInfo); });
-#endif
-	} GDEntryListCarCounter++;
+	} 
 	break;
 
 	// #ACCD_CASE: TRACK_DATA
@@ -433,7 +414,7 @@ void AACCDProtocol::Recv(const FArrayReaderPtr & ArrayReaderPtr, const FIPv4Endp
 
 		AsyncTask(ENamedThreads::GameThread, [&] {OnTrackDataUpdate.Broadcast(ConnectionIdentifier, GTrackData); });
 
-	} GDTrackDataCounter++;
+	} 
 	break;
 
 	// #ACCD_CASE: REALTIME_UPDATE
@@ -472,12 +453,11 @@ void AACCDProtocol::Recv(const FArrayReaderPtr & ArrayReaderPtr, const FIPv4Endp
 		{
 			*ArrayReaderPtr << RTUpdate.ReplaySessionTime;
 			*ArrayReaderPtr << RTUpdate.ReplayRemainingTime;
-			*ArrayReaderPtr << RTUpdate.ReplayFocusedCar;
 		}
 
-		uint16 TimeOfDay = 0;
-		*ArrayReaderPtr << TimeOfDay;
-		RTUpdate.TimeOfDay = FTimespan(TimeOfDay / 100, TimeOfDay % 100, 0);
+		float TempTimeOfDay = 0.f;
+		*ArrayReaderPtr << TempTimeOfDay;
+		RTUpdate.TimeOfDay = FTimespan::FromMilliseconds(TempTimeOfDay);
 
 		*ArrayReaderPtr << RTUpdate.AmbientTemp;
 		*ArrayReaderPtr << RTUpdate.TrackTemp;
@@ -498,23 +478,24 @@ void AACCDProtocol::Recv(const FArrayReaderPtr & ArrayReaderPtr, const FIPv4Endp
 		RTUpdate.BestSessionLap = ReadLap(ArrayReaderPtr);
 
 		OnRealTimeUpdate.Broadcast(ConnectionIdentifier, RTUpdate);
-	} GDRealTimeUpdateCounter++;
+	} 
 	break;
 
 	// #ACCD_CASE: REALTIME_CAR_UPDATE
 	case EInboundMessageTypes::REALTIME_CAR_UPDATE:
 	{
+		
 		FRealTimeCarUpdate CarUpdate;
 
 		uint16 TempCarIndex;
 		*ArrayReaderPtr << TempCarIndex;
 		CarUpdate.CarIndex = TempCarIndex;
-		//debug
-		GDUpdatedCar = CarUpdate.CarIndex;
-		//------
+
 		uint16 TempDriverIndex;
 		*ArrayReaderPtr << TempDriverIndex;	// Driver swap will make this change
 		CarUpdate.DriverIndex = TempDriverIndex;
+
+		*ArrayReaderPtr << CarUpdate.DriverCount;
 
 		uint8 TempGear = 0;
 		*ArrayReaderPtr << TempGear;
@@ -547,43 +528,76 @@ void AACCDProtocol::Recv(const FArrayReaderPtr & ArrayReaderPtr, const FIPv4Endp
 
 		*ArrayReaderPtr << CarUpdate.Delta;	// Realtime delta to best session lap
 
-
-		// #ACCD_TODO current and last lap are broken from ACC!
 		CarUpdate.BestSessionLap = ReadLap(ArrayReaderPtr);
 		CarUpdate.LastLap = ReadLap(ArrayReaderPtr);
 		CarUpdate.CurrentLap = ReadLap(ArrayReaderPtr);
 
-		const FCarInfo TempCarInfo = FCarInfo(CarUpdate.CarIndex);
-		const FDriverInfo TempDriverInfo = FDriverInfo(CarUpdate.DriverIndex);
-		if (!GCarsEntryList.Contains(TempCarInfo) || !GCarsEntryList[CarUpdate.CarIndex].Drivers.Contains(TempDriverInfo))
+		//const FCarInfo TempCarInfo = FCarInfo(CarUpdate.CarIndex);
+		if (!GCarsEntryList.Contains(CarUpdate.CarIndex)/* || TempCarInfo.Drivers.Num() != CarUpdate.DriverCount*/)
 		{
-			
 			if ((FDateTime::Now().GetSecond() - LastEntryListRequest.GetSecond()) > 1)
 			{
 				UE_LOG(LogACCDProtocol, Warning, TEXT("CarUpdate %d|%d not know, will ask for new EntryList"), CarUpdate.CarIndex, CarUpdate.DriverIndex);
-				LastEntryListRequest = FDateTime::Now();				
+				LastEntryListRequest = FDateTime::Now();
 				RequestEntryList();
-				
 			}
 		}
 		else
-		{
+		{			
 			OnRealTimeCarUpdate.Broadcast(ConnectionIdentifier, CarUpdate);
 		}
-
 		
-	} GDRealTimeCarUpdateCounter++;
+		
+	} 
 	break;
 
+	// #ACCD_CASE: BROADCASTING_EVENT
+	case EInboundMessageTypes::BROADCASTING_EVENT:
+	{
+		*ArrayReaderPtr << GBroadcastingEvent.EventType;
+		ReadString(ArrayReaderPtr, GBroadcastingEvent.Msg);
+		*ArrayReaderPtr << GBroadcastingEvent.TimeMs;
+		*ArrayReaderPtr << GBroadcastingEvent.CarId;
 
-	default:
-		UE_LOG(LogACCDProtocol, Warning, TEXT("===|Undefined inbound message|==="));
+		if (GCarsEntryList.Contains(FCarInfo(GBroadcastingEvent.CarId)))
+		{
+			switch (GBroadcastingEvent.EventType)
+			{
+
+			// These cases will be filtered by user in the widget, here we only exclude the LapCompleted event.
+			case EBroadcastingCarEventType::GreenFlag:
+			case EBroadcastingCarEventType::SessionOver:
+			case EBroadcastingCarEventType::Accident:
+			case EBroadcastingCarEventType::PenaltyCommMsg:
+			case EBroadcastingCarEventType::BestSessionLap:
+			case EBroadcastingCarEventType::BestPersonalLap:
+			{
+				// #ACCD_TODO fix this
+				int32 CIndex = GCarsEntryList.Find(GBroadcastingEvent.CarId);
+				GBroadcastingEvent.CarData = GCarsEntryList[CIndex];
+				AsyncTask(ENamedThreads::GameThread, [&]() {OnBroadcastingEvent.Broadcast(ConnectionIdentifier, GBroadcastingEvent); });
+				break;
+			}
+			
+			default:
+				break;
+			}
+
+			/*if (GCarsEntryList.IsValidIndex(GBroadcastingEvent.CarId))
+			{
+				GBroadcastingEvent.CarData = GCarsEntryList[GBroadcastingEvent.CarId];				
+				AsyncTask(ENamedThreads::GameThread, [&]() {OnBroadcastingEvent.Broadcast(ConnectionIdentifier, GBroadcastingEvent); });
+			}*/
+			
+		}
 		break;
 	}
 
-#if 0	// DEBUG
-	PrintRecvCounters();
-#endif
+	default:
+		UE_LOG(LogACCDProtocol, Warning, TEXT("=== Undefined Inbound Message: %d ==="), MessageType);
+		break;
+	}
+
 }
 
 void AACCDProtocol::WriteString(FArrayWriter & Buffer, const FString & String)
@@ -602,6 +616,7 @@ void AACCDProtocol::ReadString(const FArrayReaderPtr & Buffer, FString & String)
 {
 	int16 SLength = 0;
 	uint8 SChar = 0;
+	String.Empty();
 
 	*Buffer << SLength;
 
@@ -640,15 +655,15 @@ FLapInfo AACCDProtocol::ReadLap(const FArrayReaderPtr & Buffer)
 
 	if (bIsOutLap)
 	{
-		LapInfo.Type = ELapType::Outlap;
+		LapInfo.LapType = ELapType::Outlap;
 	}
 	else if (bIsInLap)
 	{
-		LapInfo.Type = ELapType::Inlap;
+		LapInfo.LapType = ELapType::Inlap;
 	}
 	else
 	{
-		LapInfo.Type = ELapType::Regular;
+		LapInfo.LapType = ELapType::Regular;
 	}
 
 	// #ACCD_TODO let me try this solution for now, we set invalid split and lap values to -1 and we will manage it with the widget
@@ -737,23 +752,5 @@ bool AACCDProtocol::CheckByteSent(int32 BytesSent)
 	return true;
 }
 
-void AACCDProtocol::PrintRecvCounters()
-{
-	FString Str = FString::Printf(TEXT("\n"
-		                               "|Registration Result: %d\n"
-		                               "|EntryList: %d\n"
-		                               "|Entry List Car: %d\n"
-		                               "|Track Data: %d\n"
-		                               "|Realtime Update: %d\n"
-		                               "|Realtime Car Update: %d\n"
-	                                   "|Updated Car: %d\n"), 
-		GDRegResultCounter, GDEntryListCounter, GDEntryListCarCounter, GDTrackDataCounter, GDRealTimeUpdateCounter, GDRealTimeCarUpdateCounter, GDUpdatedCar);
 
-	if (GEngine)
-	{
-		GEngine->AddOnScreenDebugMessage(1, 0.250f, FColor::Blue, Str);
-	}
-
-	UE_LOG(LogACCDProtocol, Log, TEXT("%s"), *Str);
-}
 

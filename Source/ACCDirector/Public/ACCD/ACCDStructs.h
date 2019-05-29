@@ -38,18 +38,6 @@ struct FDriverInfo
 
 	FDriverInfo() {}
 
-	FDriverInfo(uint16 _DriverIndex)
-	{
-		DriverIndex = _DriverIndex;
-		BPDriverIndex = _DriverIndex;
-	}
-
-	// I need it because i can't expose uint16 types on Blueprint
-	UPROPERTY(BlueprintReadOnly, Category = "ACCD|Driver Info")
-	int32 BPDriverIndex = 0;
-
-	uint16 DriverIndex = 0;
-
 	UPROPERTY(BlueprintReadOnly, Category = "ACCD|Driver Info")
 	FString FirstName;
 
@@ -57,19 +45,11 @@ struct FDriverInfo
 	FString LastName;
 
 	UPROPERTY(BlueprintReadOnly, Category = "ACCD|Driver Info")
-	FString NickName;
-
-	UPROPERTY(BlueprintReadOnly, Category = "ACCD|Driver Info")
 	FString ShortName;
 
 	// Platinum = 3, Gold = 2, Silver = 1, Bronze = 0
 	UPROPERTY(BlueprintReadOnly, Category = "ACCD|Driver Info")
 	EDriverCategory Category = EDriverCategory::Error;
-
-	bool operator==(const FDriverInfo &Arg) const
-	{
-		return DriverIndex == Arg.DriverIndex;
-	}
 };
 
 
@@ -84,11 +64,6 @@ struct FCarInfo
 	{
 		CarIndex = _CarIndex;
 		BPCarIndex = _CarIndex;
-	}
-
-	void AddDriver(FDriverInfo DriverInfo)
-	{
-		Drivers.Add(DriverInfo);
 	}
 
 	// I need it because i can't expose uint16 types on Blueprint
@@ -106,22 +81,29 @@ struct FCarInfo
 	UPROPERTY(BlueprintReadOnly, Category = "ACCD|Car Info")
 	int32 RaceNumber = 0;
 
-	UPROPERTY(BlueprintReadOnly, Category = "ACCD|Car Info")
-	FString TeamCarName;
-
-	UPROPERTY(BlueprintReadOnly, Category = "ACCD|Car Info")
-	FString DisplayName;
-
 	// Cup: Overall/Pro = 0, ProAm = 1, Am = 2, Silver = 3, National = 4
 	UPROPERTY(BlueprintReadOnly, Category = "ACCD|Car Info")
 	uint8 CupCategory = 0;
 
 	UPROPERTY(BlueprintReadOnly, Category = "ACCD|Car Info")
+	int32 CurrentDriverIndex;
+
+	UPROPERTY(BlueprintReadOnly, Category = "ACCD|Car Info")
 	TArray<FDriverInfo> Drivers;
+
+	void AddDriver(FDriverInfo DriverInfo)
+	{
+		Drivers.Add(DriverInfo);
+	}
 
 	bool operator==(const FCarInfo &Arg) const
 	{
 		return CarIndex == Arg.CarIndex;
+	}
+
+	bool operator==(const uint16 CIndex) const
+	{
+		return CarIndex == CIndex;
 	}
 };
 
@@ -164,7 +146,7 @@ struct FLapInfo
 	uint8 bIsValidForBest = 0;
 
 	UPROPERTY(BlueprintReadOnly, Category = "ACCD|Lap Info")
-	ELapType Type = ELapType::ERROR;
+	ELapType LapType = ELapType::ERROR;
 
 };
 
@@ -179,7 +161,7 @@ struct FRealTimeCarUpdate
 	UPROPERTY(BlueprintReadOnly, Category = "ACCD|Realtime Car Update")
 	int32 CarIndex = 0;
 
-	UPROPERTY(BlueprintReadOnly, Category = "ACCD|Realtime Update")
+	UPROPERTY(BlueprintReadOnly, Category = "ACCD|Realtime Car Update")
 	int32 DriverIndex = 0;
 
 	UPROPERTY(BlueprintReadOnly, Category = "ACCD|Realtime Car Update")
@@ -221,6 +203,8 @@ struct FRealTimeCarUpdate
 	int32 Laps = 0;
 
 	uint16 CupPosition = 0;
+
+	uint8 DriverCount = 0;
 };
 
 
@@ -267,7 +251,7 @@ struct FRealTimeUpdate
 	UPROPERTY(BlueprintReadOnly, Category = "ACCD|Realtime Update")
 	int32 BPBestLapDriverIndex = 0;
 
-
+	UPROPERTY(BlueprintReadOnly, Category = "ACCD|Realtime Update")
 	int32 FocusedCarIndex = 0;
 
 	UPROPERTY(BlueprintReadOnly, Category = "ACCD|Realtime Update")
@@ -284,10 +268,7 @@ struct FRealTimeUpdate
 
 	UPROPERTY(BlueprintReadOnly, Category = "ACCD|Realtime Update")
 	float ReplayRemainingTime = 0.f;
-
-	UPROPERTY(BlueprintReadOnly, Category = "ACCD|Realtime Update")
-	int32 ReplayFocusedCar = 0;
-
+	
 	UPROPERTY(BlueprintReadOnly, Category = "ACCD|Realtime Update")
 	FTimespan SessionRemainingTime = FTimespan::FromMilliseconds(1000);
 
@@ -295,7 +276,7 @@ struct FRealTimeUpdate
 	FTimespan SessionEndTime = FTimespan::FromMilliseconds(1000);
 
 	UPROPERTY(BlueprintReadOnly, Category = "ACCD|Realtime Update")
-	ERaceSessionType SessionType = ERaceSessionType::NONE;
+	ERaceSessionType SessionType = ERaceSessionType::Practice;
 
 	UPROPERTY(BlueprintReadOnly, Category = "ACCD|Realtime Update")
 	uint8 AmbientTemp = 0;
@@ -348,4 +329,29 @@ struct FTrackData
 
 	UPROPERTY(BlueprintReadOnly, Category = "ACCD|Track Data")
 	TArray<FString> HudPages;
+};
+
+
+USTRUCT(BlueprintType)
+struct FBroadcastingEvent
+{
+	GENERATED_USTRUCT_BODY()
+
+	FBroadcastingEvent() {}
+
+	UPROPERTY(BlueprintReadOnly)
+	EBroadcastingCarEventType EventType;
+
+	UPROPERTY(BlueprintReadOnly)
+	FString Msg;
+
+	UPROPERTY(BlueprintReadOnly)
+	int32 TimeMs;
+
+	UPROPERTY(BlueprintReadOnly)
+	int32 CarId;
+
+	UPROPERTY(BlueprintReadOnly)
+	FCarInfo CarData;
+
 };

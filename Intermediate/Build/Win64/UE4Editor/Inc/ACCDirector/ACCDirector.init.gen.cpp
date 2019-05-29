@@ -17,6 +17,7 @@ void EmptyLinkFunctionForGeneratedCodeACCDirector_init() {}
 	ACCDIRECTOR_API UFunction* Z_Construct_UDelegateFunction_ACCDirector_RealTimeCarUpdateDelegate__DelegateSignature();
 	ACCDIRECTOR_API UFunction* Z_Construct_UDelegateFunction_ACCDirector_EntryListUpdateDelegate__DelegateSignature();
 	ACCDIRECTOR_API UFunction* Z_Construct_UDelegateFunction_ACCDirector_TrackDataUpdateDelegate__DelegateSignature();
+	ACCDIRECTOR_API UFunction* Z_Construct_UDelegateFunction_ACCDirector_BroadcastingEventDelegate__DelegateSignature();
 	UPackage* Z_Construct_UPackage__Script_ACCDirector()
 	{
 		static UPackage* ReturnPackage = nullptr;
@@ -29,14 +30,15 @@ void EmptyLinkFunctionForGeneratedCodeACCDirector_init() {}
 				(UObject* (*)())Z_Construct_UDelegateFunction_ACCDirector_RealTimeCarUpdateDelegate__DelegateSignature,
 				(UObject* (*)())Z_Construct_UDelegateFunction_ACCDirector_EntryListUpdateDelegate__DelegateSignature,
 				(UObject* (*)())Z_Construct_UDelegateFunction_ACCDirector_TrackDataUpdateDelegate__DelegateSignature,
+				(UObject* (*)())Z_Construct_UDelegateFunction_ACCDirector_BroadcastingEventDelegate__DelegateSignature,
 			};
 			static const UE4CodeGen_Private::FPackageParams PackageParams = {
 				"/Script/ACCDirector",
 				SingletonFuncArray,
 				ARRAY_COUNT(SingletonFuncArray),
 				PKG_CompiledIn | 0x00000000,
-				0x1D5FE471,
-				0x5E802F89,
+				0x7AAAB465,
+				0xF262CA5E,
 				METADATA_PARAMS(nullptr, 0)
 			};
 			UE4CodeGen_Private::ConstructUPackage(ReturnPackage, PackageParams);

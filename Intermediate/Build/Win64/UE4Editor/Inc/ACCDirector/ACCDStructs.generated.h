@@ -13,42 +13,49 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define ACCDIRECTOR_ACCDStructs_generated_h
 
-#define ACCDirector_Source_ACCDirector_Public_ACCD_ACCDStructs_h_334_GENERATED_BODY \
+#define ACCDirector_Source_ACCDirector_Public_ACCD_ACCDStructs_h_338_GENERATED_BODY \
+	friend struct Z_Construct_UScriptStruct_FBroadcastingEvent_Statics; \
+	ACCDIRECTOR_API static class UScriptStruct* StaticStruct();
+
+
+template<> ACCDIRECTOR_API UScriptStruct* StaticStruct<struct FBroadcastingEvent>();
+
+#define ACCDirector_Source_ACCDirector_Public_ACCD_ACCDStructs_h_315_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FTrackData_Statics; \
 	ACCDIRECTOR_API static class UScriptStruct* StaticStruct();
 
 
 template<> ACCDIRECTOR_API UScriptStruct* StaticStruct<struct FTrackData>();
 
-#define ACCDirector_Source_ACCDirector_Public_ACCD_ACCDStructs_h_314_GENERATED_BODY \
+#define ACCDirector_Source_ACCDirector_Public_ACCD_ACCDStructs_h_295_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FCameraSet_Statics; \
 	ACCDIRECTOR_API static class UScriptStruct* StaticStruct();
 
 
 template<> ACCDIRECTOR_API UScriptStruct* StaticStruct<struct FCameraSet>();
 
-#define ACCDirector_Source_ACCDirector_Public_ACCD_ACCDStructs_h_230_GENERATED_BODY \
+#define ACCDirector_Source_ACCDirector_Public_ACCD_ACCDStructs_h_214_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FRealTimeUpdate_Statics; \
 	ACCDIRECTOR_API static class UScriptStruct* StaticStruct();
 
 
 template<> ACCDIRECTOR_API UScriptStruct* StaticStruct<struct FRealTimeUpdate>();
 
-#define ACCDirector_Source_ACCDirector_Public_ACCD_ACCDStructs_h_175_GENERATED_BODY \
+#define ACCDirector_Source_ACCDirector_Public_ACCD_ACCDStructs_h_157_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FRealTimeCarUpdate_Statics; \
 	ACCDIRECTOR_API static class UScriptStruct* StaticStruct();
 
 
 template<> ACCDIRECTOR_API UScriptStruct* StaticStruct<struct FRealTimeCarUpdate>();
 
-#define ACCDirector_Source_ACCDirector_Public_ACCD_ACCDStructs_h_132_GENERATED_BODY \
+#define ACCDirector_Source_ACCDirector_Public_ACCD_ACCDStructs_h_114_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FLapInfo_Statics; \
 	ACCDIRECTOR_API static class UScriptStruct* StaticStruct();
 
 
 template<> ACCDIRECTOR_API UScriptStruct* StaticStruct<struct FLapInfo>();
 
-#define ACCDirector_Source_ACCDirector_Public_ACCD_ACCDStructs_h_79_GENERATED_BODY \
+#define ACCDirector_Source_ACCDirector_Public_ACCD_ACCDStructs_h_59_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FCarInfo_Statics; \
 	ACCDIRECTOR_API static class UScriptStruct* StaticStruct();
 

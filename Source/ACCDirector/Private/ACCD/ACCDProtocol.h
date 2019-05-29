@@ -14,8 +14,9 @@ DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FConnectionStateChangedDelegate, con
 DECLARE_DYNAMIC_MULTICAST_DELEGATE_TwoParams(FEntryListDelegate, const FString&, ConnectionIdentifier, const TArray<FCarInfo>&, EntryList);
 DECLARE_DYNAMIC_MULTICAST_DELEGATE_TwoParams(FRealtimeUpdateDelegate, const FString&, ConnectionIdentifier, const FRealTimeUpdate, RealTimeUpdate);
 DECLARE_DYNAMIC_MULTICAST_DELEGATE_TwoParams(FRealTimeCarUpdateDelegate, const FString&, ConnectionIdentifier, const FRealTimeCarUpdate, CarUpdate);
-DECLARE_DYNAMIC_MULTICAST_DELEGATE_TwoParams(FEntryListUpdateDelegate, const FString&, ConnectionIdentifier, FCarInfo, CarInfo);
+DECLARE_DYNAMIC_MULTICAST_DELEGATE_TwoParams(FEntryListUpdateDelegate, const FString&, ConnectionIdentifier, const FCarInfo, CarInfo);
 DECLARE_DYNAMIC_MULTICAST_DELEGATE_TwoParams(FTrackDataUpdateDelegate, const FString&, ConnectionIdentifier, const FTrackData, TrackData);
+DECLARE_DYNAMIC_MULTICAST_DELEGATE_TwoParams(FBroadcastingEventDelegate, const FString&, ConnectionIdentifier, const FBroadcastingEvent, BroadcastingEvent);
 
 
 UCLASS()
@@ -84,6 +85,9 @@ public:
 	UPROPERTY(BlueprintAssignable, Category = "ACCD|Protocol")
 	FTrackDataUpdateDelegate OnTrackDataUpdate;
 
+	UPROPERTY(BlueprintAssignable, Category = "ACCD|Protocol")
+	FBroadcastingEventDelegate OnBroadcastingEvent;
+
 private:
 
 	void Recv(const FArrayReaderPtr& ArrayReaderPtr, const FIPv4Endpoint& Endpoint);
@@ -116,14 +120,8 @@ private:
 	FTrackData GTrackData;
 	TArray<FCarInfo> GCarsEntryList;
 	FCarInfo GCarInfo;
+	FBroadcastingEvent GBroadcastingEvent;
 
-	// debug
-	int GDRegResultCounter = 0;
-	int GDEntryListCounter = 0;
-	int GDEntryListCarCounter = 0;
-	int GDTrackDataCounter = 0;
-	int GDRealTimeUpdateCounter = 0;
-	int GDRealTimeCarUpdateCounter = 0;
-	int GDUpdatedCar = 0;
-	void PrintRecvCounters();
+
+	
 };

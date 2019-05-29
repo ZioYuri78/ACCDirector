@@ -13,16 +13,74 @@
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodeACCDEnums() {}
 // Cross Module References
-	ACCDIRECTOR_API UEnum* Z_Construct_UEnum_ACCDirector_ERaceSessionType();
+	ACCDIRECTOR_API UEnum* Z_Construct_UEnum_ACCDirector_EBroadcastingCarEventType();
 	UPackage* Z_Construct_UPackage__Script_ACCDirector();
+	ACCDIRECTOR_API UEnum* Z_Construct_UEnum_ACCDirector_ERaceSessionType();
 	ACCDIRECTOR_API UEnum* Z_Construct_UEnum_ACCDirector_ESessionPhase();
 	ACCDIRECTOR_API UEnum* Z_Construct_UEnum_ACCDirector_ECarLocationEnum();
 	ACCDIRECTOR_API UEnum* Z_Construct_UEnum_ACCDirector_ELapType();
 	ACCDIRECTOR_API UEnum* Z_Construct_UEnum_ACCDirector_EDriverCategory();
-	ACCDIRECTOR_API UEnum* Z_Construct_UEnum_ACCDirector_EBNProtocol();
+	ACCDIRECTOR_API UEnum* Z_Construct_UEnum_ACCDirector_EBNProtocolVersion();
 	ACCDIRECTOR_API UEnum* Z_Construct_UEnum_ACCDirector_EInboundMessageTypes();
 	ACCDIRECTOR_API UEnum* Z_Construct_UEnum_ACCDirector_EOutboundMessageTypes();
 // End Cross Module References
+	static UEnum* EBroadcastingCarEventType_StaticEnum()
+	{
+		static UEnum* Singleton = nullptr;
+		if (!Singleton)
+		{
+			Singleton = GetStaticEnum(Z_Construct_UEnum_ACCDirector_EBroadcastingCarEventType, Z_Construct_UPackage__Script_ACCDirector(), TEXT("EBroadcastingCarEventType"));
+		}
+		return Singleton;
+	}
+	template<> ACCDIRECTOR_API UEnum* StaticEnum<EBroadcastingCarEventType>()
+	{
+		return EBroadcastingCarEventType_StaticEnum();
+	}
+	static FCompiledInDeferEnum Z_CompiledInDeferEnum_UEnum_EBroadcastingCarEventType(EBroadcastingCarEventType_StaticEnum, TEXT("/Script/ACCDirector"), TEXT("EBroadcastingCarEventType"), false, nullptr, nullptr);
+	uint32 Get_Z_Construct_UEnum_ACCDirector_EBroadcastingCarEventType_Hash() { return 1248523645U; }
+	UEnum* Z_Construct_UEnum_ACCDirector_EBroadcastingCarEventType()
+	{
+#if WITH_HOT_RELOAD
+		UPackage* Outer = Z_Construct_UPackage__Script_ACCDirector();
+		static UEnum* ReturnEnum = FindExistingEnumIfHotReloadOrDynamic(Outer, TEXT("EBroadcastingCarEventType"), 0, Get_Z_Construct_UEnum_ACCDirector_EBroadcastingCarEventType_Hash(), false);
+#else
+		static UEnum* ReturnEnum = nullptr;
+#endif // WITH_HOT_RELOAD
+		if (!ReturnEnum)
+		{
+			static const UE4CodeGen_Private::FEnumeratorParam Enumerators[] = {
+				{ "EBroadcastingCarEventType::None", (int64)EBroadcastingCarEventType::None },
+				{ "EBroadcastingCarEventType::GreenFlag", (int64)EBroadcastingCarEventType::GreenFlag },
+				{ "EBroadcastingCarEventType::SessionOver", (int64)EBroadcastingCarEventType::SessionOver },
+				{ "EBroadcastingCarEventType::PenaltyCommMsg", (int64)EBroadcastingCarEventType::PenaltyCommMsg },
+				{ "EBroadcastingCarEventType::Accident", (int64)EBroadcastingCarEventType::Accident },
+				{ "EBroadcastingCarEventType::LapCompleted", (int64)EBroadcastingCarEventType::LapCompleted },
+				{ "EBroadcastingCarEventType::BestSessionLap", (int64)EBroadcastingCarEventType::BestSessionLap },
+				{ "EBroadcastingCarEventType::BestPersonalLap", (int64)EBroadcastingCarEventType::BestPersonalLap },
+			};
+#if WITH_METADATA
+			const UE4CodeGen_Private::FMetaDataPairParam Enum_MetaDataParams[] = {
+				{ "BlueprintType", "true" },
+				{ "ModuleRelativePath", "Public/ACCD/ACCDEnums.h" },
+			};
+#endif
+			static const UE4CodeGen_Private::FEnumParams EnumParams = {
+				(UObject*(*)())Z_Construct_UPackage__Script_ACCDirector,
+				nullptr,
+				"EBroadcastingCarEventType",
+				"EBroadcastingCarEventType",
+				Enumerators,
+				ARRAY_COUNT(Enumerators),
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				UE4CodeGen_Private::EDynamicType::NotDynamic,
+				(uint8)UEnum::ECppForm::EnumClass,
+				METADATA_PARAMS(Enum_MetaDataParams, ARRAY_COUNT(Enum_MetaDataParams))
+			};
+			UE4CodeGen_Private::ConstructUEnum(ReturnEnum, EnumParams);
+		}
+		return ReturnEnum;
+	}
 	static UEnum* ERaceSessionType_StaticEnum()
 	{
 		static UEnum* Singleton = nullptr;
@@ -37,7 +95,7 @@ void EmptyLinkFunctionForGeneratedCodeACCDEnums() {}
 		return ERaceSessionType_StaticEnum();
 	}
 	static FCompiledInDeferEnum Z_CompiledInDeferEnum_UEnum_ERaceSessionType(ERaceSessionType_StaticEnum, TEXT("/Script/ACCDirector"), TEXT("ERaceSessionType"), false, nullptr, nullptr);
-	uint32 Get_Z_Construct_UEnum_ACCDirector_ERaceSessionType_Hash() { return 1778160367U; }
+	uint32 Get_Z_Construct_UEnum_ACCDirector_ERaceSessionType_Hash() { return 572702059U; }
 	UEnum* Z_Construct_UEnum_ACCDirector_ERaceSessionType()
 	{
 #if WITH_HOT_RELOAD
@@ -57,7 +115,6 @@ void EmptyLinkFunctionForGeneratedCodeACCDEnums() {}
 				{ "ERaceSessionType::Hotstint", (int64)ERaceSessionType::Hotstint },
 				{ "ERaceSessionType::HotlapSuperpole", (int64)ERaceSessionType::HotlapSuperpole },
 				{ "ERaceSessionType::Replay", (int64)ERaceSessionType::Replay },
-				{ "ERaceSessionType::NONE", (int64)ERaceSessionType::NONE },
 			};
 #if WITH_METADATA
 			const UE4CodeGen_Private::FMetaDataPairParam Enum_MetaDataParams[] = {
@@ -300,33 +357,33 @@ void EmptyLinkFunctionForGeneratedCodeACCDEnums() {}
 		}
 		return ReturnEnum;
 	}
-	static UEnum* EBNProtocol_StaticEnum()
+	static UEnum* EBNProtocolVersion_StaticEnum()
 	{
 		static UEnum* Singleton = nullptr;
 		if (!Singleton)
 		{
-			Singleton = GetStaticEnum(Z_Construct_UEnum_ACCDirector_EBNProtocol, Z_Construct_UPackage__Script_ACCDirector(), TEXT("EBNProtocol"));
+			Singleton = GetStaticEnum(Z_Construct_UEnum_ACCDirector_EBNProtocolVersion, Z_Construct_UPackage__Script_ACCDirector(), TEXT("EBNProtocolVersion"));
 		}
 		return Singleton;
 	}
-	template<> ACCDIRECTOR_API UEnum* StaticEnum<EBNProtocol>()
+	template<> ACCDIRECTOR_API UEnum* StaticEnum<EBNProtocolVersion>()
 	{
-		return EBNProtocol_StaticEnum();
+		return EBNProtocolVersion_StaticEnum();
 	}
-	static FCompiledInDeferEnum Z_CompiledInDeferEnum_UEnum_EBNProtocol(EBNProtocol_StaticEnum, TEXT("/Script/ACCDirector"), TEXT("EBNProtocol"), false, nullptr, nullptr);
-	uint32 Get_Z_Construct_UEnum_ACCDirector_EBNProtocol_Hash() { return 1674954084U; }
-	UEnum* Z_Construct_UEnum_ACCDirector_EBNProtocol()
+	static FCompiledInDeferEnum Z_CompiledInDeferEnum_UEnum_EBNProtocolVersion(EBNProtocolVersion_StaticEnum, TEXT("/Script/ACCDirector"), TEXT("EBNProtocolVersion"), false, nullptr, nullptr);
+	uint32 Get_Z_Construct_UEnum_ACCDirector_EBNProtocolVersion_Hash() { return 1657553030U; }
+	UEnum* Z_Construct_UEnum_ACCDirector_EBNProtocolVersion()
 	{
 #if WITH_HOT_RELOAD
 		UPackage* Outer = Z_Construct_UPackage__Script_ACCDirector();
-		static UEnum* ReturnEnum = FindExistingEnumIfHotReloadOrDynamic(Outer, TEXT("EBNProtocol"), 0, Get_Z_Construct_UEnum_ACCDirector_EBNProtocol_Hash(), false);
+		static UEnum* ReturnEnum = FindExistingEnumIfHotReloadOrDynamic(Outer, TEXT("EBNProtocolVersion"), 0, Get_Z_Construct_UEnum_ACCDirector_EBNProtocolVersion_Hash(), false);
 #else
 		static UEnum* ReturnEnum = nullptr;
 #endif // WITH_HOT_RELOAD
 		if (!ReturnEnum)
 		{
 			static const UE4CodeGen_Private::FEnumeratorParam Enumerators[] = {
-				{ "EBNProtocol::BROADCAST_PROTOCOL_VERSION", (int64)EBNProtocol::BROADCAST_PROTOCOL_VERSION },
+				{ "EBNProtocolVersion::BROADCAST_PROTOCOL_VERSION", (int64)EBNProtocolVersion::BROADCAST_PROTOCOL_VERSION },
 			};
 #if WITH_METADATA
 			const UE4CodeGen_Private::FMetaDataPairParam Enum_MetaDataParams[] = {
@@ -336,8 +393,8 @@ void EmptyLinkFunctionForGeneratedCodeACCDEnums() {}
 			static const UE4CodeGen_Private::FEnumParams EnumParams = {
 				(UObject*(*)())Z_Construct_UPackage__Script_ACCDirector,
 				nullptr,
-				"EBNProtocol",
-				"EBNProtocol",
+				"EBNProtocolVersion",
+				"EBNProtocolVersion",
 				Enumerators,
 				ARRAY_COUNT(Enumerators),
 				RF_Public|RF_Transient|RF_MarkAsNative,
@@ -363,7 +420,7 @@ void EmptyLinkFunctionForGeneratedCodeACCDEnums() {}
 		return EInboundMessageTypes_StaticEnum();
 	}
 	static FCompiledInDeferEnum Z_CompiledInDeferEnum_UEnum_EInboundMessageTypes(EInboundMessageTypes_StaticEnum, TEXT("/Script/ACCDirector"), TEXT("EInboundMessageTypes"), false, nullptr, nullptr);
-	uint32 Get_Z_Construct_UEnum_ACCDirector_EInboundMessageTypes_Hash() { return 2400770206U; }
+	uint32 Get_Z_Construct_UEnum_ACCDirector_EInboundMessageTypes_Hash() { return 209598607U; }
 	UEnum* Z_Construct_UEnum_ACCDirector_EInboundMessageTypes()
 	{
 #if WITH_HOT_RELOAD
@@ -375,13 +432,13 @@ void EmptyLinkFunctionForGeneratedCodeACCDEnums() {}
 		if (!ReturnEnum)
 		{
 			static const UE4CodeGen_Private::FEnumeratorParam Enumerators[] = {
-				{ "EInboundMessageTypes::NONE", (int64)EInboundMessageTypes::NONE },
 				{ "EInboundMessageTypes::REGISTRATION_RESULT", (int64)EInboundMessageTypes::REGISTRATION_RESULT },
 				{ "EInboundMessageTypes::REALTIME_UPDATE", (int64)EInboundMessageTypes::REALTIME_UPDATE },
 				{ "EInboundMessageTypes::REALTIME_CAR_UPDATE", (int64)EInboundMessageTypes::REALTIME_CAR_UPDATE },
 				{ "EInboundMessageTypes::ENTRY_LIST", (int64)EInboundMessageTypes::ENTRY_LIST },
-				{ "EInboundMessageTypes::ENTRY_LIST_CAR", (int64)EInboundMessageTypes::ENTRY_LIST_CAR },
 				{ "EInboundMessageTypes::TRACK_DATA", (int64)EInboundMessageTypes::TRACK_DATA },
+				{ "EInboundMessageTypes::ENTRY_LIST_CAR", (int64)EInboundMessageTypes::ENTRY_LIST_CAR },
+				{ "EInboundMessageTypes::BROADCASTING_EVENT", (int64)EInboundMessageTypes::BROADCASTING_EVENT },
 			};
 #if WITH_METADATA
 			const UE4CodeGen_Private::FMetaDataPairParam Enum_MetaDataParams[] = {

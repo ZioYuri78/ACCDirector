@@ -8,6 +8,7 @@
 #include "UObject/ScriptMacros.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
+struct FBroadcastingEvent;
 struct FTrackData;
 struct FCarInfo;
 struct FRealTimeCarUpdate;
@@ -17,6 +18,21 @@ struct FRegistrationResult;
 #error "ACCDProtocol.generated.h already included, missing '#pragma once' in ACCDProtocol.h"
 #endif
 #define ACCDIRECTOR_ACCDProtocol_generated_h
+
+#define ACCDirector_Source_ACCDirector_Private_ACCD_ACCDProtocol_h_19_DELEGATE \
+struct _Script_ACCDirector_eventBroadcastingEventDelegate_Parms \
+{ \
+	FString ConnectionIdentifier; \
+	FBroadcastingEvent BroadcastingEvent; \
+}; \
+static inline void FBroadcastingEventDelegate_DelegateWrapper(const FMulticastScriptDelegate& BroadcastingEventDelegate, const FString& ConnectionIdentifier, const FBroadcastingEvent BroadcastingEvent) \
+{ \
+	_Script_ACCDirector_eventBroadcastingEventDelegate_Parms Parms; \
+	Parms.ConnectionIdentifier=ConnectionIdentifier; \
+	Parms.BroadcastingEvent=BroadcastingEvent; \
+	BroadcastingEventDelegate.ProcessMulticastDelegate<UObject>(&Parms); \
+}
+
 
 #define ACCDirector_Source_ACCDirector_Private_ACCD_ACCDProtocol_h_18_DELEGATE \
 struct _Script_ACCDirector_eventTrackDataUpdateDelegate_Parms \
@@ -39,7 +55,7 @@ struct _Script_ACCDirector_eventEntryListUpdateDelegate_Parms \
 	FString ConnectionIdentifier; \
 	FCarInfo CarInfo; \
 }; \
-static inline void FEntryListUpdateDelegate_DelegateWrapper(const FMulticastScriptDelegate& EntryListUpdateDelegate, const FString& ConnectionIdentifier, FCarInfo CarInfo) \
+static inline void FEntryListUpdateDelegate_DelegateWrapper(const FMulticastScriptDelegate& EntryListUpdateDelegate, const FString& ConnectionIdentifier, const FCarInfo CarInfo) \
 { \
 	_Script_ACCDirector_eventEntryListUpdateDelegate_Parms Parms; \
 	Parms.ConnectionIdentifier=ConnectionIdentifier; \
@@ -106,7 +122,7 @@ static inline void FConnectionStateChangedDelegate_DelegateWrapper(const FMultic
 }
 
 
-#define ACCDirector_Source_ACCDirector_Private_ACCD_ACCDProtocol_h_24_RPC_WRAPPERS \
+#define ACCDirector_Source_ACCDirector_Private_ACCD_ACCDProtocol_h_25_RPC_WRAPPERS \
  \
 	DECLARE_FUNCTION(execRequestHUDPage) \
 	{ \
@@ -199,7 +215,7 @@ static inline void FConnectionStateChangedDelegate_DelegateWrapper(const FMultic
 	}
 
 
-#define ACCDirector_Source_ACCDirector_Private_ACCD_ACCDProtocol_h_24_RPC_WRAPPERS_NO_PURE_DECLS \
+#define ACCDirector_Source_ACCDirector_Private_ACCD_ACCDProtocol_h_25_RPC_WRAPPERS_NO_PURE_DECLS \
  \
 	DECLARE_FUNCTION(execRequestHUDPage) \
 	{ \
@@ -292,7 +308,7 @@ static inline void FConnectionStateChangedDelegate_DelegateWrapper(const FMultic
 	}
 
 
-#define ACCDirector_Source_ACCDirector_Private_ACCD_ACCDProtocol_h_24_INCLASS_NO_PURE_DECLS \
+#define ACCDirector_Source_ACCDirector_Private_ACCD_ACCDProtocol_h_25_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesAACCDProtocol(); \
 	friend struct Z_Construct_UClass_AACCDProtocol_Statics; \
@@ -301,7 +317,7 @@ public: \
 	DECLARE_SERIALIZER(AACCDProtocol)
 
 
-#define ACCDirector_Source_ACCDirector_Private_ACCD_ACCDProtocol_h_24_INCLASS \
+#define ACCDirector_Source_ACCDirector_Private_ACCD_ACCDProtocol_h_25_INCLASS \
 private: \
 	static void StaticRegisterNativesAACCDProtocol(); \
 	friend struct Z_Construct_UClass_AACCDProtocol_Statics; \
@@ -310,7 +326,7 @@ public: \
 	DECLARE_SERIALIZER(AACCDProtocol)
 
 
-#define ACCDirector_Source_ACCDirector_Private_ACCD_ACCDProtocol_h_24_STANDARD_CONSTRUCTORS \
+#define ACCDirector_Source_ACCDirector_Private_ACCD_ACCDProtocol_h_25_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API AACCDProtocol(const FObjectInitializer& ObjectInitializer); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(AACCDProtocol) \
@@ -323,7 +339,7 @@ private: \
 public:
 
 
-#define ACCDirector_Source_ACCDirector_Private_ACCD_ACCDProtocol_h_24_ENHANCED_CONSTRUCTORS \
+#define ACCDirector_Source_ACCDirector_Private_ACCD_ACCDProtocol_h_25_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	NO_API AACCDProtocol(AACCDProtocol&&); \
@@ -334,26 +350,26 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(AACCDProtocol); \
 	DEFINE_DEFAULT_CONSTRUCTOR_CALL(AACCDProtocol)
 
 
-#define ACCDirector_Source_ACCDirector_Private_ACCD_ACCDProtocol_h_24_PRIVATE_PROPERTY_OFFSET
-#define ACCDirector_Source_ACCDirector_Private_ACCD_ACCDProtocol_h_21_PROLOG
-#define ACCDirector_Source_ACCDirector_Private_ACCD_ACCDProtocol_h_24_GENERATED_BODY_LEGACY \
+#define ACCDirector_Source_ACCDirector_Private_ACCD_ACCDProtocol_h_25_PRIVATE_PROPERTY_OFFSET
+#define ACCDirector_Source_ACCDirector_Private_ACCD_ACCDProtocol_h_22_PROLOG
+#define ACCDirector_Source_ACCDirector_Private_ACCD_ACCDProtocol_h_25_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	ACCDirector_Source_ACCDirector_Private_ACCD_ACCDProtocol_h_24_PRIVATE_PROPERTY_OFFSET \
-	ACCDirector_Source_ACCDirector_Private_ACCD_ACCDProtocol_h_24_RPC_WRAPPERS \
-	ACCDirector_Source_ACCDirector_Private_ACCD_ACCDProtocol_h_24_INCLASS \
-	ACCDirector_Source_ACCDirector_Private_ACCD_ACCDProtocol_h_24_STANDARD_CONSTRUCTORS \
+	ACCDirector_Source_ACCDirector_Private_ACCD_ACCDProtocol_h_25_PRIVATE_PROPERTY_OFFSET \
+	ACCDirector_Source_ACCDirector_Private_ACCD_ACCDProtocol_h_25_RPC_WRAPPERS \
+	ACCDirector_Source_ACCDirector_Private_ACCD_ACCDProtocol_h_25_INCLASS \
+	ACCDirector_Source_ACCDirector_Private_ACCD_ACCDProtocol_h_25_STANDARD_CONSTRUCTORS \
 public: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
-#define ACCDirector_Source_ACCDirector_Private_ACCD_ACCDProtocol_h_24_GENERATED_BODY \
+#define ACCDirector_Source_ACCDirector_Private_ACCD_ACCDProtocol_h_25_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	ACCDirector_Source_ACCDirector_Private_ACCD_ACCDProtocol_h_24_PRIVATE_PROPERTY_OFFSET \
-	ACCDirector_Source_ACCDirector_Private_ACCD_ACCDProtocol_h_24_RPC_WRAPPERS_NO_PURE_DECLS \
-	ACCDirector_Source_ACCDirector_Private_ACCD_ACCDProtocol_h_24_INCLASS_NO_PURE_DECLS \
-	ACCDirector_Source_ACCDirector_Private_ACCD_ACCDProtocol_h_24_ENHANCED_CONSTRUCTORS \
+	ACCDirector_Source_ACCDirector_Private_ACCD_ACCDProtocol_h_25_PRIVATE_PROPERTY_OFFSET \
+	ACCDirector_Source_ACCDirector_Private_ACCD_ACCDProtocol_h_25_RPC_WRAPPERS_NO_PURE_DECLS \
+	ACCDirector_Source_ACCDirector_Private_ACCD_ACCDProtocol_h_25_INCLASS_NO_PURE_DECLS \
+	ACCDirector_Source_ACCDirector_Private_ACCD_ACCDProtocol_h_25_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 

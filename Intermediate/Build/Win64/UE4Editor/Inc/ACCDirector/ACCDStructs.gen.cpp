@@ -13,8 +13,11 @@
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodeACCDStructs() {}
 // Cross Module References
-	ACCDIRECTOR_API UScriptStruct* Z_Construct_UScriptStruct_FTrackData();
+	ACCDIRECTOR_API UScriptStruct* Z_Construct_UScriptStruct_FBroadcastingEvent();
 	UPackage* Z_Construct_UPackage__Script_ACCDirector();
+	ACCDIRECTOR_API UScriptStruct* Z_Construct_UScriptStruct_FCarInfo();
+	ACCDIRECTOR_API UEnum* Z_Construct_UEnum_ACCDirector_EBroadcastingCarEventType();
+	ACCDIRECTOR_API UScriptStruct* Z_Construct_UScriptStruct_FTrackData();
 	ACCDIRECTOR_API UScriptStruct* Z_Construct_UScriptStruct_FCameraSet();
 	ACCDIRECTOR_API UScriptStruct* Z_Construct_UScriptStruct_FRealTimeUpdate();
 	ACCDIRECTOR_API UEnum* Z_Construct_UEnum_ACCDirector_ERaceSessionType();
@@ -24,11 +27,145 @@ void EmptyLinkFunctionForGeneratedCodeACCDStructs() {}
 	ACCDIRECTOR_API UScriptStruct* Z_Construct_UScriptStruct_FRealTimeCarUpdate();
 	ACCDIRECTOR_API UEnum* Z_Construct_UEnum_ACCDirector_ECarLocationEnum();
 	ACCDIRECTOR_API UEnum* Z_Construct_UEnum_ACCDirector_ELapType();
-	ACCDIRECTOR_API UScriptStruct* Z_Construct_UScriptStruct_FCarInfo();
 	ACCDIRECTOR_API UScriptStruct* Z_Construct_UScriptStruct_FDriverInfo();
 	ACCDIRECTOR_API UEnum* Z_Construct_UEnum_ACCDirector_EDriverCategory();
 	ACCDIRECTOR_API UScriptStruct* Z_Construct_UScriptStruct_FRegistrationResult();
 // End Cross Module References
+class UScriptStruct* FBroadcastingEvent::StaticStruct()
+{
+	static class UScriptStruct* Singleton = NULL;
+	if (!Singleton)
+	{
+		extern ACCDIRECTOR_API uint32 Get_Z_Construct_UScriptStruct_FBroadcastingEvent_Hash();
+		Singleton = GetStaticStruct(Z_Construct_UScriptStruct_FBroadcastingEvent, Z_Construct_UPackage__Script_ACCDirector(), TEXT("BroadcastingEvent"), sizeof(FBroadcastingEvent), Get_Z_Construct_UScriptStruct_FBroadcastingEvent_Hash());
+	}
+	return Singleton;
+}
+template<> ACCDIRECTOR_API UScriptStruct* StaticStruct<FBroadcastingEvent>()
+{
+	return FBroadcastingEvent::StaticStruct();
+}
+static FCompiledInDeferStruct Z_CompiledInDeferStruct_UScriptStruct_FBroadcastingEvent(FBroadcastingEvent::StaticStruct, TEXT("/Script/ACCDirector"), TEXT("BroadcastingEvent"), false, nullptr, nullptr);
+static struct FScriptStruct_ACCDirector_StaticRegisterNativesFBroadcastingEvent
+{
+	FScriptStruct_ACCDirector_StaticRegisterNativesFBroadcastingEvent()
+	{
+		UScriptStruct::DeferCppStructOps(FName(TEXT("BroadcastingEvent")),new UScriptStruct::TCppStructOps<FBroadcastingEvent>);
+	}
+} ScriptStruct_ACCDirector_StaticRegisterNativesFBroadcastingEvent;
+	struct Z_Construct_UScriptStruct_FBroadcastingEvent_Statics
+	{
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Struct_MetaDataParams[];
+#endif
+		static void* NewStructOps();
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_CarData_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FStructPropertyParams NewProp_CarData;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_CarId_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FIntPropertyParams NewProp_CarId;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_TimeMs_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FIntPropertyParams NewProp_TimeMs;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_Msg_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FStrPropertyParams NewProp_Msg;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_EventType_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FEnumPropertyParams NewProp_EventType;
+		static const UE4CodeGen_Private::FBytePropertyParams NewProp_EventType_Underlying;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FBroadcastingEvent_Statics::Struct_MetaDataParams[] = {
+		{ "BlueprintType", "true" },
+		{ "ModuleRelativePath", "Public/ACCD/ACCDStructs.h" },
+	};
+#endif
+	void* Z_Construct_UScriptStruct_FBroadcastingEvent_Statics::NewStructOps()
+	{
+		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FBroadcastingEvent>();
+	}
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FBroadcastingEvent_Statics::NewProp_CarData_MetaData[] = {
+		{ "Category", "BroadcastingEvent" },
+		{ "ModuleRelativePath", "Public/ACCD/ACCDStructs.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FBroadcastingEvent_Statics::NewProp_CarData = { "CarData", nullptr, (EPropertyFlags)0x0010000000000014, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FBroadcastingEvent, CarData), Z_Construct_UScriptStruct_FCarInfo, METADATA_PARAMS(Z_Construct_UScriptStruct_FBroadcastingEvent_Statics::NewProp_CarData_MetaData, ARRAY_COUNT(Z_Construct_UScriptStruct_FBroadcastingEvent_Statics::NewProp_CarData_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FBroadcastingEvent_Statics::NewProp_CarId_MetaData[] = {
+		{ "Category", "BroadcastingEvent" },
+		{ "ModuleRelativePath", "Public/ACCD/ACCDStructs.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FIntPropertyParams Z_Construct_UScriptStruct_FBroadcastingEvent_Statics::NewProp_CarId = { "CarId", nullptr, (EPropertyFlags)0x0010000000000014, UE4CodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FBroadcastingEvent, CarId), METADATA_PARAMS(Z_Construct_UScriptStruct_FBroadcastingEvent_Statics::NewProp_CarId_MetaData, ARRAY_COUNT(Z_Construct_UScriptStruct_FBroadcastingEvent_Statics::NewProp_CarId_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FBroadcastingEvent_Statics::NewProp_TimeMs_MetaData[] = {
+		{ "Category", "BroadcastingEvent" },
+		{ "ModuleRelativePath", "Public/ACCD/ACCDStructs.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FIntPropertyParams Z_Construct_UScriptStruct_FBroadcastingEvent_Statics::NewProp_TimeMs = { "TimeMs", nullptr, (EPropertyFlags)0x0010000000000014, UE4CodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FBroadcastingEvent, TimeMs), METADATA_PARAMS(Z_Construct_UScriptStruct_FBroadcastingEvent_Statics::NewProp_TimeMs_MetaData, ARRAY_COUNT(Z_Construct_UScriptStruct_FBroadcastingEvent_Statics::NewProp_TimeMs_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FBroadcastingEvent_Statics::NewProp_Msg_MetaData[] = {
+		{ "Category", "BroadcastingEvent" },
+		{ "ModuleRelativePath", "Public/ACCD/ACCDStructs.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FStrPropertyParams Z_Construct_UScriptStruct_FBroadcastingEvent_Statics::NewProp_Msg = { "Msg", nullptr, (EPropertyFlags)0x0010000000000014, UE4CodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FBroadcastingEvent, Msg), METADATA_PARAMS(Z_Construct_UScriptStruct_FBroadcastingEvent_Statics::NewProp_Msg_MetaData, ARRAY_COUNT(Z_Construct_UScriptStruct_FBroadcastingEvent_Statics::NewProp_Msg_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FBroadcastingEvent_Statics::NewProp_EventType_MetaData[] = {
+		{ "Category", "BroadcastingEvent" },
+		{ "ModuleRelativePath", "Public/ACCD/ACCDStructs.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FEnumPropertyParams Z_Construct_UScriptStruct_FBroadcastingEvent_Statics::NewProp_EventType = { "EventType", nullptr, (EPropertyFlags)0x0010000000000014, UE4CodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FBroadcastingEvent, EventType), Z_Construct_UEnum_ACCDirector_EBroadcastingCarEventType, METADATA_PARAMS(Z_Construct_UScriptStruct_FBroadcastingEvent_Statics::NewProp_EventType_MetaData, ARRAY_COUNT(Z_Construct_UScriptStruct_FBroadcastingEvent_Statics::NewProp_EventType_MetaData)) };
+	const UE4CodeGen_Private::FBytePropertyParams Z_Construct_UScriptStruct_FBroadcastingEvent_Statics::NewProp_EventType_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UE4CodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, nullptr, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UScriptStruct_FBroadcastingEvent_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FBroadcastingEvent_Statics::NewProp_CarData,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FBroadcastingEvent_Statics::NewProp_CarId,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FBroadcastingEvent_Statics::NewProp_TimeMs,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FBroadcastingEvent_Statics::NewProp_Msg,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FBroadcastingEvent_Statics::NewProp_EventType,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FBroadcastingEvent_Statics::NewProp_EventType_Underlying,
+	};
+	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FBroadcastingEvent_Statics::ReturnStructParams = {
+		(UObject* (*)())Z_Construct_UPackage__Script_ACCDirector,
+		nullptr,
+		&NewStructOps,
+		"BroadcastingEvent",
+		sizeof(FBroadcastingEvent),
+		alignof(FBroadcastingEvent),
+		Z_Construct_UScriptStruct_FBroadcastingEvent_Statics::PropPointers,
+		ARRAY_COUNT(Z_Construct_UScriptStruct_FBroadcastingEvent_Statics::PropPointers),
+		RF_Public|RF_Transient|RF_MarkAsNative,
+		EStructFlags(0x00000001),
+		METADATA_PARAMS(Z_Construct_UScriptStruct_FBroadcastingEvent_Statics::Struct_MetaDataParams, ARRAY_COUNT(Z_Construct_UScriptStruct_FBroadcastingEvent_Statics::Struct_MetaDataParams))
+	};
+	UScriptStruct* Z_Construct_UScriptStruct_FBroadcastingEvent()
+	{
+#if WITH_HOT_RELOAD
+		extern uint32 Get_Z_Construct_UScriptStruct_FBroadcastingEvent_Hash();
+		UPackage* Outer = Z_Construct_UPackage__Script_ACCDirector();
+		static UScriptStruct* ReturnStruct = FindExistingStructIfHotReloadOrDynamic(Outer, TEXT("BroadcastingEvent"), sizeof(FBroadcastingEvent), Get_Z_Construct_UScriptStruct_FBroadcastingEvent_Hash(), false);
+#else
+		static UScriptStruct* ReturnStruct = nullptr;
+#endif
+		if (!ReturnStruct)
+		{
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FBroadcastingEvent_Statics::ReturnStructParams);
+		}
+		return ReturnStruct;
+	}
+	uint32 Get_Z_Construct_UScriptStruct_FBroadcastingEvent_Hash() { return 2788261719U; }
 class UScriptStruct* FTrackData::StaticStruct()
 {
 	static class UScriptStruct* Singleton = NULL;
@@ -308,10 +445,6 @@ static struct FScriptStruct_ACCDirector_StaticRegisterNativesFRealTimeUpdate
 #endif
 		static const UE4CodeGen_Private::FStructPropertyParams NewProp_SessionRemainingTime;
 #if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_ReplayFocusedCar_MetaData[];
-#endif
-		static const UE4CodeGen_Private::FIntPropertyParams NewProp_ReplayFocusedCar;
-#if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_ReplayRemainingTime_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_ReplayRemainingTime;
@@ -331,6 +464,10 @@ static struct FScriptStruct_ACCDirector_StaticRegisterNativesFRealTimeUpdate
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_ActiveCameraSet_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FStrPropertyParams NewProp_ActiveCameraSet;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_FocusedCarIndex_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FIntPropertyParams NewProp_FocusedCarIndex;
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_BPBestLapDriverIndex_MetaData[];
 #endif
@@ -425,13 +562,6 @@ static struct FScriptStruct_ACCDirector_StaticRegisterNativesFRealTimeUpdate
 #endif
 	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FRealTimeUpdate_Statics::NewProp_SessionRemainingTime = { "SessionRemainingTime", nullptr, (EPropertyFlags)0x0010000000000014, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FRealTimeUpdate, SessionRemainingTime), Z_Construct_UScriptStruct_FTimespan, METADATA_PARAMS(Z_Construct_UScriptStruct_FRealTimeUpdate_Statics::NewProp_SessionRemainingTime_MetaData, ARRAY_COUNT(Z_Construct_UScriptStruct_FRealTimeUpdate_Statics::NewProp_SessionRemainingTime_MetaData)) };
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FRealTimeUpdate_Statics::NewProp_ReplayFocusedCar_MetaData[] = {
-		{ "Category", "ACCD|Realtime Update" },
-		{ "ModuleRelativePath", "Public/ACCD/ACCDStructs.h" },
-	};
-#endif
-	const UE4CodeGen_Private::FIntPropertyParams Z_Construct_UScriptStruct_FRealTimeUpdate_Statics::NewProp_ReplayFocusedCar = { "ReplayFocusedCar", nullptr, (EPropertyFlags)0x0010000000000014, UE4CodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FRealTimeUpdate, ReplayFocusedCar), METADATA_PARAMS(Z_Construct_UScriptStruct_FRealTimeUpdate_Statics::NewProp_ReplayFocusedCar_MetaData, ARRAY_COUNT(Z_Construct_UScriptStruct_FRealTimeUpdate_Statics::NewProp_ReplayFocusedCar_MetaData)) };
-#if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FRealTimeUpdate_Statics::NewProp_ReplayRemainingTime_MetaData[] = {
 		{ "Category", "ACCD|Realtime Update" },
 		{ "ModuleRelativePath", "Public/ACCD/ACCDStructs.h" },
@@ -466,6 +596,13 @@ static struct FScriptStruct_ACCDirector_StaticRegisterNativesFRealTimeUpdate
 	};
 #endif
 	const UE4CodeGen_Private::FStrPropertyParams Z_Construct_UScriptStruct_FRealTimeUpdate_Statics::NewProp_ActiveCameraSet = { "ActiveCameraSet", nullptr, (EPropertyFlags)0x0010000000000014, UE4CodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FRealTimeUpdate, ActiveCameraSet), METADATA_PARAMS(Z_Construct_UScriptStruct_FRealTimeUpdate_Statics::NewProp_ActiveCameraSet_MetaData, ARRAY_COUNT(Z_Construct_UScriptStruct_FRealTimeUpdate_Statics::NewProp_ActiveCameraSet_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FRealTimeUpdate_Statics::NewProp_FocusedCarIndex_MetaData[] = {
+		{ "Category", "ACCD|Realtime Update" },
+		{ "ModuleRelativePath", "Public/ACCD/ACCDStructs.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FIntPropertyParams Z_Construct_UScriptStruct_FRealTimeUpdate_Statics::NewProp_FocusedCarIndex = { "FocusedCarIndex", nullptr, (EPropertyFlags)0x0010000000000014, UE4CodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FRealTimeUpdate, FocusedCarIndex), METADATA_PARAMS(Z_Construct_UScriptStruct_FRealTimeUpdate_Statics::NewProp_FocusedCarIndex_MetaData, ARRAY_COUNT(Z_Construct_UScriptStruct_FRealTimeUpdate_Statics::NewProp_FocusedCarIndex_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FRealTimeUpdate_Statics::NewProp_BPBestLapDriverIndex_MetaData[] = {
 		{ "Category", "ACCD|Realtime Update" },
@@ -538,12 +675,12 @@ static struct FScriptStruct_ACCDirector_StaticRegisterNativesFRealTimeUpdate
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FRealTimeUpdate_Statics::NewProp_SessionType_Underlying,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FRealTimeUpdate_Statics::NewProp_SessionEndTime,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FRealTimeUpdate_Statics::NewProp_SessionRemainingTime,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FRealTimeUpdate_Statics::NewProp_ReplayFocusedCar,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FRealTimeUpdate_Statics::NewProp_ReplayRemainingTime,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FRealTimeUpdate_Statics::NewProp_ReplaySessionTime,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FRealTimeUpdate_Statics::NewProp_IsReplayPlaying,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FRealTimeUpdate_Statics::NewProp_ActiveCamera,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FRealTimeUpdate_Statics::NewProp_ActiveCameraSet,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FRealTimeUpdate_Statics::NewProp_FocusedCarIndex,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FRealTimeUpdate_Statics::NewProp_BPBestLapDriverIndex,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FRealTimeUpdate_Statics::NewProp_BPBestLapCarIndex,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FRealTimeUpdate_Statics::NewProp_BestSessionLap,
@@ -583,7 +720,7 @@ static struct FScriptStruct_ACCDirector_StaticRegisterNativesFRealTimeUpdate
 		}
 		return ReturnStruct;
 	}
-	uint32 Get_Z_Construct_UScriptStruct_FRealTimeUpdate_Hash() { return 1302170801U; }
+	uint32 Get_Z_Construct_UScriptStruct_FRealTimeUpdate_Hash() { return 1504817627U; }
 class UScriptStruct* FRealTimeCarUpdate::StaticStruct()
 {
 	static class UScriptStruct* Singleton = NULL;
@@ -758,7 +895,7 @@ static struct FScriptStruct_ACCDirector_StaticRegisterNativesFRealTimeCarUpdate
 	const UE4CodeGen_Private::FIntPropertyParams Z_Construct_UScriptStruct_FRealTimeCarUpdate_Statics::NewProp_Gear = { "Gear", nullptr, (EPropertyFlags)0x0010000000000014, UE4CodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FRealTimeCarUpdate, Gear), METADATA_PARAMS(Z_Construct_UScriptStruct_FRealTimeCarUpdate_Statics::NewProp_Gear_MetaData, ARRAY_COUNT(Z_Construct_UScriptStruct_FRealTimeCarUpdate_Statics::NewProp_Gear_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FRealTimeCarUpdate_Statics::NewProp_DriverIndex_MetaData[] = {
-		{ "Category", "ACCD|Realtime Update" },
+		{ "Category", "ACCD|Realtime Car Update" },
 		{ "ModuleRelativePath", "Public/ACCD/ACCDStructs.h" },
 	};
 #endif
@@ -814,7 +951,7 @@ static struct FScriptStruct_ACCDirector_StaticRegisterNativesFRealTimeCarUpdate
 		}
 		return ReturnStruct;
 	}
-	uint32 Get_Z_Construct_UScriptStruct_FRealTimeCarUpdate_Hash() { return 3278907254U; }
+	uint32 Get_Z_Construct_UScriptStruct_FRealTimeCarUpdate_Hash() { return 1098375214U; }
 class UScriptStruct* FLapInfo::StaticStruct()
 {
 	static class UScriptStruct* Singleton = NULL;
@@ -844,10 +981,10 @@ static struct FScriptStruct_ACCDirector_StaticRegisterNativesFLapInfo
 #endif
 		static void* NewStructOps();
 #if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_Type_MetaData[];
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_LapType_MetaData[];
 #endif
-		static const UE4CodeGen_Private::FEnumPropertyParams NewProp_Type;
-		static const UE4CodeGen_Private::FBytePropertyParams NewProp_Type_Underlying;
+		static const UE4CodeGen_Private::FEnumPropertyParams NewProp_LapType;
+		static const UE4CodeGen_Private::FBytePropertyParams NewProp_LapType_Underlying;
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_bIsValidForBest_MetaData[];
 #endif
@@ -879,13 +1016,13 @@ static struct FScriptStruct_ACCDirector_StaticRegisterNativesFLapInfo
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FLapInfo>();
 	}
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FLapInfo_Statics::NewProp_Type_MetaData[] = {
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FLapInfo_Statics::NewProp_LapType_MetaData[] = {
 		{ "Category", "ACCD|Lap Info" },
 		{ "ModuleRelativePath", "Public/ACCD/ACCDStructs.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FEnumPropertyParams Z_Construct_UScriptStruct_FLapInfo_Statics::NewProp_Type = { "Type", nullptr, (EPropertyFlags)0x0010000000000014, UE4CodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FLapInfo, Type), Z_Construct_UEnum_ACCDirector_ELapType, METADATA_PARAMS(Z_Construct_UScriptStruct_FLapInfo_Statics::NewProp_Type_MetaData, ARRAY_COUNT(Z_Construct_UScriptStruct_FLapInfo_Statics::NewProp_Type_MetaData)) };
-	const UE4CodeGen_Private::FBytePropertyParams Z_Construct_UScriptStruct_FLapInfo_Statics::NewProp_Type_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UE4CodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, nullptr, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FEnumPropertyParams Z_Construct_UScriptStruct_FLapInfo_Statics::NewProp_LapType = { "LapType", nullptr, (EPropertyFlags)0x0010000000000014, UE4CodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FLapInfo, LapType), Z_Construct_UEnum_ACCDirector_ELapType, METADATA_PARAMS(Z_Construct_UScriptStruct_FLapInfo_Statics::NewProp_LapType_MetaData, ARRAY_COUNT(Z_Construct_UScriptStruct_FLapInfo_Statics::NewProp_LapType_MetaData)) };
+	const UE4CodeGen_Private::FBytePropertyParams Z_Construct_UScriptStruct_FLapInfo_Statics::NewProp_LapType_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UE4CodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, nullptr, METADATA_PARAMS(nullptr, 0) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FLapInfo_Statics::NewProp_bIsValidForBest_MetaData[] = {
 		{ "Category", "ACCD|Lap Info" },
@@ -916,8 +1053,8 @@ static struct FScriptStruct_ACCDirector_StaticRegisterNativesFLapInfo
 #endif
 	const UE4CodeGen_Private::FIntPropertyParams Z_Construct_UScriptStruct_FLapInfo_Statics::NewProp_LaptimeMS = { "LaptimeMS", nullptr, (EPropertyFlags)0x0010000000000014, UE4CodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FLapInfo, LaptimeMS), METADATA_PARAMS(Z_Construct_UScriptStruct_FLapInfo_Statics::NewProp_LaptimeMS_MetaData, ARRAY_COUNT(Z_Construct_UScriptStruct_FLapInfo_Statics::NewProp_LaptimeMS_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UScriptStruct_FLapInfo_Statics::PropPointers[] = {
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FLapInfo_Statics::NewProp_Type,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FLapInfo_Statics::NewProp_Type_Underlying,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FLapInfo_Statics::NewProp_LapType,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FLapInfo_Statics::NewProp_LapType_Underlying,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FLapInfo_Statics::NewProp_bIsValidForBest,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FLapInfo_Statics::NewProp_bIsValid,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FLapInfo_Statics::NewProp_Splits,
@@ -952,7 +1089,7 @@ static struct FScriptStruct_ACCDirector_StaticRegisterNativesFLapInfo
 		}
 		return ReturnStruct;
 	}
-	uint32 Get_Z_Construct_UScriptStruct_FLapInfo_Hash() { return 3085255060U; }
+	uint32 Get_Z_Construct_UScriptStruct_FLapInfo_Hash() { return 4250330529U; }
 class UScriptStruct* FCarInfo::StaticStruct()
 {
 	static class UScriptStruct* Singleton = NULL;
@@ -987,17 +1124,13 @@ static struct FScriptStruct_ACCDirector_StaticRegisterNativesFCarInfo
 		static const UE4CodeGen_Private::FArrayPropertyParams NewProp_Drivers;
 		static const UE4CodeGen_Private::FStructPropertyParams NewProp_Drivers_Inner;
 #if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_CurrentDriverIndex_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FIntPropertyParams NewProp_CurrentDriverIndex;
+#if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_CupCategory_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FBytePropertyParams NewProp_CupCategory;
-#if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_DisplayName_MetaData[];
-#endif
-		static const UE4CodeGen_Private::FStrPropertyParams NewProp_DisplayName;
-#if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_TeamCarName_MetaData[];
-#endif
-		static const UE4CodeGen_Private::FStrPropertyParams NewProp_TeamCarName;
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_RaceNumber_MetaData[];
 #endif
@@ -1036,6 +1169,13 @@ static struct FScriptStruct_ACCDirector_StaticRegisterNativesFCarInfo
 	const UE4CodeGen_Private::FArrayPropertyParams Z_Construct_UScriptStruct_FCarInfo_Statics::NewProp_Drivers = { "Drivers", nullptr, (EPropertyFlags)0x0010000000000014, UE4CodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FCarInfo, Drivers), METADATA_PARAMS(Z_Construct_UScriptStruct_FCarInfo_Statics::NewProp_Drivers_MetaData, ARRAY_COUNT(Z_Construct_UScriptStruct_FCarInfo_Statics::NewProp_Drivers_MetaData)) };
 	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FCarInfo_Statics::NewProp_Drivers_Inner = { "Drivers", nullptr, (EPropertyFlags)0x0000000000000000, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, Z_Construct_UScriptStruct_FDriverInfo, METADATA_PARAMS(nullptr, 0) };
 #if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FCarInfo_Statics::NewProp_CurrentDriverIndex_MetaData[] = {
+		{ "Category", "ACCD|Car Info" },
+		{ "ModuleRelativePath", "Public/ACCD/ACCDStructs.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FIntPropertyParams Z_Construct_UScriptStruct_FCarInfo_Statics::NewProp_CurrentDriverIndex = { "CurrentDriverIndex", nullptr, (EPropertyFlags)0x0010000000000014, UE4CodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FCarInfo, CurrentDriverIndex), METADATA_PARAMS(Z_Construct_UScriptStruct_FCarInfo_Statics::NewProp_CurrentDriverIndex_MetaData, ARRAY_COUNT(Z_Construct_UScriptStruct_FCarInfo_Statics::NewProp_CurrentDriverIndex_MetaData)) };
+#if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FCarInfo_Statics::NewProp_CupCategory_MetaData[] = {
 		{ "Category", "ACCD|Car Info" },
 		{ "ModuleRelativePath", "Public/ACCD/ACCDStructs.h" },
@@ -1043,20 +1183,6 @@ static struct FScriptStruct_ACCDirector_StaticRegisterNativesFCarInfo
 	};
 #endif
 	const UE4CodeGen_Private::FBytePropertyParams Z_Construct_UScriptStruct_FCarInfo_Statics::NewProp_CupCategory = { "CupCategory", nullptr, (EPropertyFlags)0x0010000000000014, UE4CodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FCarInfo, CupCategory), nullptr, METADATA_PARAMS(Z_Construct_UScriptStruct_FCarInfo_Statics::NewProp_CupCategory_MetaData, ARRAY_COUNT(Z_Construct_UScriptStruct_FCarInfo_Statics::NewProp_CupCategory_MetaData)) };
-#if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FCarInfo_Statics::NewProp_DisplayName_MetaData[] = {
-		{ "Category", "ACCD|Car Info" },
-		{ "ModuleRelativePath", "Public/ACCD/ACCDStructs.h" },
-	};
-#endif
-	const UE4CodeGen_Private::FStrPropertyParams Z_Construct_UScriptStruct_FCarInfo_Statics::NewProp_DisplayName = { "DisplayName", nullptr, (EPropertyFlags)0x0010000000000014, UE4CodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FCarInfo, DisplayName), METADATA_PARAMS(Z_Construct_UScriptStruct_FCarInfo_Statics::NewProp_DisplayName_MetaData, ARRAY_COUNT(Z_Construct_UScriptStruct_FCarInfo_Statics::NewProp_DisplayName_MetaData)) };
-#if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FCarInfo_Statics::NewProp_TeamCarName_MetaData[] = {
-		{ "Category", "ACCD|Car Info" },
-		{ "ModuleRelativePath", "Public/ACCD/ACCDStructs.h" },
-	};
-#endif
-	const UE4CodeGen_Private::FStrPropertyParams Z_Construct_UScriptStruct_FCarInfo_Statics::NewProp_TeamCarName = { "TeamCarName", nullptr, (EPropertyFlags)0x0010000000000014, UE4CodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FCarInfo, TeamCarName), METADATA_PARAMS(Z_Construct_UScriptStruct_FCarInfo_Statics::NewProp_TeamCarName_MetaData, ARRAY_COUNT(Z_Construct_UScriptStruct_FCarInfo_Statics::NewProp_TeamCarName_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FCarInfo_Statics::NewProp_RaceNumber_MetaData[] = {
 		{ "Category", "ACCD|Car Info" },
@@ -1089,9 +1215,8 @@ static struct FScriptStruct_ACCDirector_StaticRegisterNativesFCarInfo
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UScriptStruct_FCarInfo_Statics::PropPointers[] = {
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FCarInfo_Statics::NewProp_Drivers,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FCarInfo_Statics::NewProp_Drivers_Inner,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FCarInfo_Statics::NewProp_CurrentDriverIndex,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FCarInfo_Statics::NewProp_CupCategory,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FCarInfo_Statics::NewProp_DisplayName,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FCarInfo_Statics::NewProp_TeamCarName,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FCarInfo_Statics::NewProp_RaceNumber,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FCarInfo_Statics::NewProp_TeamName,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FCarInfo_Statics::NewProp_CarModelType,
@@ -1125,7 +1250,7 @@ static struct FScriptStruct_ACCDirector_StaticRegisterNativesFCarInfo
 		}
 		return ReturnStruct;
 	}
-	uint32 Get_Z_Construct_UScriptStruct_FCarInfo_Hash() { return 3796569682U; }
+	uint32 Get_Z_Construct_UScriptStruct_FCarInfo_Hash() { return 2195774812U; }
 class UScriptStruct* FDriverInfo::StaticStruct()
 {
 	static class UScriptStruct* Singleton = NULL;
@@ -1164,10 +1289,6 @@ static struct FScriptStruct_ACCDirector_StaticRegisterNativesFDriverInfo
 #endif
 		static const UE4CodeGen_Private::FStrPropertyParams NewProp_ShortName;
 #if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_NickName_MetaData[];
-#endif
-		static const UE4CodeGen_Private::FStrPropertyParams NewProp_NickName;
-#if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_LastName_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FStrPropertyParams NewProp_LastName;
@@ -1175,10 +1296,6 @@ static struct FScriptStruct_ACCDirector_StaticRegisterNativesFDriverInfo
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_FirstName_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FStrPropertyParams NewProp_FirstName;
-#if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_BPDriverIndex_MetaData[];
-#endif
-		static const UE4CodeGen_Private::FIntPropertyParams NewProp_BPDriverIndex;
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
@@ -1209,13 +1326,6 @@ static struct FScriptStruct_ACCDirector_StaticRegisterNativesFDriverInfo
 #endif
 	const UE4CodeGen_Private::FStrPropertyParams Z_Construct_UScriptStruct_FDriverInfo_Statics::NewProp_ShortName = { "ShortName", nullptr, (EPropertyFlags)0x0010000000000014, UE4CodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FDriverInfo, ShortName), METADATA_PARAMS(Z_Construct_UScriptStruct_FDriverInfo_Statics::NewProp_ShortName_MetaData, ARRAY_COUNT(Z_Construct_UScriptStruct_FDriverInfo_Statics::NewProp_ShortName_MetaData)) };
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FDriverInfo_Statics::NewProp_NickName_MetaData[] = {
-		{ "Category", "ACCD|Driver Info" },
-		{ "ModuleRelativePath", "Public/ACCD/ACCDStructs.h" },
-	};
-#endif
-	const UE4CodeGen_Private::FStrPropertyParams Z_Construct_UScriptStruct_FDriverInfo_Statics::NewProp_NickName = { "NickName", nullptr, (EPropertyFlags)0x0010000000000014, UE4CodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FDriverInfo, NickName), METADATA_PARAMS(Z_Construct_UScriptStruct_FDriverInfo_Statics::NewProp_NickName_MetaData, ARRAY_COUNT(Z_Construct_UScriptStruct_FDriverInfo_Statics::NewProp_NickName_MetaData)) };
-#if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FDriverInfo_Statics::NewProp_LastName_MetaData[] = {
 		{ "Category", "ACCD|Driver Info" },
 		{ "ModuleRelativePath", "Public/ACCD/ACCDStructs.h" },
@@ -1229,22 +1339,12 @@ static struct FScriptStruct_ACCDirector_StaticRegisterNativesFDriverInfo
 	};
 #endif
 	const UE4CodeGen_Private::FStrPropertyParams Z_Construct_UScriptStruct_FDriverInfo_Statics::NewProp_FirstName = { "FirstName", nullptr, (EPropertyFlags)0x0010000000000014, UE4CodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FDriverInfo, FirstName), METADATA_PARAMS(Z_Construct_UScriptStruct_FDriverInfo_Statics::NewProp_FirstName_MetaData, ARRAY_COUNT(Z_Construct_UScriptStruct_FDriverInfo_Statics::NewProp_FirstName_MetaData)) };
-#if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FDriverInfo_Statics::NewProp_BPDriverIndex_MetaData[] = {
-		{ "Category", "ACCD|Driver Info" },
-		{ "ModuleRelativePath", "Public/ACCD/ACCDStructs.h" },
-		{ "ToolTip", "I need it because i can't expose uint16 types on Blueprint" },
-	};
-#endif
-	const UE4CodeGen_Private::FIntPropertyParams Z_Construct_UScriptStruct_FDriverInfo_Statics::NewProp_BPDriverIndex = { "BPDriverIndex", nullptr, (EPropertyFlags)0x0010000000000014, UE4CodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FDriverInfo, BPDriverIndex), METADATA_PARAMS(Z_Construct_UScriptStruct_FDriverInfo_Statics::NewProp_BPDriverIndex_MetaData, ARRAY_COUNT(Z_Construct_UScriptStruct_FDriverInfo_Statics::NewProp_BPDriverIndex_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UScriptStruct_FDriverInfo_Statics::PropPointers[] = {
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FDriverInfo_Statics::NewProp_Category,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FDriverInfo_Statics::NewProp_Category_Underlying,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FDriverInfo_Statics::NewProp_ShortName,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FDriverInfo_Statics::NewProp_NickName,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FDriverInfo_Statics::NewProp_LastName,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FDriverInfo_Statics::NewProp_FirstName,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FDriverInfo_Statics::NewProp_BPDriverIndex,
 	};
 	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FDriverInfo_Statics::ReturnStructParams = {
 		(UObject* (*)())Z_Construct_UPackage__Script_ACCDirector,
@@ -1274,7 +1374,7 @@ static struct FScriptStruct_ACCDirector_StaticRegisterNativesFDriverInfo
 		}
 		return ReturnStruct;
 	}
-	uint32 Get_Z_Construct_UScriptStruct_FDriverInfo_Hash() { return 543837381U; }
+	uint32 Get_Z_Construct_UScriptStruct_FDriverInfo_Hash() { return 139485435U; }
 class UScriptStruct* FRegistrationResult::StaticStruct()
 {
 	static class UScriptStruct* Singleton = NULL;
