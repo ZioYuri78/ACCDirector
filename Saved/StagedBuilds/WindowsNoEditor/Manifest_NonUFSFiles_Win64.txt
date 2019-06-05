@@ -1,4 +1,4 @@
-ACCDirector/Binaries/Win64/ACCDirector-Win64-Shipping.exe	2019-05-29T12:34:29.676Z
+ACCDirector/Binaries/Win64/ACCDirector-Win64-Shipping.exe	2019-06-04T14:02:36.876Z
 Engine/Extras/Redist/en-us/UE4PrereqSetup_x64.exe	2019-04-03T08:46:41.133Z
 Engine/Binaries/ThirdParty/DbgHelp/dbghelp.dll	2019-04-03T08:38:26.113Z
 Engine/Binaries/ThirdParty/libsndfile/Win64/libsndfile-1.dll	2019-04-25T19:22:05.637Z
@@ -16,4 +16,4 @@ Engine/Binaries/ThirdParty/PhysX3/Win64/VS2015/APEX_Legacy_x64.dll	2019-04-03T08
 Engine/Binaries/ThirdParty/PhysX3/Win64/VS2015/ApexFramework_x64.dll	2019-04-03T08:38:47.721Z
 Engine/Binaries/ThirdParty/PhysX3/Win64/VS2015/NvCloth_x64.dll	2019-04-03T08:38:47.825Z
 Engine/Binaries/ThirdParty/Windows/DirectX/x64/WinPixEventRuntime.dll	2019-04-03T08:39:22.506Z
-ACCDirector.exe	2019-05-29T13:23:59.255Z
+ACCDirector.exe	2019-06-05T14:51:27.568Z
