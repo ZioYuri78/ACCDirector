@@ -1,6 +1,10 @@
 # ACCDirector
-Broadcast client for Assetto Corsa Competizione (pre 0.6) - project and source code.
+Broadcast client for Assetto Corsa Competizione - project and source code.
 
-IMPORTANT: It not work because Kunos temporarily disabled UDP broadcast protocol, i left it here just in case someone want to look at my implementation of the client, when UDP Broadcasting will come back on ACC i will start a new project based on what i learned on develop this.
+Docs at ACC official forum
 
-[![](http://img.youtube.com/vi/vmS4qNJTzi8/0.jpg)](http://www.youtube.com/watch?v=vmS4qNJTzi8 "")
+https://www.assettocorsa.net/forum/index.php?threads/accdirector-v1-0-0-broadcast-client.57202/
+
+Packaged project at Race Department
+
+https://www.racedepartment.com/downloads/accdirector.27014/
