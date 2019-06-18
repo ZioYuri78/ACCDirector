@@ -60,9 +60,8 @@ void AACCDProtocol::EndPlay(const EEndPlayReason::Type EndPlayReason)
 bool AACCDProtocol::RequestConnection(const FString& IP, const int32 Port, FString DisplayName, FString ConnectionPsw, int32 RTUpdateInterval, FString CommandPsw)
 {
 
-	FString SocketDescriptiopn = FString("ACCDSocket");
-
 	// Initialize the sender socket
+	UE_LOG(LogACCDProtocol, Log, TEXT("\nStart UDPSender ...\n"));
 	RemoteAddr = ISocketSubsystem::Get(PLATFORM_SOCKETSUBSYSTEM)->CreateInternetAddr();
 
 	bool bIsValid;
@@ -77,16 +76,38 @@ bool AACCDProtocol::RequestConnection(const FString& IP, const int32 Port, FStri
 
 	ConnectionIdentifier = RemoteAddr->ToString(true);
 
-	UDPSenderSocket = FUdpSocketBuilder(SocketDescriptiopn).AsReusable().WithBroadcast();
+#if 0 // Just a test, it not work as expected.
+	FIPv4Address IPAdr;
+	FIPv4Address::Parse(IP, IPAdr);
+	FIPv4Endpoint EndPoint_Client(IPAdr, Port);
+	UDPSenderSocket = FUdpSocketBuilder(FString("ACCDSenderSocket")).BoundToEndpoint(EndPoint_Client).AsNonBlocking().AsReusable().WithBroadcast().WithSendBufferSize(2*1024*1024);
+	if (UDPSenderSocket)
+	{
+		UE_LOG(LogACCDProtocol, Log, TEXT("\nUDPSender Initialized Successfully!!!\n"));
+	}
+	else
+	{
+		UE_LOG(LogACCDProtocol, Log, TEXT("\nUDPSender Initialization FAILED!!!\n"));
+		return false;
+	}
+#else
 
-	int32 SendBufferSize = 2*1024*1024;
+	UDPSenderSocket = FUdpSocketBuilder(FString("ACCDSenderSocket")).AsReusable().WithBroadcast();
+	if (UDPSenderSocket)
+	{
+		UE_LOG(LogACCDProtocol, Log, TEXT("\nUDPSender Initialized Successfully!!!\n"));
+	}
+	else
+	{
+		UE_LOG(LogACCDProtocol, Log, TEXT("\nUDPSender Initialization FAILED!!!\n"));
+		return false;
+	}
+
+	int32 SendBufferSize = 2 * 1024 * 1024;
 	UDPSenderSocket->SetSendBufferSize(SendBufferSize, SendBufferSize);
-	UDPSenderSocket->SetReceiveBufferSize(SendBufferSize, SendBufferSize);
-
+	//UDPSenderSocket->SetReceiveBufferSize(SendBufferSize, SendBufferSize);
+#endif
 	
-	UE_LOG(LogACCDProtocol, Log, TEXT("\nUDPSender Initialized Successfully!!!\n"));
-	
-
 	// Request Connection
 	FArrayWriter Message;
 	uint8 CommandType = (uint8)EOutboundMessageTypes::REGISTER_COMMAND_APPLICATION;
@@ -113,7 +134,7 @@ bool AACCDProtocol::RequestConnection(const FString& IP, const int32 Port, FStri
 
 	
 	// Initialize the receiver socket and UDP receiver object
-	UE_LOG(LogACCDProtocol, Log, TEXT("\nStart UDPReceiver...\n"));
+	UE_LOG(LogACCDProtocol, Log, TEXT("\nStart UDPReceiver ...\n"));
 	
 	FIPv4Address IPAddress;
 	FIPv4Address::Parse(IP, IPAddress);
@@ -122,7 +143,16 @@ bool AACCDProtocol::RequestConnection(const FString& IP, const int32 Port, FStri
 
 	int32 ReceiveBufferSize = 2*1024*1024;
 
-	UDPReceiverSocket = FUdpSocketBuilder(SocketDescriptiopn).AsNonBlocking().AsReusable().BoundToEndpoint(Endpoint).WithReceiveBufferSize(ReceiveBufferSize);
+	UDPReceiverSocket = FUdpSocketBuilder(FString("ACCDReceiverSocket")).AsNonBlocking().AsReusable().BoundToEndpoint(Endpoint).WithReceiveBufferSize(ReceiveBufferSize);
+	if (UDPReceiverSocket)
+	{
+		UE_LOG(LogACCDProtocol, Log, TEXT("\nUDPReceiver Initialized Successfully!!!\n"));
+	}
+	else
+	{
+		UE_LOG(LogACCDProtocol, Log, TEXT("\nUDPReceiver Initialization FAILED!!!\n"));
+		return false;
+	}
 
 	FTimespan ThreadWaitTime = FTimespan::FromMilliseconds(50);
 	UDPReceiver = new FUdpSocketReceiver(UDPReceiverSocket, ThreadWaitTime, TEXT("UDPReceiver thread"));
