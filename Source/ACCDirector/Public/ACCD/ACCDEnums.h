@@ -6,6 +6,15 @@
 
 
 UENUM()
+enum class EConnectionLogLevel : uint8
+{
+	LOG = 0,
+	WARNING = 1,
+	ERROR = 2
+};
+
+
+UENUM()
 enum class EOutboundMessageTypes : uint8
 {
 	REGISTER_COMMAND_APPLICATION = 1,

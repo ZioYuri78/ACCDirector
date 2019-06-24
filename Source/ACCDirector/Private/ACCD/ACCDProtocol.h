@@ -10,6 +10,7 @@
 
 DECLARE_LOG_CATEGORY_EXTERN(LogACCDProtocol, All, All);
 
+DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FConnectionLogDelegate, const FConnectionLog, ConnLog);
 DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FConnectionStateChangedDelegate, const FRegistrationResult, RegistrationResult);
 DECLARE_DYNAMIC_MULTICAST_DELEGATE_TwoParams(FEntryListDelegate, const FString&, ConnectionIdentifier, const TArray<FCarInfo>&, EntryList);
 DECLARE_DYNAMIC_MULTICAST_DELEGATE_TwoParams(FRealtimeUpdateDelegate, const FString&, ConnectionIdentifier, const FRealTimeUpdate, RealTimeUpdate);
@@ -65,7 +66,8 @@ public:
 	UFUNCTION(BlueprintCallable, Category = "ACCD|Protocol")
 	void RequestHUDPage(FString HudPage);
 
-	
+	UPROPERTY(BlueprintAssignable, Category = "ACCD|Protocol")
+	FConnectionLogDelegate OnConnectionLog;
 
 	UPROPERTY(BlueprintAssignable, Category = "ACCD|Protocol")
 	FConnectionStateChangedDelegate OnConnectionStateChanged;
@@ -115,6 +117,8 @@ private:
 	FString ConnectionIdentifier;
 
 	FDateTime LastEntryListRequest;
+
+	FConnectionLog GConnectionLog;
 
 	// TrackData and EntryListCars are declared here because we need them on Game Thread or the AsyncTask in TRACK_DATA and ENTRY_LIST_CAR will crash
 	FTrackData GTrackData;

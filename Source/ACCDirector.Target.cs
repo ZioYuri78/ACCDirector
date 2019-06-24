@@ -7,7 +7,8 @@ public class ACCDirectorTarget : TargetRules
 {
 	public ACCDirectorTarget(TargetInfo Target) : base(Target)
 	{
-		Type = TargetType.Game;
+        
+        Type = TargetType.Game;
 
 		ExtraModuleNames.AddRange( new string[] { "ACCDirector" } );
 	}

@@ -9,11 +9,14 @@ DEFINE_LOG_CATEGORY(LogACCDProtocol);
 AACCDProtocol::AACCDProtocol()
 {
  	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
-	PrimaryActorTick.bCanEverTick = true;
+	PrimaryActorTick.bCanEverTick = false;
 
 	UDPReceiver = nullptr;
 	UDPSenderSocket = nullptr;
 	UDPReceiverSocket = nullptr;
+
+	GConnectionLog.LogLevel = EConnectionLogLevel::LOG;
+	GConnectionLog.LogMessage = TEXT("");
 }
 
 // Called when the game starts or when spawned
@@ -62,6 +65,10 @@ bool AACCDProtocol::RequestConnection(const FString& IP, const int32 Port, FStri
 
 	// Initialize the sender socket
 	UE_LOG(LogACCDProtocol, Log, TEXT("\nStart UDPSender ...\n"));
+	GConnectionLog.LogLevel = EConnectionLogLevel::LOG;
+	GConnectionLog.LogMessage = TEXT("Start UDPSender ...");
+	OnConnectionLog.Broadcast(GConnectionLog);
+
 	RemoteAddr = ISocketSubsystem::Get(PLATFORM_SOCKETSUBSYSTEM)->CreateInternetAddr();
 
 	bool bIsValid;
@@ -70,45 +77,38 @@ bool AACCDProtocol::RequestConnection(const FString& IP, const int32 Port, FStri
 
 	if (!bIsValid)
 	{
-		UE_LOG(LogACCDProtocol, Error, TEXT("IP Address %s was not valid!"), *IP);		
+		UE_LOG(LogACCDProtocol, Error, TEXT("IP Address %s was not valid!"), *IP);
+		GConnectionLog.LogLevel = EConnectionLogLevel::ERROR;
+		GConnectionLog.LogMessage = FString::Printf(TEXT("IP Address %s was not valid!"), *IP);
+		OnConnectionLog.Broadcast(GConnectionLog);
 		return false;
 	}
 
 	ConnectionIdentifier = RemoteAddr->ToString(true);
 
-#if 0 // Just a test, it not work as expected.
-	FIPv4Address IPAdr;
-	FIPv4Address::Parse(IP, IPAdr);
-	FIPv4Endpoint EndPoint_Client(IPAdr, Port);
-	UDPSenderSocket = FUdpSocketBuilder(FString("ACCDSenderSocket")).BoundToEndpoint(EndPoint_Client).AsNonBlocking().AsReusable().WithBroadcast().WithSendBufferSize(2*1024*1024);
-	if (UDPSenderSocket)
-	{
-		UE_LOG(LogACCDProtocol, Log, TEXT("\nUDPSender Initialized Successfully!!!\n"));
-	}
-	else
-	{
-		UE_LOG(LogACCDProtocol, Log, TEXT("\nUDPSender Initialization FAILED!!!\n"));
-		return false;
-	}
-#else
-
 	UDPSenderSocket = FUdpSocketBuilder(FString("ACCDSenderSocket")).AsReusable().WithBroadcast();
 	if (UDPSenderSocket)
 	{
 		UE_LOG(LogACCDProtocol, Log, TEXT("\nUDPSender Initialized Successfully!!!\n"));
+		GConnectionLog.LogLevel = EConnectionLogLevel::LOG;
+		GConnectionLog.LogMessage = TEXT("UDPSender Initialized Successfully!!!");
+		OnConnectionLog.Broadcast(GConnectionLog);
 	}
 	else
 	{
 		UE_LOG(LogACCDProtocol, Log, TEXT("\nUDPSender Initialization FAILED!!!\n"));
+		GConnectionLog.LogLevel = EConnectionLogLevel::ERROR;
+		GConnectionLog.LogMessage = TEXT("UDPSender Initialization FAILED!!!");
+		OnConnectionLog.Broadcast(GConnectionLog);
 		return false;
 	}
 
 	int32 SendBufferSize = 2 * 1024 * 1024;
 	UDPSenderSocket->SetSendBufferSize(SendBufferSize, SendBufferSize);
-	//UDPSenderSocket->SetReceiveBufferSize(SendBufferSize, SendBufferSize);
-#endif
+	UDPSenderSocket->SetReceiveBufferSize(SendBufferSize, SendBufferSize);
+
 	
-	// Request Connection
+	// Request Connection to ACC
 	FArrayWriter Message;
 	uint8 CommandType = (uint8)EOutboundMessageTypes::REGISTER_COMMAND_APPLICATION;
 	uint8 ProtocolVersion = (uint8)EBNProtocolVersion::BROADCAST_PROTOCOL_VERSION;
@@ -135,10 +135,12 @@ bool AACCDProtocol::RequestConnection(const FString& IP, const int32 Port, FStri
 	
 	// Initialize the receiver socket and UDP receiver object
 	UE_LOG(LogACCDProtocol, Log, TEXT("\nStart UDPReceiver ...\n"));
+	GConnectionLog.LogLevel = EConnectionLogLevel::LOG;
+	GConnectionLog.LogMessage = TEXT("Start UDPReceiver ...");
+	OnConnectionLog.Broadcast(GConnectionLog);
 	
 	FIPv4Address IPAddress;
 	FIPv4Address::Parse(IP, IPAddress);
-
 	FIPv4Endpoint Endpoint(IPAddress, UDPSenderSocket->GetPortNo());
 
 	int32 ReceiveBufferSize = 2*1024*1024;
@@ -147,10 +149,16 @@ bool AACCDProtocol::RequestConnection(const FString& IP, const int32 Port, FStri
 	if (UDPReceiverSocket)
 	{
 		UE_LOG(LogACCDProtocol, Log, TEXT("\nUDPReceiver Initialized Successfully!!!\n"));
+		GConnectionLog.LogLevel = EConnectionLogLevel::LOG;
+		GConnectionLog.LogMessage = TEXT("UDPReceiver Initialized Successfully!!!");
+		OnConnectionLog.Broadcast(GConnectionLog);
 	}
 	else
 	{
 		UE_LOG(LogACCDProtocol, Log, TEXT("\nUDPReceiver Initialization FAILED!!!\n"));
+		GConnectionLog.LogLevel = EConnectionLogLevel::ERROR;
+		GConnectionLog.LogMessage = TEXT("UDPReceiver Initialization FAILED!!!");
+		OnConnectionLog.Broadcast(GConnectionLog);
 		return false;
 	}
 
@@ -172,7 +180,7 @@ void AACCDProtocol::RequestDisconnection()
 	Message << RegistrationResult.ConnectionID;
 
 	int32 BytesSent = 0;
-	if (RemoteAddr)
+	if (UDPSenderSocket && RemoteAddr)
 	{
 		UDPSenderSocket->SendTo(Message.GetData(), Message.Num(), BytesSent, *RemoteAddr);
 		CheckByteSent(BytesSent);
@@ -180,6 +188,9 @@ void AACCDProtocol::RequestDisconnection()
 	else
 	{
 		UE_LOG(LogACCDProtocol, Warning, TEXT("RequestDisconnection() invalid RemoteAddr"));
+		GConnectionLog.LogLevel = EConnectionLogLevel::WARNING;
+		GConnectionLog.LogMessage = TEXT("RequestDisconnection() invalid RemoteAddr");
+		OnConnectionLog.Broadcast(GConnectionLog);
 	}
 
 }
@@ -202,6 +213,9 @@ void AACCDProtocol::RequestEntryList()
 	else
 	{
 		UE_LOG(LogACCDProtocol, Warning, TEXT("RequestEntryList() invalid RemoteAddr"));
+		GConnectionLog.LogLevel = EConnectionLogLevel::WARNING;
+		GConnectionLog.LogMessage = TEXT("RequestEntryList() invalid RemoteAddr");
+		OnConnectionLog.Broadcast(GConnectionLog);
 	}
 
 }
@@ -224,6 +238,9 @@ void AACCDProtocol::RequestTrackData()
 	else
 	{
 		UE_LOG(LogACCDProtocol, Warning, TEXT("RequestTrackData() invalid RemoteAddr"));
+		GConnectionLog.LogLevel = EConnectionLogLevel::WARNING;
+		GConnectionLog.LogMessage = TEXT("RequestTrackData() invalid RemoteAddr");
+		OnConnectionLog.Broadcast(GConnectionLog);
 	}
 	
 }
@@ -269,7 +286,10 @@ void AACCDProtocol::RequestInstantReplay(float StartSessionTime, float DurationM
 	else
 	{
 		UE_LOG(LogACCDProtocol, Warning, TEXT("RequestInstantReplay(...) invalid RemoteAddr"));
-	}	
+		GConnectionLog.LogLevel = EConnectionLogLevel::WARNING;
+		GConnectionLog.LogMessage = TEXT("RequestInstantReplay(...) invalid RemoteAddr");
+		OnConnectionLog.Broadcast(GConnectionLog);
+	}
 }
 
 void AACCDProtocol::RequestHUDPage(FString HudPage)
@@ -292,6 +312,9 @@ void AACCDProtocol::RequestHUDPage(FString HudPage)
 	else
 	{
 		UE_LOG(LogACCDProtocol, Warning, TEXT("RequestHUDPage(...) invalid RemoteAddr"));
+		GConnectionLog.LogLevel = EConnectionLogLevel::WARNING;
+		GConnectionLog.LogMessage = TEXT("RequestHUDPages(...) invalid RemoteAddr");
+		OnConnectionLog.Broadcast(GConnectionLog);
 	}
 	
 }
@@ -568,6 +591,9 @@ void AACCDProtocol::Recv(const FArrayReaderPtr & ArrayReaderPtr, const FIPv4Endp
 			if ((FDateTime::Now().GetSecond() - LastEntryListRequest.GetSecond()) > 1)
 			{
 				UE_LOG(LogACCDProtocol, Warning, TEXT("CarUpdate %d|%d not know, will ask for new EntryList"), CarUpdate.CarIndex, CarUpdate.DriverIndex);
+				GConnectionLog.LogLevel = EConnectionLogLevel::WARNING;
+				GConnectionLog.LogMessage = FString::Printf(TEXT("CarUpdate %d|%d not know, will ask for new EntryList"), CarUpdate.CarIndex, CarUpdate.DriverIndex);
+				OnConnectionLog.Broadcast(GConnectionLog);
 				LastEntryListRequest = FDateTime::Now();
 				RequestEntryList();
 			}
@@ -612,12 +638,6 @@ void AACCDProtocol::Recv(const FArrayReaderPtr & ArrayReaderPtr, const FIPv4Endp
 			default:
 				break;
 			}
-
-			/*if (GCarsEntryList.IsValidIndex(GBroadcastingEvent.CarId))
-			{
-				GBroadcastingEvent.CarData = GCarsEntryList[GBroadcastingEvent.CarId];				
-				AsyncTask(ENamedThreads::GameThread, [&]() {OnBroadcastingEvent.Broadcast(ConnectionIdentifier, GBroadcastingEvent); });
-			}*/
 			
 		}
 		break;
@@ -625,6 +645,10 @@ void AACCDProtocol::Recv(const FArrayReaderPtr & ArrayReaderPtr, const FIPv4Endp
 
 	default:
 		UE_LOG(LogACCDProtocol, Warning, TEXT("=== Undefined Inbound Message: %d ==="), MessageType);
+		GConnectionLog.LogLevel = EConnectionLogLevel::WARNING;
+		GConnectionLog.LogMessage = FString::Printf(TEXT("=== Undefined Inbound Message: %d ==="), MessageType);
+		OnConnectionLog.Broadcast(GConnectionLog);
+
 		break;
 	}
 
@@ -776,6 +800,8 @@ bool AACCDProtocol::CheckByteSent(int32 BytesSent)
 	if (BytesSent <= 0)
 	{		
 		UE_LOG(LogACCDProtocol, Warning, TEXT("Socket is valid but the receiver received 0 bytes, make sure it is listening properly!"));
+		GConnectionLog.LogLevel = EConnectionLogLevel::WARNING;
+		GConnectionLog.LogMessage = TEXT("Socket is valid but the receiver received 0 bytes, make sure it is listening properly!");
 		return false;
 	}
 

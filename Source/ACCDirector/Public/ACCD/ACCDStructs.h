@@ -7,6 +7,21 @@
 
 
 USTRUCT(BlueprintType)
+struct FConnectionLog
+{
+	GENERATED_USTRUCT_BODY()
+	
+	FConnectionLog() {};
+
+	UPROPERTY(BlueprintReadOnly, Category = "ACCD|Connection Info")
+	EConnectionLogLevel LogLevel = EConnectionLogLevel::LOG;
+
+	UPROPERTY(BlueprintReadOnly, Category = "ACCD|Connection Info")
+	FString LogMessage = TEXT("");
+
+};
+
+USTRUCT(BlueprintType)
 struct FRegistrationResult
 {
 	GENERATED_USTRUCT_BODY()
