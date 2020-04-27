@@ -65,6 +65,10 @@ struct FDriverInfo
 	// Platinum = 3, Gold = 2, Silver = 1, Bronze = 0
 	UPROPERTY(BlueprintReadOnly, Category = "ACCD|Driver Info")
 	EDriverCategory Category = EDriverCategory::Error;
+
+	UPROPERTY(BlueprintReadOnly, Category = "ACCD|Driver Info")
+	ENationality Nationality = ENationality::Any;
+
 };
 
 
@@ -106,9 +110,21 @@ struct FCarInfo
 	UPROPERTY(BlueprintReadOnly, Category = "ACCD|Car Info")
 	TArray<FDriverInfo> Drivers;
 
+	UPROPERTY(BlueprintReadOnly, Category = "ACCD|Car Info")
+	ENationality Nationality;
+
+
 	void AddDriver(FDriverInfo DriverInfo)
 	{
 		Drivers.Add(DriverInfo);
+	}
+
+	FString GetCurrentDriverName()
+	{
+		if (CurrentDriverIndex < Drivers.Num())
+		{
+			return Drivers[CurrentDriverIndex].LastName;
+		}
 	}
 
 	bool operator==(const FCarInfo &Arg) const
@@ -240,6 +256,9 @@ struct FRealTimeUpdate
 	FTimespan SessionTime = FTimespan::FromMilliseconds(1000);
 
 	UPROPERTY(BlueprintReadOnly, Category = "ACCD|Realtime Update")
+	FTimespan RemainingTime = FTimespan::FromMilliseconds(1000);
+
+	UPROPERTY(BlueprintReadOnly, Category = "ACCD|Realtime Update")
 	FTimespan TimeOfDay = FTimespan::FromMilliseconds(1000);
 
 	UPROPERTY(BlueprintReadOnly, Category = "ACCD|Realtime Update")
@@ -252,7 +271,7 @@ struct FRealTimeUpdate
 	float Wetness = 0.f;
 
 	UPROPERTY(BlueprintReadOnly, Category = "ACCD|Realtime Update")
-	FLapInfo BestSessionLap;;
+	FLapInfo BestSessionLap;
 
 	
 	uint16 BestLapCarIndex = 0;

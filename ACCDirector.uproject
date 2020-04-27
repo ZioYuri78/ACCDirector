@@ -16,10 +16,6 @@
 	],
 	"Plugins": [
 		{
-			"Name": "AISupport",
-			"Enabled": false
-		},
-		{
 			"Name": "MagicLeapMedia",
 			"Enabled": false,
 			"SupportedTargetPlatforms": [
