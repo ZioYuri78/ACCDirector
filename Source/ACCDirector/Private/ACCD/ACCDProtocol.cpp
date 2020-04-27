@@ -368,7 +368,12 @@ void AACCDProtocol::Recv(const FArrayReaderPtr & ArrayReaderPtr, const FIPv4Endp
 			GCarsEntryList.Add(FCarInfo(TempCarIndex));
 		}	
 
-		AsyncTask(ENamedThreads::GameThread, [&]() {OnEntryList.Broadcast(ConnectionIdentifier, GCarsEntryList);});
+		AsyncTask(ENamedThreads::GameThread, 
+			[&]() 
+			{
+				OnEntryList.Broadcast(ConnectionIdentifier, GCarsEntryList);
+			}
+		);
 
 	} 
 	break;
@@ -398,6 +403,10 @@ void AACCDProtocol::Recv(const FArrayReaderPtr & ArrayReaderPtr, const FIPv4Endp
 		*ArrayReaderPtr << TempCurrentDriverIndex;
 		GCarInfo.CurrentDriverIndex = (int32)TempCurrentDriverIndex;
 		
+		uint16 TempNationality;
+		*ArrayReaderPtr << TempNationality;
+		GCarInfo.Nationality = (ENationality)TempNationality;
+
 		// Now the drivers on this car
 		uint8 DriversOnCarCount;
 		*ArrayReaderPtr << DriversOnCarCount;
@@ -410,13 +419,22 @@ void AACCDProtocol::Recv(const FArrayReaderPtr & ArrayReaderPtr, const FIPv4Endp
 			ReadString(ArrayReaderPtr, DriverInfo.ShortName);
 			*ArrayReaderPtr << DriverInfo.Category;	// Platinum = 3, Gold = 2, Silver = 1, Bronze = 0
 
+			uint16 TempDriverNationality;
+			*ArrayReaderPtr << TempDriverNationality;
+			DriverInfo.Nationality = (ENationality)TempDriverNationality;
+
 			GCarInfo.AddDriver(DriverInfo);
 		}
 
 		int32 Index = GCarsEntryList.IndexOfByKey(GCarInfo);
 		GCarsEntryList[Index] = GCarInfo;
 		
-		AsyncTask(ENamedThreads::GameThread, [&] {OnEntryListUpdate.Broadcast(ConnectionIdentifier, GCarInfo); });
+		AsyncTask(ENamedThreads::GameThread, 
+			[&]() 
+			{
+				OnEntryListUpdate.Broadcast(ConnectionIdentifier, GCarInfo); 
+			}
+		);
 	} 
 	break;
 
@@ -537,7 +555,11 @@ void AACCDProtocol::Recv(const FArrayReaderPtr & ArrayReaderPtr, const FIPv4Endp
 	// #ACCD_CASE: REALTIME_CAR_UPDATE
 	case EInboundMessageTypes::REALTIME_CAR_UPDATE:
 	{
-		
+		// #ACCD_TODO check if is a good place to clean message log
+		//GConnectionLog.LogLevel = EConnectionLogLevel::LOG;
+		//GConnectionLog.LogMessage = FString::Printf(TEXT(""));
+		//OnConnectionLog.Broadcast(GConnectionLog);
+
 		FRealTimeCarUpdate CarUpdate;
 
 		uint16 TempCarIndex;
@@ -591,9 +613,9 @@ void AACCDProtocol::Recv(const FArrayReaderPtr & ArrayReaderPtr, const FIPv4Endp
 			if ((FDateTime::Now().GetSecond() - LastEntryListRequest.GetSecond()) > 1)
 			{
 				UE_LOG(LogACCDProtocol, Warning, TEXT("CarUpdate %d|%d not know, will ask for new EntryList"), CarUpdate.CarIndex, CarUpdate.DriverIndex);
-				GConnectionLog.LogLevel = EConnectionLogLevel::WARNING;
-				GConnectionLog.LogMessage = FString::Printf(TEXT("CarUpdate %d|%d not know, will ask for new EntryList"), CarUpdate.CarIndex, CarUpdate.DriverIndex);
-				OnConnectionLog.Broadcast(GConnectionLog);
+				//GConnectionLog.LogLevel = EConnectionLogLevel::WARNING;
+				//GConnectionLog.LogMessage = FString::Printf(TEXT("CarUpdate %d|%d not know, will ask for new EntryList"), CarUpdate.CarIndex, CarUpdate.DriverIndex);
+				//OnConnectionLog.Broadcast(GConnectionLog);
 				LastEntryListRequest = FDateTime::Now();
 				RequestEntryList();
 			}
